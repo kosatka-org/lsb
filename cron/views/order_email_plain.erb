@@ -1,0 +1,15 @@
+
+        Ваш заказ получен, обеды будут доставлены в пункт выдачи по адресу <%= orders.first.delivery_point %> по расписанию.
+        Получить заказ можно по номеру заказа на имя <%= email %>.
+
+    <% orders.each do |order| %>
+            <%= "Заказ №#{order.order_number}, #{order.delivery_date.strftime("%d.%m")} #{@daynames[order.delivery_date.wday]}" %>
+            Отменить заказ - http://obed.store/cancel/<%= order.id %>
+            <% order.items.each do |item| %>
+                <%= item['name'] %> <%= item['quantity'] %> шт. стоимость: <%= item["price"].to_i*item['quantity'] %>р
+            <% end %>
+            Итого: <%= order.items.map {|i| i["price"].to_i*i['quantity'] }.reduce(:+) %>р
+    <% end %>
+
+
+        Приятного аппетита!

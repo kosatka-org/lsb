@@ -1,0 +1,3 @@
+ALTER TABLE `delivery_cities` ADD `city_is_main` TINYINT NOT NULL DEFAULT '0' AFTER `city_name`;
+
+UPDATE `delivery_cities` SET `city_is_main` = '1' WHERE `city_name` LIKE 'Москва%' OR  `city_name` LIKE 'Нижний Новгород'  OR `city_name` LIKE '%Петербург%' OR `city_name` LIKE '%Казань%' OR `city_name` LIKE '%Екатеринбург%'  OR `city_name` LIKE 'Самара%'  OR `city_name` LIKE 'Ростов-на-%' OR  `city_name` LIKE 'Челябинск';

@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `uhod` TEXT NOT NULL DEFAULT '' AFTER `text_sizes`;

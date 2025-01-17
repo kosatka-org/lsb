@@ -1,0 +1,1 @@
+ALTER TABLE  `brands` ADD  `visibility` INT( 2 ) NOT NULL DEFAULT  '1';

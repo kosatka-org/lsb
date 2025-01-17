@@ -1,0 +1,1 @@
+ALTER TABLE  `products` ADD  `pack_id` VARCHAR( 24 ) NULL ;

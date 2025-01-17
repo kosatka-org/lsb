@@ -1,0 +1,1 @@
+ALTER TABLE `users2sizes_n` ADD `manager_id` INT(11) NOT NULL AFTER `size_id`, ADD `date` TIMESTAMP NOT NULL AFTER `manager_id`;

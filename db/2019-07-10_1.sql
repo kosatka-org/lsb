@@ -1,0 +1,2 @@
+ALTER TABLE `warehouses` ADD `admin_only` TINYINT(1) NOT NULL AFTER `reservation`;
+UPDATE warehouses SET admin_only = 1 WHERE name LIKE '%Ревизия%' OR name LIKE '%нужно найти%' OR name LIKE '%изъятие в таможню%';

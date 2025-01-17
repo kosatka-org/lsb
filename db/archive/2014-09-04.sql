@@ -1,0 +1,1 @@
+ALTER TABLE  `coupons` ADD  `user_id` INT NOT NULL AFTER  `id`

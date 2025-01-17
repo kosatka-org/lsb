@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/style_s.css" type="text/css" />
+	<link rel="stylesheet" href="css/style_h.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/checkbox.js"></script>
+
+</head>
+<title></title>
+<body>
+	<div class="headBlock">
+        <div class="logoOnline">
+            <a href="./Главная_files/Главная.htm"><img src="images/logo.png" width="220" height="64"></a>
+        </div>
+		<!--<a href="">
+			<div class="buttons_head">
+				
+			</div>
+		</a>-->  
+		<div class="adr" style="margin: 18px 0px 0px 30px; width: 200px;">
+			<span class="adr2txt">+7-(831)-430-36-30</span><br>
+			<span class="adr1txt">для справки и помощи</span>
+		</div>
+        <div class="rightTopLinks">
+            <div class="links">
+	            <!--<div style="height:25px;">&nbsp;<a href="#"><span class="wishImg"></span>Wish List (9)</a></div>-->
+            <!-- Информер корзины /-->  
+                        <!-- Информер корзины #End /-->         
+	            <div style="margin: 20px 0px 0px 0px;">
+					<div style="width: 75px; float: left;">
+						<a href="" target="_blank" id="vk_login_link"><div id="vk_login_button" style="width: 75px; height: 21px; margin: 3px 0px 0 0; background-size: 100% 100%;">Выйти</div></a>
+					</div>
+					<a href="/catalog">
+						<div class="ShAA_toCatalog"></div>
+					</a>
+				</div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="mainMenu">
+        <ul class="menuList">
+	        <li><a href="https://lsboutique.ru/sections/whats_new">Что нового?</a></li>
+	        <li>|</li>
+	        <li><a href="https://lsboutique.ru/brandwall/">Дизайнеры</a></li>
+							<li>|</li>
+				<li><a href="https://lsboutique.ru/catalog/?category=2">Обувь</a></li>
+							<li>|</li>
+				<li><a href="https://lsboutique.ru/catalog/?category=1">Одежда</a></li>
+							<li>|</li>
+				<li><a href="https://lsboutique.ru/catalog/?category=3">Белье</a></li>
+							<li>|</li>
+				<li><a href="https://lsboutique.ru/catalog/?category=4">Аксессуары</a></li>
+			
+	    </ul>
+        <div class="search">
+		<form id="form" name="search" method="get" action="" onsubmit="window.location=&#39;/catalog/?search=&#39;+this.keyword.value; return false;">
+            <input type="text" name="keyword" value="Ищем по сайту" onfocus="$(this).val( $(this).val() == &#39;Ищем по сайту&#39; ? &#39;&#39; : $(this).val());" onblur="$(this).val( $(this).val() == &#39;&#39; ? &#39;Ищем по сайту&#39; : $(this).val());">
+            <img src="images/search.png" width="15" height="15">
+		</form>
+        </div>
+        <div class="clear"></div>
+    </div>
+	<div class="footerLine"></div>
+	<div class="profile">
+		<div class="avatar">
+			<img src="images/ava.png">
+		</div>
+		<div class="profinfo">
+			<span class="Htitle2">Алексей Костин</span><br>
+			<form>
+			<select size="1" class="formNum">
+				<option selected disabled>Выберете размер одежды</option>
+				<option value="6">6</option>
+				<option value="6">6</option>
+				<option value="6">6</option>
+			</select><br>
+			<select size="1" class="formNum">
+				<option selected disabled>Выберете размер обуви</option>
+				<option value="6">6</option>
+				<option value="6">6</option>
+				<option value="6">6</option>
+			</select><br>
+			<input type="text" placeholder="укажите номер дисконтной карты" class="formTxt"><br>
+			<input type="text" placeholder="укажите номер телефона" class="formTxt"><br>
+			<input type="text" placeholder="укажите электронную почту" class="formTxt"><br>
+			<input type="text" placeholder="укажите адресс" class="formTxt"><br>
+			<a href="">
+				<div class="saveButton"></div>
+			</a>
+			</form>
+
+		</div>
+	</div>
+	<script language="javascript">
+	$(document).ready(function(){
+		$(".tab").click(function(){
+			$(".tab").removeClass("tabact");
+			$(this).addClass("tabact");
+		});
+		$(".titleCatalog").mousedown(function(){
+			$(".cash_menu").removeClass("vis");
+			$(".cash_menu").removeAttr("style");
+			$("div", this).addClass("vis");
+		});
+		$(".imgCatalog_new").mousedown(function(){
+			$(".cash_menu").removeAttr("style");
+			$(this).next().children("div").toggle();
+			$(".cash_menu").removeClass("vis");
+		});
+		$(".cash_menu").click(function(){
+			$(".cash_menu").removeAttr("style");
+			$(".cash_menu").removeClass("vis");
+		});
+	});
+	</script>
+	<div class="cash_field">
+		<div class="tab tabact" onclick="$('.cash').hide();$('#c1').show(); ">
+			<img src="images/cart_mini.png" align="top">
+			Корзина
+		</div>
+		<div class="tab" onclick="$('.cash').hide();$('#c2').show(); ">
+			Отложить 
+		</div>
+		<div class="tab" onclick="$('.cash').hide();$('#c3').show(); ">
+			Гардероб 
+		</div>
+		<div class="cash" id="c1">
+			<script language="javascript">
+				$(document).ready( function () {
+					$('.ShAA_catalogItem_new').bind('mouseenter', function() {
+						id = $(this).eq(0).attr('id');
+						$('#img_' + id).removeClass("imgCatalog_new").addClass("imgCatalogHover_new");
+						$('#img_' + id + ' img').attr('src', $('#img_' + id + ' img').attr('src_over'));
+						$('#title_' + id + ' a').css({borderBottom: "2px solid #777"});
+						return false;
+					}).bind('mouseleave', function() {
+						id = $(this).eq(0).attr('id');
+						$('#img_' + id).removeClass("imgCatalogHover_new").addClass("imgCatalog_new");
+						$('#img_' + id + ' img').attr('src', $('#img_' + id + ' img').attr('src_out'));
+						$('#title_' + id + ' a').css({borderBottom: "none"});
+						return false;
+					});
+					showActive('checkBrands');
+					showActive('checkCategories');
+				});
+			</script>
+			<div class="cash_in">
+				<div id="35198" class="ShAA_catalogItem_new category_64 sex_1">
+					<div id="img_35198" class="imgCatalog_new">
+						<img alt="Аксессуары Перчатки ZILLI" title="Аксессуары Перчатки ZILLI" src="images/IMG_9072.jpg" src_out="images/IMG_9072.jpg" src_over="images/IMG_9072.jpg">
+					</div>
+					<div id="title_35198" class="titleCatalog" onclick=" return false;">
+						<div class="cash_menu" id="ccm1">
+							<a href="products/616GANTA114C-AGC-6" target="_blank" onclick="popupWin = window.open(this.href, 'Посмотреть', 'location,top=0'); popupWin.focus(); return false;">
+								<div class="cash_menu_button">
+									Посмотреть
+								</div>
+							</a>
+							<div class="cash_menu_button">
+								Отложить
+							</div>
+							<div class="cash_menu_button">
+								Удалить
+							</div>
+						</div>
+						<a href="" style="border-bottom-style: none; border-bottom-width: initial; border-bottom-color: initial; ">Phillip Lim</a>
+					</div>
+					<div class="ShAA_descriptionCatalog">
+			
+						<span>Платье, шелк-шифон</span><br>
+							руб 28000.00<br>
+					</div>
+				</div>
+				<div id="29940" class="ShAA_catalogItem_new category_64 sex_1">
+					<div id="img_29940" class="imgCatalog_new">
+						<img alt="Аксессуары Перчатки ZILLI" title="Аксессуары Перчатки ZILLI" src="images/IMG_9175.jpg" src_out="images/IMG_9175.jpg" src_over="images/IMG_9175.jpg">
+					</div>
+					<div id="title_29940" class="titleCatalog" onclick=" return false;">
+						<div class="cash_menu" id="ccm2">
+							<a href="products/616GANTA114C-AGC-6" target="_blank" onclick="popupWin = window.open(this.href, 'Посмотреть', 'location,top=0'); popupWin.focus(); return false;">
+								<div class="cash_menu_button">
+									Посмотреть
+								</div>
+							</a>
+							<div class="cash_menu_button">
+								Отложить
+							</div>
+							<div class="cash_menu_button">
+								Удалить
+							</div>
+						</div>
+						<a href="" style="border-bottom-style: none; border-bottom-width: initial; border-bottom-color: initial; ">Phillip Lim</a>
+					</div>
+					<div class="ShAA_descriptionCatalog">
+						<span>Платье, шелк-шифон</span><br>
+							руб 24000.00<br>
+					</div>
+				</div>
+				<div id="29939" class="ShAA_catalogItem_new category_64 sex_1">
+					<div id="img_29939" class="imgCatalog_new">
+						<img alt="Аксессуары Перчатки ZILLI" title="Аксессуары Перчатки ZILLI" src="images/IMG_9718.jpg" src_out="images/IMG_9718.jpg" src_over="images/IMG_9718.jpg">
+					</div>
+					<div id="title_29939" class="titleCatalog" onclick=" return false;">
+						<div class="cash_menu" id="ccm3">
+							<a href="products/616GANTA114C-AGC-6" target="_blank" onclick="popupWin = window.open(this.href, 'Посмотреть', 'location,top=0'); popupWin.focus(); return false;">
+								<div class="cash_menu_button">
+									Посмотреть
+								</div>
+							</a>
+							<div class="cash_menu_button">
+								Отложить
+							</div>
+							<div class="cash_menu_button">
+								Удалить
+							</div>
+						</div>
+						<a href="" style="border-bottom-style: none; border-bottom-width: initial; border-bottom-color: initial; ">Phillip Lim</a>
+					</div>
+					<div class="ShAA_descriptionCatalog">
+						<span>Платье, шелк-шифон</span><br>
+							руб 25000.00<br>
+					</div>
+				</div>
+			</div>
+			<a href="/cart/form/" rel="facebox" target="_blank">
+				<div class="ShAA_orderButton"></div>
+			</a>
+		</div>
+		<div class="cash invis" id="c2">
+			<div class="cash_in">
+				<div id="35198" class="ShAA_catalogItem_new category_64 sex_1">
+					<div id="img_35198" class="imgCatalog_new">
+						<img alt="Аксессуары Перчатки ZILLI" title="Аксессуары Перчатки ZILLI" src="images/IMG_9072.jpg" src_out="images/IMG_9072.jpg" src_over="images/IMG_9072.jpg">
+					</div>
+					<div id="title_35198" class="titleCatalog" onclick=" return false;">
+						<div class="cash_menu" id="pacm1">
+							<a href="products/616GANTA114C-AGC-6" target="_blank" onclick="popupWin = window.open(this.href, 'Посмотреть', 'location,top=0'); popupWin.focus(); return false;">
+								<div class="cash_menu_button">
+									Посмотреть
+								</div>
+							</a>
+							<div class="cash_menu_button">
+								В корзину
+							</div>
+							<div class="cash_menu_button">
+								Удалить
+							</div>
+						</div>
+						<a href="" style="border-bottom-style: none; border-bottom-width: initial; border-bottom-color: initial; ">Phillip Lim</a>
+					</div>
+					<div class="ShAA_descriptionCatalog">
+						<span>Платье, шелк-шифон</span><br>
+							руб 28000.00<br>
+					</div>
+				</div>
+				<div id="29940" class="ShAA_catalogItem_new category_64 sex_1">
+					<div id="img_29940" class="imgCatalog_new">
+						<img alt="Аксессуары Перчатки ZILLI" title="Аксессуары Перчатки ZILLI" src="images/IMG_9175.jpg" src_out="images/IMG_9175.jpg" src_over="images/IMG_9175.jpg">
+					</div>
+					<div id="title_29940" class="titleCatalog" onclick=" return false;">
+						<div class="cash_menu" id="pacm2">
+							<a href="products/616GANTA114C-AGC-6" target="_blank" onclick="popupWin = window.open(this.href, 'Посмотреть', 'location,top=0'); popupWin.focus(); return false;">
+								<div class="cash_menu_button">
+									Посмотреть
+								</div>
+							</a>
+							<div class="cash_menu_button">
+								В корзину
+							</div>
+							<div class="cash_menu_button">
+								Удалить
+							</div>
+						</div>
+						<a href="" style="border-bottom-style: none; border-bottom-width: initial; border-bottom-color: initial; ">Phillip Lim</a>
+					</div>
+					<div class="ShAA_descriptionCatalog">
+						<span>Платье, шелк-шифон</span><br>
+							руб 24000.00<br>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cash invis" id="c3">
+			<div class="nope">
+				<span class="notxt">Ваш гардероб пуст: <br>
+				- тут будут доступны все совершонне вами покупки</span>
+				<img src="images/garpic.png">
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="footer">
+        <div class="footerLine"></div>
+        <div class="footerMenu">
+			<div class="footerMenuBlock">
+				<div class="footerMenuTitle">Интернет магазин:</div>
+				<div>
+					<ul>
+													<li><a href="/sections/shipping">Доставка и оплата</a></li>
+													<li><a href="/sections/vacancies">Вакансии</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="footerMenuBlock">
+				<div class="footerMenuTitle">Компания "Лакшери Стор":</div>
+				<div>
+					<ul>
+						<li><a href="http://ru.lsboutique.ru/db/shops/" target="_blank">Магазины в Н.Новгороде</a></li>
+						<li><a href="http://ru.lsboutique.ru/doctxt/atele/" target="_blank">Пошив костюма на заказ</a></li>
+						<li><a href="http://ru.lsboutique.ru/doctxt/diskont/" target="_blank">Накопительная скидка</a></li>
+						<li><a href="http://ru.lsboutique.ru/db/news/" target="_blank">Новости</a></li>
+						<li><a href="http://ru.lsboutique.ru/doctxt/kontaktyi/" target="_blank">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="footerMenuBlock">
+				<div class="footerMenuTitle">Социальные группы:</div>
+				<div>
+					<a href="http://vk.com/luxurystore" target="_blank" rel="nofollow" class="bordern"><img src="images/lsgroup.png"></a>
+					<a href="http://www.facebook.com/groups/185568738161569/" target="_blank" rel="nofollow" class="bordern"><div class="fb" style="float: none;"></div></a> 
+					
+				</div>
+			</div>
+			
+			<div class="footerMenuBlock">
+				<div class="footerMenuTitle">Прием платежей:</div>
+				<div class="copy"><div class="cardlogos"><img height="30" src="images/visa_mastercard_logo.png"></div></div>
+			</div>
+			<div class="clear"></div>
+			<div style="margin: 48px 0 0 0;">
+				© Luxury Store 2012			</div>
+        </div>
+    </div>
+</body>
+</html>

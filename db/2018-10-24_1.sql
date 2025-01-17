@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `packer_id` INT(11) NOT NULL AFTER `courier_id`;

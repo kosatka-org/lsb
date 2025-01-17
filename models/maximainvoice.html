@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="/css/invoice.css?v=1.1" type="text/css" />
+</head>
+<title></title>
+<body style="width:auto">
+	<div class="OrderWrap" style="page-break-after:always;">
+        <div class="logo"><img src="/images/new_logo.png"></div>
+        <div style="font-size: 27px; margin: 15px 0 0;"><strong>НАКЛАДНАЯ. ЗАКАЗ № {OrderId}</strong></div>
+        <table class="ghostTable" style="width: 100%;">
+            <tr>
+                <td colspan=9>
+                    <div class="underline_title">ПОЛУЧАТЕЛЬ</div>
+                </td>
+            </tr>
+            <tr class="low">
+                <td class="">Ф.И.О.:</td>
+                <td colspan="8" class="">{ClientName}</td>
+            </tr>
+            <tr class="low">
+                <td class="">Адрес:</td>
+                <td colspan="8" class="">{ClientAddress}</td>
+            </tr>
+            <tr class="low">
+                <td class="">Телефон:</td>
+                <td colspan="8" class="">{ClientPhone}</td>
+            </tr>
+            <tr class="low">
+                <td class="">Дата:</td>
+                <td colspan="8" class="">«______» ____________________________ 201__ г</td>
+            </tr>
+            <tr class="low">
+                <td class="">Подпись:</td>
+                <td colspan="8" class="right">_______________________________ / Расшифровка ___________________________________________________________</td>
+            </tr>
+            <tr>
+                <td colspan=9>
+                    <div class="underline_title">ПОЛУЧЕНИЕ МАТЕРИАЛЬНЫХ ЦЕННОСТЕЙ</div>
+                </td>
+            </tr>
+            <tr class="hight">
+                <td class="" width="150">Артикул</td>
+                <td class="">Номенклатура</td>
+                <td class="right">Размер</td>
+                <td class="right" width="70">Кол-во,<br/>шт.</td>
+                <td class="right" width="55">Сезон</td>
+                <td class="right" width="55">Скидка</td>
+                <td class="right" width="20"><strong>&#10004;</strong></td>
+                <td class="right" width="20"><strong>&#10006;</strong></td>
+                <td class="right" width="130">Стоимость, руб.</td>
+            </tr>
+            {ProductsPieses}
+            <tr class="hight">
+                <td colspan="8" class="right">Стоимость товара, руб.:</td>
+                <td class="right">{TotalItemsPrice}</td>
+            </tr>
+            <tr class="hight">
+                <td colspan="8" class="right">Предоплата [ &#9744; Депозит РФИ. &#9744; Транзакция № {TransactionID} ]:</td>
+                <td class="right">{PaymentPrepaid}</td>
+            </tr>
+            <tr class="hight">
+                <td colspan="8" class="right">Доставка, руб.:</td>
+                <td class="right">{DeliveryPrice}</td>
+            </tr>
+            <tr class="hight">
+                <td colspan="8" class="right"><strong>Общая сумма полного заказа к оплате, руб.:</strong></td>
+                <td class="right"><strong>{TotalOrderPrice}</strong></td>
+            </tr>
+        </table>
+        <table class="ghostTable" style="width: 100%;">
+            <tr>
+                <td colspan=5>
+                    <div class="underline_title">ДОСТАВКА</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="">Курьер:</td>
+                <td class="">
+                    {CourierName} [ Тел. {CourierPhone} ]
+                </td>
+                <td class="right">
+                    Подпись ___________________
+                </td>
+            </tr>
+            <tr>
+                <td class="">Форма оплаты:</td>
+                <td colspan=2>
+                     &#9744; Наличные &#9744; Терминал &#9744; Предоплата &#9744; Депозит
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td class="">Принятая сумма:</td>
+                <td colspan=2 class="">
+                    ______________________________ руб. [ ____________________________________________________________________________
+                </td>
+            </tr>
+            <tr>
+                <td class=""></td>
+                <td colspan=2 class="">
+                    ___________________________________________________________________________________________ рублей _______ копеек ]
+                </td>
+            </tr>
+            <tr>
+                <td colspan=5>
+                    <div class="underline_title">ОТПРАВИТЕЛЬ</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="">Менеджер<br/>заказа:</td>
+                <td colspan=2 class="">
+                    {ManagerName}
+                </td>
+            </tr>
+            <tr>
+                <td class="">Наименование<br/>организации:</td>
+                <td colspan=2 class="">
+                    ИП Жехарев Евгений Всеволодович, ИНН 526054606726, ОГРНИП 310526023700014,
+                    р/с 40802810110500017951, Филиал №6318 ВТБ 24 (ПАО) г. Самара, к/с 30101810422023601955,
+                    БИК 043601955
+                </td>
+            </tr>
+            <tr>
+                <td class="">Адрес:</td>
+                <td colspan=2 class="">
+                    Россия, г. Нижний Новгород, Нижневолжская набережная, 8/7
+                </td>
+            </tr>
+            <tr>
+                <td class="">Телефон<br/>горячей линии: </td>
+                <td colspan=2 class="">
+                    8 800 333 21 38
+                </td>
+            </tr>
+        </table>
+        <div class="bordered_field">
+            <div class="manager_icon"><img src="/images/manager_icon.jpg"></div>
+            Лакшери store – это семейная компания, которая старается быть вашим лучшим другом<br/>
+            в сегменте люксовой одежды и оказывать персональный сервис на высшем уровне.<br/>
+            Остались недовольны?<br/>
+            Не спешите ругать нас публично, дайте нам шанс исправиться! Пишите на почту problem@lsboutique.ru<br/>
+        </div>
+    </div>
+</body>
+</html>

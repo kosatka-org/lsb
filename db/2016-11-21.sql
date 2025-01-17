@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `receipt_number` INT UNSIGNED NOT NULL DEFAULT '0' AFTER `cashbox_id`;

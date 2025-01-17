@@ -1,0 +1,1 @@
+CREATE TABLE `lsboutique`.`calls_log` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `date` DATETIME NOT NULL , `status` SMALLINT(2) NOT NULL COMMENT '1 - success, 2 - failed' , PRIMARY KEY (`id`), INDEX `status` (`status`)) ENGINE = InnoDB;

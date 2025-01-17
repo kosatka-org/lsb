@@ -1,0 +1,29 @@
+INSERT INTO `locations2links` (`sex`, `item_location`, `name`, `link`) VALUES ('1', 'Ramsey', 'Ramsey', 'http://ru.lsboutique.ru/db/shops/firmennyiy_magazin_ramsey');
+
+INSERT INTO `locations2links` (`sex`, `item_location`, `name`, `link` ) VALUES ('', 'Internet', 'Internet', 'http://lsboutique.ru/' );
+
+ALTER TABLE `users` ADD `store` VARCHAR( 255 ) NOT NULL COMMENT 'Магазин по умолчанию' AFTER `group_id`;
+
+UPDATE `users` SET store = 'Internet' WHERE group_id = '2';
+
+
+UPDATE `lsboutique`.`users` SET `store` = 'Ramsey' WHERE `users`.`user_id` =1838 LIMIT 1 ;
+
+UPDATE `lsboutique`.`users` SET `store` = 'Luxury Store' WHERE `users`.`user_id` =1837 LIMIT 1 ;
+
+UPDATE `lsboutique`.`users` SET `store` = 'Luxury Store Concept' WHERE `users`.`user_id` =1836 LIMIT 1 ;
+
+UPDATE `lsboutique`.`users` SET `store` = 'Podium VIP' WHERE `users`.`user_id` =1841 LIMIT 1 ;
+
+UPDATE `lsboutique`.`users` SET `store` = 'Podium Элита' WHERE `users`.`user_id` =1840 LIMIT 1 ;
+
+UPDATE `lsboutique`.`users` SET `store` = 'ICE iceberg' WHERE `users`.`user_id` =1839 LIMIT 1 ;
+
+UPDATE `lsboutique`.`users` SET `store` = 'Outlet Luxury Store' WHERE `users`.`user_id` =1835 LIMIT 1 ;
+
+
+
+INSERT INTO `emails` (`sender_email`, `sender_name`, `name`, `alias`, `subject`, `body_html`, `body_text`, `state`, `variables`) VALUES
+('info@lsboutique.ru', 'Luxury Store', 'Емейл-рассылка', 'email_message', '{SUBJECT}', '<html>\r\n<body style="margin:10px 0 0 0;" bgcolor="#ffffff" color="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">\r\n	<table width="686" align="center" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px; line-height: 13pt; font-family: Tahoma, Helvetica;" rules="none">\r\n		<tr height="142">\r\n			<td><a href="{SITE}" style="color: #787878; font-size: 18px; text-decoration: none; font-weight: bold;"><img alt="Luxury Store" src="{SITE}/email_img/logo.png" width="220" height="64" /></a></td>\r\n			<td>\r\n				<div style="float: right; padding: 16px 20px 0 0;">\r\n					<div style="font-size: 10px;">По частным вопросам</div>\r\n					<a href="mailto:{SUPPORT_EMAIL}" style="color: #787878; text-decoration: underline; font-weight: bold;">{SUPPORT_EMAIL}</a>\r\n				</div>\r\n			</td>\r\n		</tr>\r\n		<tr style="background: #f2f2f1;">\r\n			<td colspan="2" style="color: #80807d; font-size: 18px; font-weight: bold; padding: 8px 12px; border-top: 1px solid #e8e8e6; border-bottom: 1px solid #e8e8e6;">{SUBJECT}</td>\r\n		</tr>\r\n		<tr>\r\n			<td colspan="2" style="padding: 32px 12px 32px 12px;">\r\n
+<br><br>{MESSAGE}
+<br><br>\r\n Хорошего дня и хороших покупок!<br><br>\r\n					 \r\n					С уважением, <span style="font-weight: bold;">{ORDER_MANAGER}</span>, Руководитель службы Вашей поддержки <a href="mailto:{ORDER_MANAGER_EMAIL}" style="color: #787878; text-decoration: underline; font-weight: bold;">{ORDER_MANAGER_EMAIL}</a>\r\n				</div>\r\n			</td>\r\n		</tr>\r\n		<tr style="background: #e0ded9;">\r\n			<td style="padding: 10px 12px;">Справочная служба с готовностью даст ответ<br> круглосуточно, 24/7 звонок по России бесплатно </td>\r\n			<td style="padding: 10px 0;">\r\n				<img src="{SITE}/email_img/phone.png" width="17" height="16" style="vertical-align: middle;"/>\r\n				<span style="font-size: 18px; vertical-align: bottom; line-height: 22px;">&nbsp;{ORDER_MANAGER_PHONE}&nbsp;</span>\r\n				<a href="{CALL_BY_CLICK}" style="color: #787878; text-decoration: underline; font-weight: bold; vertical-align: bottom;">или с компьютера</a>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style="padding: 16px 0 0 0;">\r\n				<a href="{SITE}" style="color: #787878; font-size: 18px; text-decoration: none; font-weight: bold;"><img alt="Бесплатная доставка" src="{SITE}/email_img/free_delivery.png" width="338" height="119"/></a>\r\n			</td>\r\n			<td style="padding: 16px 0 0 0;">\r\n				<a href="{SITE}" style="color: #787878; font-size: 18px; text-decoration: none; font-weight: bold;"><img alt="На Москву! За сутки!" src="{SITE}/email_img/to_moscow.png" width="338" height="119"/></a>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td colspan="2" style="font-size: 10px; padding: 16px 12px;">\r\n			Сообщение было отправлено на <a href="mailto:{USEREMAIL}" style="color: #787878; text-decoration: underline;">{USEREMAIL}</a>.\r\n			Если Вы не хотите получать письма от <a href="lsboutique.ru" style="color: #787878; text-decoration: none;">lsboutique.ru</a>, пожалуйста, <a href="UNSUBSCRIBE_LINK" style="color: #787878; text-decoration: none; border-bottom: 1px solid #787878;">отпишитесь</a>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td colspan="2" style="font-size: 10px; padding: 0px 12px 16px 12px; color: #787878;">&copy; Luxury Store {YEAR}</td>\r\n		</tr>\r\n	</table>\r\n</body>\r\n</html>', NULL, 0, '')

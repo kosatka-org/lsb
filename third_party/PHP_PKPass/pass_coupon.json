@@ -1,0 +1,68 @@
+{
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "{passTypeIdentifier}",
+  "serialNumber" : "{serialNumber}",
+  "webServiceURL" : "https://lsboutique.ru/pass_service/",
+  "authenticationToken" : "{authenticationToken}",
+  "teamIdentifier" : "LRM67SVKY6",
+  "barcode" : {
+    "message" : "{CardNumber}",
+    "format" : "PKBarcodeFormatPDF417",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "organizationName" : "Лакшери Store",
+  "description" : "Карта клиента",
+  "logoText" : "Лакшери Store",
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "backgroundColor" : "{backgroundColor}",
+  "coupon" : {
+    "primaryFields" : [
+      {
+        "key" : "member",
+        "value" : "{UserName}"
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "card_number",
+        "label" : "Номер Карты",
+        "value" : "{CardNumber}"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "level",
+        "label" : "Статус",
+        "value" : "{StatusLevel}"
+      },
+      {
+        "key" : "offer",
+        "label" : "Скидка",
+        "value" : "{StatusSale}",
+        "textAlignment" : "PKTextAlignmentRight"
+      }
+    ],
+    "backFields" : [
+      {
+        "label" : "Номер телефона клиента",
+        "key" : "phone_number",
+        "value" : "{UserPhone}"
+      },
+      {
+        "label" : "Сайт магазина",
+        "key" : "site",
+        "value" : "https://lsboutique.ru",
+      },
+      {
+        "label" : "Единая спрвочная служба",
+        "key" : "help_phone",
+        "value" : "+78314303630 или 88003332138"
+      },
+      {
+        "label" : "Используя карту вы подтверждаете, что:",
+        "key" : "info",
+        "value" : "Согласны с условиями участия в Программе поощрения клиентов Лакшери Стор",
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `sex` TINYINT UNSIGNED NOT NULL AFTER `photo_rec`;

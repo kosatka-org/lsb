@@ -1,0 +1,1 @@
+INSERT INTO `groups` (`name`, `discount`, `sections`) VALUES ('Менеджер торгового зала', 0.00, 'OfflineSale');

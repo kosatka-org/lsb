@@ -1,0 +1,1 @@
+ALTER TABLE  `product_views` ADD  `price` FLOAT NULL AFTER  `user_id` ;

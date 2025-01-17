@@ -1,0 +1,25 @@
+<Files ~ "(\.(inc|module|pl|rb|sh|ini|sql|theme|engine|xtmpl|proc|func|tests|str|conf)|Entries|Repositories|Root|scripts|updates)$">
+  Order deny,allow
+  Deny from all
+</Files>
+
+AddDefaultCharset UTF-8
+ErrorDocument 404 /sections/404
+
+php_value max_execution_time 6000
+php_value post_max_size 30000000
+php_value upload_max_filesize 30000000
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www\.lsboutique\.ru$ [NC]
+RewriteRule ^(.*)$ https://lsboutique.ru/$1 [R=301,L]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . /index.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)\.php
+RewriteCond %{REQUEST_URI} !(.*)/$

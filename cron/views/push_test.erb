@@ -1,0 +1,60 @@
+<main role="main" class="container">
+
+  <div class="starter-template">
+    <h1>Отправка тестовых Push Notifications</h1>
+  </div>
+
+  <% if flash['sent_succes'] %>
+    <div class="alert alert-primary" role="alert">
+      Запрос FCM отправлен
+    </div>
+  <% end %>
+
+  <% if flash['json_error'] %>
+    <div class="alert alert-danger" role="alert">
+      Неправильный формат JSON в поле data
+    </div>
+  <% end %>
+
+  <% if flash['fcm_response'] %>
+    <div><%= flash['fcm_response'] %></div>
+  <% end %>
+
+  <form method="POST">
+    <div class="form-group">
+      <label>User</label>
+      <select class="form-control" name="token">
+        <% @admin_app_sessions.each do |ses| %>
+          <option value="<%= ses.firebase_token %>"><%= ses.user.name %> / <%= ses.firebase_token %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Title</label>
+      <input class="form-control" type="text" name="title">
+    </div>
+
+    <div class="form-group">
+      <label>Message</label>
+      <input class="form-control" type="text"  name="message">
+    </div>
+
+    <div class="form-group">
+      <label>Sound</label>
+      <input class="form-control" type="text"  name="sound" value="default">
+    </div>
+
+    <div class="form-group">
+      <label>Badge</label>
+      <input class="form-control" type="number"  name="badge" value="1">
+    </div>
+
+    <div class="form-group">
+      <label>Data</label>
+      <textarea class="form-control" rows="5"  name="data"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Отправить</button>
+  </form>
+
+</main>

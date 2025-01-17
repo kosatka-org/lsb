@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `warehouses` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `bookmarks`, ADD `m_types` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `warehouses`;

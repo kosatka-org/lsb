@@ -1,0 +1,1 @@
+ALTER TABLE  `specials` ADD  `query_params` VARCHAR( 500 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;

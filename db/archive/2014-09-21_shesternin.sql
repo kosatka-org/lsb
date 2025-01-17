@@ -1,0 +1,1 @@
+ALTER TABLE `search_history` ADD `results_count` SMALLINT UNSIGNED NOT NULL DEFAULT '0' AFTER `word` ;

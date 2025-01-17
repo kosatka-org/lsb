@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `superuser` TINYINT(1) NOT NULL DEFAULT '0' AFTER `intagramm_user`;

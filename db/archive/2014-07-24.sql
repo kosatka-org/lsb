@@ -1,0 +1,1 @@
+ALTER TABLE  `faqs` ADD  `user_feature` VARCHAR( 255 ) NOT NULL AFTER  `user_phone`;

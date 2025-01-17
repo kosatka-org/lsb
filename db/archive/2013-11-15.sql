@@ -1,0 +1,1 @@
+ALTER TABLE  `users_calls` ADD  `sms_template` TEXT NOT NULL AFTER  `brands`

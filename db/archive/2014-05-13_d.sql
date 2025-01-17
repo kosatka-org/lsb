@@ -1,0 +1,1 @@
+ALTER TABLE  `orders` ADD  `city_id` INT( 11 ) NOT NULL AFTER  `address`

@@ -1,0 +1,1 @@
+ALTER TABLE `users` CHANGE `intagramm_user` `intagramm_user` VARCHAR(150) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;

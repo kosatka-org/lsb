@@ -1,0 +1,1 @@
+ALTER TABLE  `orders` ADD  `user_comment` VARCHAR( 255 ) NOT NULL DEFAULT  '' AFTER  `comment` ;

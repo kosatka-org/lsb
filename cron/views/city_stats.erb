@@ -1,0 +1,35 @@
+<main role="main" class="container">
+  <form class="form-inline" method="GET">
+    <div class="form-group">
+      <label>Год</label>
+      <select class="form-control" name="year">
+        <% (2014..Date.today.year).each do |year| %>
+          <option value="<%= year %>" <% if @date.year == year; %>selected<% end %>><%= year %></option>
+        <% end %>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Отправить</button>
+  </form>
+  <br>
+  <br>
+  <table data-toggle="table">
+    <thead>
+      <tr>
+        <th>Город</th>
+        <th data-sortable="true" data-halign="right">Принято</th>
+        <th data-sortable="true" data-halign="right">Возврат</th>
+        <th data-sortable="true" data-halign="right">В примерке</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @stats.each do |city, stats| %>
+        <tr>
+          <td><%= city %></td>
+          <td class="text-right"><%= stats[5].to_i %></td>
+          <td class="text-right"><%= stats[4].to_i %></td>
+          <td class="text-right"><%= stats[0].to_i %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</main>

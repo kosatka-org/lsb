@@ -1,0 +1,4 @@
+INSERT INTO `settings` (`setting_id`, `name`, `value`) VALUES (NULL, 'ok_login_client_id', ''), (NULL, 'ok_login_public_key', ''), (NULL, 'ok_login_client_secret', '');
+INSERT INTO `settings` (`setting_id`, `name`, `value`) VALUES (NULL, 'vk_login_client_id', ''), (NULL, 'vk_login_client_secret', '');
+INSERT INTO `settings` (`setting_id`, `name`, `value`) VALUES (NULL, 'fb_login_client_id', ''), (NULL, 'fb_login_client_secret', '');
+INSERT INTO `settings` (`setting_id`, `name`, `value`) VALUES (NULL, 'mail_login_client_id', ''), (NULL, 'mail_login_private_key', ''), (NULL, 'mail_login_client_secret', '');

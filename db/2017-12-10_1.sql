@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS `lsboutique`.`one_time_links` ( `id` INT NOT NULL , `user_id` INT NOT NULL , `code` VARCHAR(200) NOT NULL , `created` DATETIME NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

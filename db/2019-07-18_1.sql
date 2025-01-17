@@ -1,0 +1,1 @@
+INSERT INTO `bookmarks` (`id`, `name`) VALUES (NULL, 'Перенос в отложку'), (NULL, 'Возврат из отложки');

@@ -1,0 +1,1 @@
+INSERT INTO `modules` (`module_id`, `class`, `name`, `valuable`) VALUES (NULL, 'StefanoRicci', 'Stefano Ricci', '0');CREATE TABLE `lsboutique`.`sms_to_push_log` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `date` DATETIME NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

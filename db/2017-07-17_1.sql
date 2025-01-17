@@ -1,0 +1,1 @@
+CREATE TABLE `lsboutique`.`service_order_log` ( `id` INT NOT NULL AUTO_INCREMENT , `service_order_item_id` INT NOT NULL , `manager_id` INT NOT NULL , `date` DATETIME NOT NULL , `status` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`), INDEX (`service_order_item_id`)) ENGINE = InnoDB;

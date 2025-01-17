@@ -1,0 +1,8 @@
+CREATE TABLE  `orders_events` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`order_id` INT NOT NULL ,
+`user_id` INT NOT NULL ,
+`date` TIMESTAMP NOT NULL ,
+`type` VARCHAR( 100 ) NOT NULL ,
+`text` TEXT NOT NULL
+) ENGINE = MYISAM CHARACTER SET utf8 COLLATE utf8_general_ci;

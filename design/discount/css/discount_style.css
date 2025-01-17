@@ -1,0 +1,140 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    border: none;
+}
+
+.ShAA_catalogItem_new {
+    width: 220px;
+}
+
+.mainMenu {
+    background: none;
+}
+
+.menuList li a:hover {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.ShAA_swdIcon, .ShAA_goldenPriceIcon, .ShAA_saleIcon, .ShAA_newSeasonIcon {
+    background: #4c4c4c;
+    color: #fff;
+    border: 1px solid #4c4c4c;
+}
+
+.ShAA_discountButton {
+    background: #4c4c4c;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 3px;
+    width: 50%;
+    cursor: pointer;
+    color: #fff;
+}
+
+a .ShAA_discountButton {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.ShAA_sizeLink {
+    background: none;
+}
+
+.ShAA_popButton_input {
+    background: #4c4c4c;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.ShAA_boldLink {
+    font-weight: bold;
+    cursor: default;
+}
+
+.manOrWoman {
+    float: left;
+    margin: 27px 0 0 65px;
+}
+
+.manOrWoman a:hover {
+    text-decoration: none;
+    border: none;
+}
+
+.ShAA_zoomImg img {
+    max-width: 100%;
+}
+
+.Product_productMiddleImg img {
+    max-height: 2400px;
+    max-width: 1600px;
+    width: 100%;
+}
+
+
+#zoomImg,
+#PlaxAct {
+	cursor: pointer;
+}
+#PlaxAct.ParallaxZoom_work {
+	cursor: zoom-out;
+}
+	
+.ShAA_zoomImg {
+	cursor: pointer;
+	display: none;
+	width: 100%;
+	cursor: zoom-out;
+}
+	
+.ShAA_zoomImageForProduct {
+    /* cursor: zoom-out !important;
+    height: auto !important;
+    max-height: 1200px !important;
+    max-width: 800px !important;
+    width: 100% !important;
+	float: left;*/
+	cursor: zoom-out !important;
+    width: 100% !important;
+    float: left;
+	height: auto !important;
+}
+
+.parallax_c {
+	position: relative;
+	min-height:800px;
+    overflow: hidden;
+	z-index: 1;
+	background:#fff;
+}
+#parallax_close {
+	position: absolute;
+	top:0;
+	right:0;
+	height:50px;
+	width:50px;
+    overflow: hidden;
+	z-index: 2;
+	cursor:pointer;
+	background:url(/images/pop_close_black.png) no-repeat;
+	background-position: 50% 50%;
+}
+.parallax_l {
+	position: inherit;
+	max-width:1600px;
+	width:100%;
+}
+.parallax_c.parallax_act{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 232px;
+}
+
+.Product_productImgBlock {
+    text-align: left;
+}

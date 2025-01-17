@@ -1,0 +1,1 @@
+ALTER TABLE `inkass` ADD `rejected` INT(2) NOT NULL AFTER `confirmed`;

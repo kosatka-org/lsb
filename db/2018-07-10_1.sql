@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `model_full` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `model`;

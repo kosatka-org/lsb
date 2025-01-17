@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style_mobile.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+</head>
+<title></title>
+<body>
+	<div class="content">
+		<a href="" title="" alt="">
+			<div class="menu_icon"></div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="logo">
+				<img src="images/logo.png" title="" alt="">
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="bag">
+				<div class="bag_num">10</div>
+			</div>
+		</a>
+		<div class="divider" style="margin: 0;"></div>
+		<script>
+			$(document).ready(function(){
+				$(".button").mousedown(function(){
+					$(this).addClass("mousedown");
+				});
+				$(".button").mouseup(function(){
+					$(this).removeClass("mousedown");
+				});
+				$(".button").mouseleave(function(){
+					$(this).removeClass("mousedown");
+				});
+			});
+		</script>
+		<a href="" title="" alt="">
+			<div class="button button560px button_text">
+				Одежда
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="button button560px button_text">
+				Обувь
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="button button560px button_text">
+				Аксессуары
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="button button560px button_text">
+				Outlet
+			</div>
+		</a>
+		<div class="item_wrap">
+			<script>
+				$(document).ready(function(){
+					$(".item_image").mouseenter(function(){
+						$(this).find(".img_normal").hide();
+						$(this).find(".img_mouseOver").show();
+					});
+					$(".item_image").mouseleave(function(){
+						$(this).find(".img_normal").show();
+						$(this).find(".img_mouseOver").hide();
+					});
+				});
+			</script>
+			<div class="item_container">
+				<a href="" title="" alt="">
+					<table class="item_image">
+						<tr>
+							<td>
+								<img title="" alt="" src="images/item_normal.png" class="img_normal">
+								<img title="" alt="" src="images/item_mouseOver.png" class="img_mouseOver" style="display: none;">
+							</td>
+						</tr>
+					</table>
+				</a>
+				<div class="item_text">
+					<div class="item_text-name">Кофта</div>
+					<a href="" title="" alt=""><div class="item_text-brand">ZILLI</div></a>
+					<div class="item_text-price">за 45000</div>
+				</div>
+			</div>
+			<div class="item_container">
+				<a href="" title="" alt="">
+					<table class="item_image">
+						<tr>
+							<td>
+								<img title="" alt="" src="images/item_normal.png" class="img_normal">
+								<img title="" alt="" src="images/item_mouseOver.png" class="img_mouseOver" style="display: none;">
+							</td>
+						</tr>
+					</table>
+				</a>
+				<div class="item_text">
+					<div class="item_text-name">Кофта</div>
+					<a href="" title="" alt=""><div class="item_text-brand">ZILLI</div></a>
+					<div class="item_text-price">за 45000</div>
+				</div>
+			</div>
+			<div class="item_container">
+				<a href="" title="" alt="">
+					<table class="item_image">
+						<tr>
+							<td>
+								<img title="" alt="" src="images/item_normal.png" class="img_normal">
+								<img title="" alt="" src="images/item_mouseOver.png" class="img_mouseOver" style="display: none;">
+							</td>
+						</tr>
+					</table>
+				</a>
+				<div class="item_text">
+					<div class="item_text-name">Кофта</div>
+					<a href="" title="" alt=""><div class="item_text-brand">ZILLI</div></a>
+					<div class="item_text-price">за 45000</div>
+				</div>
+			</div>
+		</div>
+		<div class="button_wrap" style="margin: 32px 0 10px 40px;">
+			<div class="button160px_wrap">
+				<a href="" title="" alt="">
+					<div class="button button160px button_text">
+						Доставка
+					</div>
+				</a>
+			</div>
+			<div class="button160px_wrap">
+				<a href="" title="" alt="">
+					<div class="button button160px button_text">
+						Оплата
+					</div>
+				</a>
+			</div>
+			<div class="button160px_wrap">
+				<a href="" title="" alt="">
+					<div class="button button160px button_text">
+						FAQ
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

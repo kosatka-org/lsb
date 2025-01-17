@@ -1,0 +1,1 @@
+ALTER TABLE `inkass` ADD `confirmed` INT(2) NOT NULL DEFAULT '0' AFTER `shop_id`;

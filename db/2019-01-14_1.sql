@@ -1,0 +1,1 @@
+ALTER TABLE `payment_methods` ADD `block_date` TIMESTAMP NOT NULL AFTER `enabled_admin`;

@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `fitting` INT(11) NOT NULL AFTER `preserve_season`;

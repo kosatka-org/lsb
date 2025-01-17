@@ -1,0 +1,1 @@
+ALTER TABLE `movement_items` ADD `price` FLOAT(10,2) NOT NULL DEFAULT '0.00' AFTER `accepted`;

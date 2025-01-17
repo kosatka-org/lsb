@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="true"?>
+<SPSR TemplateVersion="1.2">
+	<GeneralInfo TotalInsurance="6160.0" ContractNumber="7701245411">
+		<Invoice Prepayment="" CODDeliverySum="0.0" CODGoodsSum="100.0" FullDescription="Полное описание вложимого" DeliveryTime="AM" DeliveryDate="12.08.2012" InsuranceSum="6160.0" InsuranceType="INS" PiecesCount="1" ProductCode="PelON" PickUpType="C" ShipRefNum="20120722-999999" Action="N"> 
+		<Shipper Phone="+7-913-2303333" ContactName="Ример Елена Геннадьевна1" Address="Набережная, 3 Б" City="Бийск" Region="Алтайский Край" Country="Россия" PostCode="659300"/> 
+		<Receiver Phone="+7-913-2303333" ContactName="Ример Елена Геннадьевна" Address="Набережная, 3 Б" City="Бийск" Region="Алтайский Край" Country="Россия" PostCode="659300"/> 
+		<AdditionalServices AgreedDelivery="" PaidByReceiver="" SaturdayDelivery="" EveningDelivery="" ByHand="" TryOn="" Verify="" CheckContents="" ReturnDoc="" PartDelivery="" COD=""/> 
+		<CustomerInfo Info7="" Info6="" Info5="" Info4="" Info3="" Info2="" Info1=""/> 
+		<SMS SMStoReceiver="" SMSNumberShipper="" SMSToShipper=""/>
+		<Pieces> 
+			<Piece ClientBarcode="Bar_Code91" Description="17"> 
+				<SubPiece Description="SKU=DE269FGCD478HS34, barcode=10000133630" Cost="828.72"/> 
+				<SubPiece Description="SKU=DE269FCCD480HS01, barcode=10000133635" Cost="737.9"/> 
+				<SubPiece Description="SKU=DE269FCCD480HS01, barcode=10000133634" Cost="790.88"/> 
+				<SubPiece Description="SKU=DE269FGCD478HS56, barcode=10000133633" Cost="953.59"/> 
+				<SubPiece Description="SKU=DE269FGCD478HS12, barcode=10000133632" Cost="953.59"/> 
+				<SubPiece Description="SKU=DE269FGCD478HS12, barcode=10000133539" Cost="397.33"/> 
+			</Piece> 
+		</Pieces> 
+		</Invoice> 
+	</GeneralInfo> 
+</SPSR>

@@ -1,0 +1,23 @@
+    <h1 style="font-size: 30px; padding-right: 30px; padding-left: 30px;">
+        Ваш заказ на obed.store
+    </h1>
+    <p style="font-size: 17px; padding-right: 30px; padding-left: 30px;">
+        Ваш заказ получен, обеды будут доставлены в пункт выдачи по адресу <b><%= orders.first.delivery_point %></b> по расписанию.
+    </p>
+    <p style="font-size: 17px; padding-right: 30px; padding-left: 30px;">
+        Получить заказ можно по номеру заказа на имя <b><%= email %></b>.
+    </p>
+    <br/>
+    <% orders.each do |order| %>
+        <p style="font-size: 17px; padding-right: 30px; padding-left: 30px;">
+            Заказ №<b><%= order.order_number %></b> - <%= "#{@daynames[order.delivery_date.wday]} #{order.delivery_date.strftime("%d.%m")}" %> (<a href="http://obed.store/cancel/<%= order.id %>">Отменить заказ</a>)<br/>
+            <% order.items.each do |item| %>
+                <%= item['name'] %> x <%= item['quantity'] %><br/>стоимость: <%= item["price"].to_i*item['quantity'] %>р<br/><br/>
+            <% end %>
+            Итого: <%= order.items.map {|i| i["price"].to_i*i['quantity'] }.reduce(:+) %>р
+        </p>
+        <br/>
+    <% end %>
+    <p style="font-size: 17px; padding-right: 30px; padding-left: 30px;">
+        Приятного аппетита!
+    </p>

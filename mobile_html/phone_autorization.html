@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style_mobile.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+</head>
+<title></title>
+<body>
+	<div class="content">
+		<a href="" title="" alt="">
+			<div class="logo">
+				<img src="images/logo.png" title="" alt="">
+			</div>
+		</a>
+		<div class="divider"></div>
+		<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css" />
+		<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+		<script type="text/javascript" src="js/jquery.validationEngine-ru.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#autorization_form").validationEngine("attach");
+			});
+		</script>
+		<form id="autorization_form">
+			<div class="centered_text normal_text">
+				Номер телефона владельца карты
+			</div>
+			<div class="input_wrap"><input type="text" class="text_input validate[required,custom[phone]]" placeholder="+7  . . .  . . .  . .  . ." name=""></div>
+			<div class="centered_text normal_text">
+				Номер карты — 16 цифр
+			</div>
+			<div class="input_wrap"><input type="text" class="text_input validate[required,custom[onlyNumberSp]]" placeholder="2 . . .  . . . .  . . . .  . . . ." name=""></div>
+			<div class="button_wrap" style="margin: 0 0 0 40px;">
+				<script>
+					$(document).ready(function(){
+						$(".button").mousedown(function(){
+							$(this).addClass("mousedown");
+						});
+						$(".button").mouseup(function(){
+							$(this).removeClass("mousedown");
+						});
+						$(".button").mouseleave(function(){
+							$(this).removeClass("mousedown");
+						});
+					});
+				</script>
+				<a href="" title="" alt="">
+					<div class="button button240px button_text" style="margin: 0 83px 0 0;">
+						Войти
+					</div>
+				</a>
+				<a href="" title="" alt="">
+					<div class="button button240px button_text">
+						Забыл номер
+					</div>
+				</a>
+			</div>
+		</form>
+		<div class="divider" style="margin: 20px 0 40px;"></div>
+		<div class="centered_text normal_text">
+			Войдите используя учетную<br>
+			запись социальной сети
+		</div>
+		<div class="centered_text">
+			<a href="" title="" alt=""><div class="socnet vk"></div></a>
+			<a href="" title="" alt=""><div class="socnet class"></div></a>
+			<a href="" title="" alt=""><div class="socnet mail"></div></a>
+			<a href="" title="" alt=""><div class="socnet facebook"></div></a>
+			<a href="" title="" alt=""><div class="socnet twitter"></div></a>
+			<a href="" title="" alt=""><div class="socnet google"></div></a>
+			<a href="" title="" alt=""><div class="socnet yandex"></div></a>
+			<a href="" title="" alt=""><div class="socnet livejournal"></div></a>
+			<a href="" title="" alt=""><div class="socnet youtube"></div></a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `delivery_ip` INT(11) NOT NULL AFTER `invoice_number`;

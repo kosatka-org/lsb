@@ -1,0 +1,40 @@
+CREATE TABLE  `lsboutique`.`ostatki` (
+`code` INT( 16 ) NOT NULL COMMENT  'Код',
+`sku` VARCHAR( 256 ) NOT NULL COMMENT  'Артикул',
+`model` VARCHAR( 256 ) NOT NULL COMMENT  'Наименование',
+`sex` VARCHAR( 256 ) NOT NULL COMMENT  'Пол',
+`season` VARCHAR( 256 ) NOT NULL COMMENT  'Сезон',
+`brand` VARCHAR( 256 ) NOT NULL COMMENT  'Бренд',
+`location` VARCHAR( 256 ) NOT NULL COMMENT  'Склад',
+`nomenk_group` VARCHAR( 256 ) NOT NULL COMMENT  'Номенклатурная группа',
+`harakteristika_nomenk` VARCHAR( 256 ) NOT NULL COMMENT  'Характеристика номенклатуры',
+`quantity` INT( 16 ) NOT NULL COMMENT  'Количество',
+`purchase_sum` VARCHAR( 256 ) NOT NULL COMMENT  'Сумма закупки',
+`retail_price` VARCHAR( 256 ) NOT NULL COMMENT  'Розничная стоимость',
+`size` VARCHAR( 256 ) NOT NULL COMMENT  'Размер',
+`color` VARCHAR( 256 ) NOT NULL COMMENT  'Цвет'
+) ENGINE = MYISAM ;
+
+CREATE TABLE  `lsboutique`.`prodazhi` (
+`date` VARCHAR( 256 ) NOT NULL COMMENT  'Дата',
+`card` VARCHAR( 256 ) NOT NULL COMMENT  'Карта',
+`sum_without_discount` VARCHAR( 256 ) NOT NULL COMMENT  'Сумма без скидки',
+`sum_with_discount` VARCHAR( 256 ) NOT NULL COMMENT  'Сумма со скидкой',
+`discount` VARCHAR( 256 ) NOT NULL COMMENT  'Процент скидки',
+`client` VARCHAR( 256 ) NOT NULL COMMENT  'Клиент',
+`original_user_id` VARCHAR( 256 ) NOT NULL COMMENT  'original_user_id',
+`code` INT( 16 ) NOT NULL COMMENT  'Код',
+`sku` VARCHAR( 256 ) NOT NULL COMMENT  'Артикул',
+`model` VARCHAR( 256 ) NOT NULL COMMENT  'Наименование',
+`sex` VARCHAR( 256 ) NOT NULL COMMENT  'Пол',
+`season` VARCHAR( 256 ) NOT NULL COMMENT  'Сезон',
+`brand` VARCHAR( 256 ) NOT NULL COMMENT  'Бренд',
+`location` VARCHAR( 256 ) NOT NULL COMMENT  'Склад',
+`nomenk_group` VARCHAR( 256 ) NOT NULL COMMENT  'Номенклатурная группа',
+`harakteristika_nomenk` VARCHAR( 256 ) NOT NULL COMMENT  'Характеристика номенклатуры',
+`quantity` INT( 16 ) NOT NULL COMMENT  'Количество',
+`purchase_sum` VARCHAR( 256 ) NOT NULL COMMENT  'Сумма закупки',
+`retail_price` VARCHAR( 256 ) NOT NULL COMMENT  'Розничная стоимость',
+`size` VARCHAR( 256 ) NOT NULL COMMENT  'Размер',
+`color` VARCHAR( 256 ) NOT NULL COMMENT  'Цвет'
+) ENGINE = MYISAM ;

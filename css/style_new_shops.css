@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'test';
+    src: url('/fonts/neosanspro-bold.eot');
+    src: url('/fonts/neosanspro-bold.eot') format('embedded-opentype'),
+         url('/fonts/neosanspro-bold.woff') format('woff'),
+         url('/fonts/PFAgoraSlabPro-Light.ttf') format('truetype'),
+         url('/fonts/neosanspro-bold.svg#NeoSansProBold') format('svg');
+}
+
+@font-face {
+    font-family: 'PFAgoraSlabPro-Light';
+	src: url('/fonts_swd/PFAgoraSlabPro-Light.eot');
+    src: url('/fonts_swd/PFAgoraSlabPro-Light.eot') format('embedded-opentype'),
+         url('/fonts_swd/PFAgoraSlabPro-Light.woff') format('woff'),
+         url('/fonts_swd/PFAgoraSlabPro-Light.ttf') format('truetype'),
+		 url('/fonts_swd/PFAgoraSlabPro-Light.svg#PFAgoraSlabPro-Light') format('svg');
+}
+
+@font-face {
+    font-family: 'PFAgoraSlabPro-Regular';
+    src: url('/fonts_swd/PFAgoraSlabPro-Regular.eot');
+    src: url('/fonts_swd/PFAgoraSlabPro-Regular.eot') format('embedded-opentype'),
+         url('/fonts_swd/PFAgoraSlabPro-Regular.woff') format('woff'),
+         url('/fonts_swd/PFAgoraSlabPro-Regular.ttf') format('truetype'),
+		 url('/fonts_swd/PFAgoraSlabPro-Regular.svg#PFAgoraSlabPro-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'PFAgoraSlabPro-Medium';
+    src: url('/fonts_swd/PFAgoraSlabPro-Medium.eot');
+    src: url('/fonts_swd/PFAgoraSlabPro-Medium.eot') format('embedded-opentype'),
+         url('/fonts_swd/PFAgoraSlabPro-Medium.woff') format('woff'),
+         url('/fonts_swd/PFAgoraSlabPro-Medium.ttf') format('truetype'),
+		 url('/fonts_swd/PFAgoraSlabPro-Medium.svg#PFAgoraSlabPro-Medium') format('svg');
+}
+
+html {
+        font-family: Tahoma, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        color: #fff;
+        margin: 0;
+        height: 100%;
+     }
+
+body {
+	height: auto;
+	min-width: 628px;
+	margin: 0px auto;
+	padding: 0;
+	font-family: 'Open Sans', 'sans-serif';
+}
+
+img {
+	border: none;
+}
+
+.clear {
+	clear: both;
+}
+
+a {
+	font-family: PFAgoraSlabPro-Regular, Open Sans;
+	font-size: 18px;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #fff;
+	
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.ShAA_topBlock {
+	height: 123px;
+	text-align: center;
+}
+
+.ShAA_middleBlock {
+	height: 285px;
+}
+
+.ShAA_bottomBlock {
+	height: 396px;
+	padding: 30px 0 0 0;
+}
+
+.ShAA_logo {
+	background: url(/images/swd/LS_logo.png) no-repeat;
+	width: 137px;
+	height: 47px;
+	position: absolute;
+	top: 40px;
+	right: 69%;
+}
+
+.ShAA_topText {
+	position: relative;
+	margin: -168px auto 0;
+	width: 300px;
+}
+
+.ShAA_swdText {
+	font-size: 60px;
+	color: #fff;
+	font-family: PFAgoraSlabPro-Light, Open Sans;
+}
+
+.ShAA_sloganText {
+	font-size: 24px;
+	color: #fff;
+	font-family: PFAgoraSlabPro-Light, Open Sans;
+}
+
+.ShAA_dateText {
+	font-size: 36px;
+	color: #fff;
+	font-family: PFAgoraSlabPro-Regular, Open Sans;
+}
+
+.ShAA_hotspot {
+	background: url(/images/ls_logo_etazhi.png) no-repeat;
+	width: 320px;
+	height: 120px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 30px;
+}
+
+.ShAA_centerImg {
+	height: 285px;
+}
+
+.ShAA_info {
+	font-family: PFAgoraSlabPro-Regular, Open Sans;
+	font-size: 18px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 68px 0 0 0;
+	position: relative;
+	z-index: 2;
+	margin-top: -345px;
+}
+
+.ShAA_buttonInteresting {
+	width: 125px;
+	height: 22px;
+	padding: 10px 0 0;
+	margin: 0 auto;
+	background-color: #323232;
+	cursor: pointer;
+	color: #fff;
+	font-size: 10px;
+	text-align: center;
+}
+
+.ShAA_phone {
+	font-family: PFAgoraSlabPro-Medium, Open Sans;
+	color: #000;
+	font-size: 21px;
+	text-align: center;
+	padding: 20px 0 10px 0;
+}
+.ShAA_address {
+	font-family: PFAgoraSlabPro-Medium, Open Sans;
+	color: #000;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+.ShAA_intLink {
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.instagram {
+    width: 620px;
+    margin: auto;
+}
+
+.SWD_shadow {
+	background-color:rgba(0, 0, 0, 0.5);
+	width: 576px;
+	height: 205px;
+	top: -158px;
+	left: 633px;
+	margin: auto;
+	margin-top: -161px;
+}

@@ -1,0 +1,1 @@
+CREATE TABLE `lsboutique`.`sale_settings` ( `id` INT NOT NULL AUTO_INCREMENT , `brand_id` INT NOT NULL , `season` VARCHAR(20) NOT NULL , `sale` INT NOT NULL DEFAULT '0' , `everyone` TINYINT(1) NOT NULL DEFAULT '1' , `registered` TINYINT(1) NOT NULL DEFAULT '1' , `has_purchase` TINYINT(1) NOT NULL DEFAULT '1' , PRIMARY KEY (`id`), INDEX (`brand_id`)) ENGINE = InnoDB;

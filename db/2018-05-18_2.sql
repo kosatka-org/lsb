@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `sber_order_id` VARCHAR( 64 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;

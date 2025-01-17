@@ -1,0 +1,1 @@
+UPDATE `users` SET `intagramm_user`='' WHERE `intagramm_user`='0'

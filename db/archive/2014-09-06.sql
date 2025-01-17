@@ -1,0 +1,2 @@
+ALTER TABLE  `groups` ADD  `sections` VARCHAR( 512 ) NOT NULL AFTER  `discount`;
+INSERT INTO `groups` (`group_id`, `name`, `discount`, `sections`) VALUES (NULL, 'Копирайтер', '0.00', 'Sections,NewsLine,NewsItem,Articles,Article,Specials,Special,Swd,BrandIcons,Faqs,Faq,Storefront,Product,Categories,Category,Brands,Brand,Colors,Color,Goods,Good');

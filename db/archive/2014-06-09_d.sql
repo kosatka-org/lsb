@@ -1,0 +1,1 @@
+ALTER TABLE  `ostatki` ADD  `picture` VARCHAR( 255 ) NOT NULL;

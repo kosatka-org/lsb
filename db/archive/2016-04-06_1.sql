@@ -1,0 +1,1 @@
+UPDATE `groups` SET  `sections` =  'MainPage,Oneclick,Orders,Users,User,Order,Calls,Call' WHERE  `groups`.`group_id` =5;

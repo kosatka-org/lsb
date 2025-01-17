@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Доставочная накладная</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link media="all" href="css/invoice.css" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+	<div class="ShAA_leftBlock">
+		<div class="ShAA_headInvoice">
+			<div class="ShAA_textBold" style="font-size: 16px;">
+				<div style="padding: 20px 0;">
+					Доставочная накладная<br>
+					<div style="margin: 0 40px;text-align: left;">№ <span class="ShAA_data"></span></div>
+					<br>
+					<div style="margin: 0 40px;text-align: left;">заказ №</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="ShAA_grayCell">
+			<span class="ShAA_titleCell">1. Отправитель:</span>
+		</div>
+		<!--{sender_dataBlock}-->
+		<div class="ShAA_dataBlock">№ договора: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Ф.И.О. отправителя: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Наим.организации: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Область (регион): <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Город: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Адрес: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Телефон: <span class="ShAA_data"></span></div>
+		
+		<div class="ShAA_grayCell">
+			<span class="ShAA_titleCell">2. Получатель:</span>
+		</div>
+		<!--{reciever_dataBlock}-->
+		<div class="ShAA_dataBlock">Ф.И.О. получателя: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Область (регион): <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Город: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Адрес: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">Телефон: <span class="ShAA_data"></span></div>
+		<div class="ShAA_dataBlock">&nbsp;<span class="ShAA_data"></span></div>
+		
+		
+		<div class="ShAA_grayCell">
+			<span class="ShAA_titleCell">3. Способ перевозки:</span>
+		</div>
+		<div>
+			<table width="100%" class="ShAA_tableInvoice" rules="all">
+				<tr>
+					<td>
+						<div style="width: 100%;float: left; margin-top: 10px;">
+							<div class="ShAA_divMiniWithBorder"></div>
+							<div class="ShAA_miniText">Автомобиль</div>
+						</div>
+						<div style="width: 100%;float: left;">
+							<div style="padding: 10px 0px 3px 15px;">Марка ________________________________________</div>
+							<div style="padding: 10px 0px 3px 15px;">Гос. номер ___________________________________</div>
+						</div>
+						<div style="width: 100%;float: left;">
+							<div class="ShAA_divMiniWithBorder"></div>
+							<div class="ShAA_miniText">Поезд </div>
+						</div>
+						<div style="width: 100%;float: left;">
+							<div style="padding: 10px 0px 3px 15px;">Номер _________________________________________</div>
+							<div style="padding: 10px 0px 3px 15px;">Направление ___________________________________</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div style="width: 100%;float: left; margin-top: 10px;">
+							<div class="ShAA_divMiniWithBorder"></div>
+							<div style="padding-bottom:10px;" class="ShAA_miniText">Наличие пломб</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div style="width: 100%;float: left; margin-top: 10px;">
+							<div style="margin: 20px 0px 10px 15px;text-align: left;">Наименование перевозчика  <span class="underlined">   ООО "Тепловик"   </span></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+	</div>
+	
+	<div class="ShAA_centerBlock">
+		<div class="ShAA_headInvoice">
+<!--			<img style="margin-top:20px;" src="/third_party/barcodegen/code.php?text={InvoiceShipmentNumber}" />-->
+			<img style="margin-top:20px;" src="http://www.barcodesinc.com/generator/image.php?code={BarcodeInvoiceShipmentNumber}&style=198&type=C39&width=250&height=100&xres=1&font=6" />
+		</div>
+		
+		<div class="ShAA_grayCell">
+			<span class="ShAA_titleCell">4. Получение материальных ценностей:</span>
+		</div>
+		<div>
+			<table border="0" width="100%" rules="all" class="ShAA_tableInvoice">
+				<tr>
+					<td>Артикул</td>
+					<td>Номенклатура</td>
+					<td style="font-size: 9px;">Кол-во,<br> шт.</td>
+					<td width="80">Стоимость</td>
+					<td>V</td>
+				</tr>
+				<tr>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+					<td><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td colspan=3 style="text-align: right; border-bottom: 1px solid #ddd;">Стоимость товара</td>
+					<td style="text-align: right;"><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td colspan=3 style="text-align: right; border-bottom: 1px solid #ddd;">Стоимость доставки<b></b></td>
+					<td style="text-align: right;"><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td colspan=3 style="text-align: right; border-bottom: 1px solid #ddd;">Предоплата</td>
+					<td style="text-align: right;"><span class="ShAA_data"></span></td>
+				</tr>
+				<tr>
+					<td colspan=3 style="text-align: right;">Общая сумма полного заказа к оплате, руб</td>
+					<td style="text-align: right;"><span class="ShAA_data"></span></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="ShAA_grayCell">
+			<span class="ShAA_titleCell">5. Доставка отправления / груза:</span>
+		</div>
+		<div class="ShAA_dateTime">
+			<div>Ориентировочная дата доставки:&nbsp;"____" ____________ 201__г.<br />Время&nbsp; ____ч. ____мин.</div>
+			<div>Фактическая дата доставки:&nbsp;"____" ____________ 201__г.<br />Время&nbsp; ____ч. ____мин.</div>
+			<div>Документ _____________________________</div>
+			<div>Серия ______ №____________ &nbsp;&nbsp;&nbsp;Тел.____________________</div>
+		</div>
+		
+	</div>
+	
+	<div class="ShAA_rightBlock">
+		<div class="ShAA_headInvoice">
+		<div class="ShAA_grayCell">
+			<span class="ShAA_titleCell">Примечания</span>
+		</div>
+			<div class="ShAA_adress">
+			</div>
+			<div class="ShAA_spsrLogo"></div>
+		</div>
+		
+		<div class="ShAA_grayCellInfo">
+			Я подтверждаю, что отправление принято в закрытом виде, 
+			отсутствуют внешние повреждения упаковки, перевязи, печатей (пломб).
+		</div>
+		<div class="ShAA_signature">
+			<div>Подпись получателя / Расшифровка подписи:</div>
+			<div style="padding-bottom: 15px;">____________________________________________________</div>
+			<div>Подпись представителя / Расшифровка подписи:</div>
+			<div>____________________________________________________</div>
+		</div>
+		<div class="ShAA_grayCellInfo" style="font-weight: bold; padding-bottom: 5px;">
+			Заполняется в случае частичной доставки или при предоплате.
+		</div>
+		<div style="text-align: center; margin: 0 0 10px 0;">
+			Оплаченные товары и услуги выделяются покупателем в таблице
+		</div>
+		<div class="bordered_wrap">
+			<div class="signed_line">итоговая сумма заказа</div><div style="float: left; margin: 4px 3px 4px 3px;">-</div><div class="signed_line">предоплата</div><div style="float: left; margin: 4px 3px 4px 3px;">=</div><div class="signed_line">Общая сумма к оплате</div>
+		</div>
+		<div class="ShAA_clear"></div>
+		<div class="ShAA_line"></div>
+		<div style="font-size: 9px; margin-left: 20px; font-style: italic;">Сумма прописью</div>
+		<div class="ShAA_line"></div>
+		<div class="ShAA_dataBlock" style="padding: 10px 0px 3px 15px;">Подпись покупателя ___________________________________</div>
+		
+		
+	</div>
+</body>
+</html>

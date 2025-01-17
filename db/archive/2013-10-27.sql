@@ -1,0 +1,1 @@
+ALTER TABLE  `orders` ADD  `products_received` INT( 2 ) NOT NULL AFTER  `money_received`;

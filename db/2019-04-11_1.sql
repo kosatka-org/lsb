@@ -1,0 +1,2 @@
+ALTER TABLE `orders` ADD `return_invoice_number` VARCHAR(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `invoice_number`;
+ALTER TABLE `orders` ADD `delivery_return_price` FLOAT(10,2) NOT NULL DEFAULT '0.00' AFTER `delivery_agent_price`;

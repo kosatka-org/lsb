@@ -1,0 +1,3 @@
+ALTER TABLE  `users2shops` ADD  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ,
+ADD  `shop_id` INT NULL DEFAULT NULL AFTER  `id` ,
+ADD INDEX (  `shop_id` ) ;

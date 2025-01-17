@@ -1,0 +1,1 @@
+ALTER TABLE `inkass` ADD `im_inkass` TINYINT(2) NOT NULL AFTER `im_sber_is`;

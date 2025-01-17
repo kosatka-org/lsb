@@ -1,0 +1,7 @@
+ALTER TABLE `payment_methods` ADD `enabled_admin` INT(2) NOT NULL DEFAULT '0' AFTER `enabled`;
+ALTER TABLE `orders` ADD `prepaid_method_id` INT(3) NOT NULL AFTER `payment_prepaid`;
+INSERT INTO `payment_methods` (`payment_method_id`, `module`, `name`, `description`, `eng_name`, `eng_description`, `currency_id`, `is_local`, `params`, `image`, `enabled`, `enabled_admin`) VALUES(20, '', 'Перевод Сбербанк онлайн ', '', 'Sberbank Online', '', 4, 0, '', '', 0, 1);
+INSERT INTO `payment_methods` (`payment_method_id`, `module`, `name`, `description`, `eng_name`, `eng_description`, `currency_id`, `is_local`, `params`, `image`, `enabled`, `enabled_admin`) VALUES(21, '', 'Долг', '', 'Credit', '', 4, 0, '', '', 0, 1);
+INSERT INTO `payment_methods` (`payment_method_id`, `module`, `name`, `description`, `eng_name`, `eng_description`, `currency_id`, `is_local`, `params`, `image`, `enabled`, `enabled_admin`) VALUES(22, '', 'Безналичная оплата', '', '', '', 4, 0, '', '', 0, 1);
+INSERT INTO `payment_methods` (`payment_method_id`, `module`, `name`, `description`, `eng_name`, `eng_description`, `currency_id`, `is_local`, `params`, `image`, `enabled`, `enabled_admin`) VALUES(23, '', 'Терминал при получении: ЕВ', '', '', '', 4, 0, '', '', 0, 1);
+INSERT INTO `payment_methods` (`payment_method_id`, `module`, `name`, `description`, `eng_name`, `eng_description`, `currency_id`, `is_local`, `params`, `image`, `enabled`, `enabled_admin`) VALUES(24, '', 'Терминал при получении: ИВ', '', '', '', 4, 0, '', '', 0, 1);

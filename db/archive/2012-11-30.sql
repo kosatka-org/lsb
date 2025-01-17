@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `wish_list` TEXT NOT NULL AFTER `saved_data`;

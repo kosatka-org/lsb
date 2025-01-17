@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InfoReport>
+    <Order Number="1214733" Date="2018-08-08" DispatchNumber="1000000000" TariffTypeCode="137" Weight="3.805" DeliverySum="135" DateLastChange="2000-01-01 00:00:00" CashOnDeliv="2231"  deliveryMode="3" deliveryVariant="COURIER">
+        <SendCity Code="137" PostCode="190000" Name="Санкт-Петербург"/>
+        <RecCity Code="137" PostCode="190000" Name="Санкт-Петербург"/>
+        <Package Number="_" BarCode="1214733" Weight="1.150" VolumeWeight="2.433" SizeA="23"  SizeB="23" SizeC="23">
+            <Item WareKey="Ботинки40, размер 40" Comment="Мокасины мужские" Cost="665" Payment="665" VATRate="VAT18" VATSum="101.44" Weight="0.590" Amount="1" DelivAmount="0" />
+            <Item WareKey="Ботинки60, размер 40" Comment="Кроссовки мужские" Cost="832" Payment="832" VATRate="VAT18" VATSum="126.92" Weight="0.560" Amount="1" DelivAmount="0" />
+        </Package>
+        <Package Number="_" BarCode="134519516" Weight="0.500" VolumeWeight="1.372" SizeA="19"  SizeB="19" SizeC="19">
+            <Item WareKey="Ботинки10, размер 42" Comment="Кеды мужские" Cost="599" Payment="599" VATRate="VAT18" VATSum="91.37" Weight="0.500" Amount="1" DelivAmount="0" />
+        </Package>
+        <AddedService ServiceCode="2" Sum="0.01" />
+    </Order>
+</InfoReport>

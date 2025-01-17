@@ -1,0 +1,8 @@
+<div class="social_login" style="width:100%;">
+    {if $settings->vk_login_client_id}<a href="http://oauth.vk.com/authorize?client_id={$settings->vk_login_client_id}&redirect_uri=http://{$server_name}/login?net-work=vkontakte&response_type=code"><img src="/design/default/images/login_ico_vk.png" alt="" /></a>{/if}
+    {if $settings->ok_login_client_id}<a href="http://www.odnoklassniki.ru/oauth/authorize?client_id={$settings->ok_login_client_id}&response_type=code&redirect_uri=http://{$server_name}/login?net-work=odnoklassniki"><img src="/design/default/images/login_ico_ok.png" alt="" /></a>{/if}
+    {if $settings->mail_login_client_id}<a href="https://connect.mail.ru/oauth/authorize?client_id={$settings->mail_login_client_id}&response_type=code&redirect_uri=http://{$server_name}/login?net-work=mailru"><img src="/design/default/images/login_ico_mail.png" alt="" /></a>{/if}
+    {if $settings->fb_login_client_id}<a href="https://www.facebook.com/dialog/oauth?client_id={$settings->fb_login_client_id}&redirect_uri=http://{$server_name}/login?net-work=facebook&response_type=code&scope=email"><img src="/design/default/images/login_ico_fb.png" alt="" /></a>{/if}
+    <!--{if $settings->google_login_client_id}<a href="https://accounts.google.com/o/oauth2/auth?redirect_uri=http://{$server_name}/login?net-work=google&response_type=code&client_id={$settings->google_login_client_id}&scope=https://www.googleapis.com/auth/userinfo.profile"><img src="/design/default/images/login_ico_google.png" alt="" /></a>{/if}-->
+    {if $settings->yandex_login_client_id}<a href="https://oauth.yandex.ru/authorize?client_id={$settings->yandex_login_client_id}&response_type=code&display=popup"><img src="/design/default/images/login_ico_yandex.png" alt="" /></a>{/if}
+</div>

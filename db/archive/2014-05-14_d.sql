@@ -1,0 +1,1 @@
+ALTER TABLE  `users_calls` ADD  `shops` VARCHAR( 1024 ) NOT NULL COMMENT  'магазины через запятую' AFTER  `shop`

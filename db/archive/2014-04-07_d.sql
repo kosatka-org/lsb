@@ -1,0 +1,1 @@
+ALTER IGNORE TABLE  `lsboutique`.`users_calls_log` ADD UNIQUE  `unique_pair` (  `user_id` ,  `call_id` )

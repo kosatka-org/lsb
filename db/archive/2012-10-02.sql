@@ -1,0 +1,1 @@
+ALTER TABLE `categories` ADD `weight` DECIMAL( 4, 2 ) NOT NULL DEFAULT '0' COMMENT 'Примерный вес товара в категории, для расчета стоимости' AFTER `description`;

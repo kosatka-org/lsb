@@ -1,0 +1,1 @@
+ALTER TABLE  `sms_history` ADD  `clients_count` INT( 16 ) NOT NULL

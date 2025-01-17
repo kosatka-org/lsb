@@ -1,0 +1,146 @@
+doctype html
+html
+  head
+    title Анкета товара
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    script src="https://code.jquery.com/jquery-2.1.4.min.js"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+    javascript:
+      !function(e,i){if("function"==typeof define&&define.amd)define(["exports","jquery"],function(e,r){return i(e,r)});else if("undefined"!=typeof exports){var r=require("jquery");i(exports,r)}else i(e,e.jQuery||e.Zepto||e.ender||e.$)}(this,function(e,i){function r(e,r){function n(e,i,r){return e[i]=r,e}function a(e,i){for(var r,a=e.match(t.key);void 0!==(r=a.pop());)if(t.push.test(r)){var u=s(e.replace(/\[\]$/,""));i=n([],u,i)}else t.fixed.test(r)?i=n([],r,i):t.named.test(r)&&(i=n({},r,i));return i}function s(e){return void 0===h[e]&&(h[e]=0),h[e]++}function u(e){switch(i('[name="'+e.name+'"]',r).attr("type")){case"checkbox":return"on"===e.value?!0:e.value;default:return e.value}}function f(i){if(!t.validate.test(i.name))return this;var r=a(i.name,u(i));return l=e.extend(!0,l,r),this}function d(i){if(!e.isArray(i))throw new Error("formSerializer.addPairs expects an Array");for(var r=0,t=i.length;t>r;r++)this.addPair(i[r]);return this}function o(){return l}function c(){return JSON.stringify(o())}var l={},h={};this.addPair=f,this.addPairs=d,this.serialize=o,this.serializeJSON=c}var t={validate:/^[a-z_][a-z0-9_]*(?:\[(?:\d*|[a-z0-9_]+)\])*$/i,key:/[a-z0-9_]+|(?=\[\])/gi,push:/^$/,fixed:/^\d+$/,named:/^[a-z0-9_]+$/i};return r.patterns=t,r.serializeObject=function(){return new r(i,this).addPairs(this.serializeArray()).serialize()},r.serializeJSON=function(){return new r(i,this).addPairs(this.serializeArray()).serializeJSON()},"undefined"!=typeof i.fn&&(i.fn.serializeObject=r.serializeObject,i.fn.serializeJSON=r.serializeJSON),e.FormSerializer=r,r});
+
+  body
+    .container
+      h1 Анкета товара
+      select class="form-control" id="select"
+        option value="1" selected="true" Обувь
+        option value="2" Трикотаж
+        option value="3" Верхняя одежда
+        option value="4" Рубашки
+        option value="5" Пиджаки
+      .row style="margin-bottom:30px;"
+        form id="form" action="/rest_api/product_form" method="POST" enctype="multipart/form-data"
+          .col-md-6
+
+            .form-group
+              label for="sku" Артикул
+              input type="text" class="form-control" name="sku" id="sku"
+            .form-group
+              label for="sizes" Размеры
+              input type="text" class="form-control" name="sizes" id="sizes"
+            .form-group
+              label for="model" Название модели
+              input type="text" class="form-control" name="model" id="model"
+            .form-group
+              label for="brand_name" Брендовое имя
+              input type="text" class="form-control" name="brand_name" id="brand_name"
+            .form-group
+              label for="contains" Состав
+              input type="text" class="form-control" name="contains" id="contains"
+
+            .radio
+              label
+                input type="radio" name="formal" id="formal1" value="Формальная (классическая)"
+                | Формальная (классическая)
+            .radio
+              label
+                input type="radio" name="formal" id="formal3" value="Неформальная (casual, sport)"
+                | Неформальная (casual, sport)
+
+            .h3 Цвет
+            .row
+              .col-xs-6
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Черный (серый)" Черный (серый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Белый" Белый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Коричневый (рыжий,бежевый)" Коричневый (рыжий,бежевый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Синий (голубой, бирюзовый)" Синий (голубой, бирюзовый)
+              .col-xs-6
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Красный (бордовый)" Красный (бордовый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Зеленый" Зеленый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Желтый" Желтый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Яркие цвета (электрики, кислотные цвета и т.д.)" Яркие цвета (электрики, кислотные цвета и т.д.)
+
+            .h3 Тип подошвы
+            .radio
+              label
+                input type="radio" name="sole" id="sole1" value="Кожа" Кожа
+            .radio
+              label
+                input type="radio" name="sole" id="sole2" value="Профилактика" Профилактика
+            .radio
+              label
+                input type="radio" name="sole" id="sole3" value="Резина" Резина
+
+            .form-group
+              label for="heel" высота/форма каблука
+              input type="text" class="form-control" name="heel" id="heel" placeholder="например: каблук-шпилька 10 см, или плоский широкий каблук 8 см"
+
+            .form-group
+              label for="material" вид кожи или материала
+              input type="text" class="form-control" name="material" id="material" placeholder="например: теленок, овца, крокодил или - каучуковая подошва"
+
+            .form-group
+              label for="special_material" эксклюзивный материал
+              input type="text" class="form-control" name="special_material" id="special_material" placeholder="например: кожа наппа, плетение, водозащита"
+
+          .col-md-6
+            .h3 Сезон
+            .radio
+              label
+                input type="radio" name="season" id="season1" value="Лето" Лето
+            .radio
+              label
+                input type="radio" name="season" id="season2" value="Весь год" Весь год
+            .radio
+              label
+                input type="radio" name="season" id="season3" value="Зима" Зима
+
+            .h3 Внутри (для зимнего сезона)
+            .form-group
+              label for="fur" Мех
+              input type="text" class="form-control" name="fur" id="fur"
+            .form-group
+              label for="shoe_inside" Материал
+              input type="text" class="form-control" name="shoe_inside" id="shoe_inside"
+            .form-group
+              label for="insole" Стелька
+              input type="text" class="form-control" name="insole" id="insole"
+
+            h3 Комментарии
+            .form-group
+              textarea class="form-control" name="comments" id="comments" rows="4" autocomplete="off"
+
+            .form-group
+              label for="photo" Фотография товара
+              input type="file" name="photo" id="photo" accept="image/*" capture="camera"
+
+            button type="submit" id="submit" class="btn btn-primary" Отправить
+            button type="button" id="reset" class="btn btn-default" style="margin-left:10px;" Очистить
+
+  javascript:
+    $('#select').on('change', function() {
+      event.preventDefault();
+      window.location = $(this).val();
+    });
+
+    $('#reset').on('click', function() {
+      event.preventDefault();
+      $('input').val("");
+      $('input').attr("checked", false);
+    });

@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `delivery_date` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00' AFTER `delivery_price` ;

@@ -1,0 +1,35 @@
+<?php
+
+class Config {
+    var $dbname         = "lsboutique";
+    var $dbhost         = "localhost";
+    var $dbuser         = "vagrant";
+    var $dbpass         = "vagrant";
+    var $lang           = 'rus';
+    var $debug          = false;
+    var $demo           = false;
+    var $enviroment     = 'development';
+    var $mobile_enabled = true;
+    var $homeRegion     = "NOVGOROD";
+    var $vk_app_id      = "3062721";
+    var $max_price_delivery = 10000;
+    var $support_name   = 'Лакшери Стор';
+    var $support_private_phone = '+79200277337';
+    var $support_email  = 'mail@lsboutique.ru';
+    var $support_email2 = 'mail@lsboutique.ru';
+    var $support_phone  = '8 800 333 2138';
+    var $support_link   = 'https://issa.mangotele.com/widget/MTAzOTY4';
+
+    var $smsru_key  = '';
+    var $smsru_log  = '';
+    var $smsru_pwd  = '';
+
+    var $poni_key   = '';
+
+    var $rees64_SHOP_ID = '';
+
+    var $rfi_key      = '';
+    var $rfi_open_key = '';
+
+    var $mixmarket_on = false;
+}

@@ -1,0 +1,1 @@
+INSERT INTO `bookmarks` (`id`, `name`) VALUES (NULL, 'Отчет по кассам');

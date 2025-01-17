@@ -1,0 +1,1 @@
+INSERT INTO `modules` (`module_id`, `class`, `name`, `valuable`) VALUES (NULL, 'Artioli', 'Artioli', '0'), (NULL, 'Kiton', 'Kiton', '0'), (NULL, 'Loro_Piana', 'Loro Piana', '0'), (NULL, 'Zilli', 'Zilli', '0'), (NULL, 'Celine', 'Celine', '0');

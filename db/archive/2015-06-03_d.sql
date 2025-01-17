@@ -1,0 +1,1 @@
+ALTER TABLE  `products` ADD  `special_sale` TINYINT( 1 ) NOT NULL DEFAULT  '0';

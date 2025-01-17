@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style_mobile.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+</head>
+<title></title>
+<body>
+	<div class="content">
+		<a href="" title="" alt="">
+			<div class="menu_icon"></div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="logo">
+				<img src="images/logo.png" title="" alt="">
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="bag">
+				<div class="bag_num">10</div>
+			</div>
+		</a>
+		<div class="divider" style="margin: 0 0 20px 0;"></div>
+		<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css" />
+		<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+		<script type="text/javascript" src="js/jquery.validationEngine-ru.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#order_form").validationEngine("attach");
+			});
+		</script>
+		<form id="order_form">
+			<div class="centered_text normal_text">
+				Оформление закза
+			</div>
+			<div class="centered_text text_input-hint item_text2">
+				Ваше имя
+			</div>
+			<div class="input_wrap"><input type="text" class="text_input validate[required]" placeholder="Имя" name=""></div>
+			<div class="centered_text text_input-hint item_text2">
+				Номер телефона
+			</div>
+			<div class="input_wrap"><input type="text" class="text_input validate[required,custom[phone]]" placeholder="+7  . . .  . . .  . .  . ." name=""></div>
+			<div class="centered_text text_input-hint item_text2">
+				Электронная почта
+			</div>
+			<div class="input_wrap"><input type="text" class="text_input validate[required,custom[email]]" placeholder="name@domen.com" name=""></div>
+			<div class="centered_text text_input-hint item_text2">
+				Город доставки
+			</div>
+			<div class="Select_wrap">
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$(document).on('click', ".Select_wrap", function(){
+							$(this).children(".Select_options").toggle();
+						});
+					});
+				</script>
+				<div class="Select_input">
+					<div class="Selected_option">Казань</div>
+					<div class="Select_arr"></div>
+				</div>
+				<div class="Select_options">
+					<div class="Select_option"><div class="Select_inner_block">Казань</div></div>
+					<div class="Select_option"><div class="Select_inner_block">Казань</div></div>
+					<div class="Select_option"><div class="Select_inner_block">Казань</div></div>
+					<div class="Select_option"><div class="Select_inner_block">Казань</div></div>
+				</div>
+				<input type="text" class="hidden_field validate[required]" id="category_id" name="form[category_id]" value="0">
+			</div>
+			<div class="centered_text text_input-hint item_text2">
+				Адрес доставки
+			</div>
+			<div class="input_wrap"><input type="text" class="text_input validate[required]" placeholder="улица, дом, квавртира" name=""></div>
+			<script>
+				$(document).ready(function(){
+					$(".button").mousedown(function(){
+						$(this).addClass("mousedown");
+					});
+					$(".button").mouseup(function(){
+						$(this).removeClass("mousedown");
+					});
+					$(".button").mouseleave(function(){
+						$(this).removeClass("mousedown");
+					});
+				});
+			</script>
+			<a href="" title="" alt="">
+				<div class="button button240px button_text" style="margin: 40px 0 0 200px;">
+					Готово
+				</div>
+			</a>
+		</form>
+		<div class="divider" style="margin: 19px 0 0;"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+ALTER TABLE  `users` ADD  `last_api_login_date` TIMESTAMP NOT NULL DEFAULT  '0000-00-00 00:00:00'

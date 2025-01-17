@@ -1,0 +1,3 @@
+ALTER TABLE `inkass` ADD `confirm_date` DATETIME NOT NULL AFTER `confirmed`;
+ALTER TABLE `inkassators` ADD `name` VARCHAR(150) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `user_id`;
+INSERT INTO `inkassators` (`id`, `user_id`, `name`, `phone`) VALUES (NULL, '0', 'Всеволод Николаевич', '79290499911,79202969000'), (NULL, '0', 'Елена Николаевна', '79107969800'), (NULL, '0', 'Илья Жехарев', '79200052727,79290502727'), (NULL, '0', 'Иван Шмонин', '7951 9039402'), (NULL, '0', 'Евгений Всеволодович', '89875555557');

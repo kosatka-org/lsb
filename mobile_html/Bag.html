@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style_mobile.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+</head>
+<title></title>
+<body>
+	<div class="content">
+		<div class="menu">
+			<div class="user_field">
+				<div class="user_field_image"><img src="images/u46_normal.png" alt="" title=""></div>
+				<div class="user_field_info">
+					<div class="centered_text normal_text">
+						Костин Алексей
+					</div>
+					<div class="centered_text user_info_text2">
+						Карта № 0033 0033 0033 0033, скидка 10%
+					</div>
+				</div>
+			</div>
+			<div class="divider" style="margin: 0;"></div>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Корзина
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Отложено
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Заказы
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Редактировать данные
+				</div>
+			</a>
+			<div class="divider" style="margin: 0;"></div>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Обувь
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Сумки
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Аксессуары
+				</div>
+			</a>
+			<div class="divider" style="margin: 0;"></div>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Распродажа
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Дизайнеры
+				</div>
+			</a>
+			<div class="divider" style="margin: 0;"></div>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Корзина
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Доставка
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Оплата
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button560px_black button_text_white">
+					Вопросы
+				</div>
+			</a>
+			<div class="divider" style="margin: 0;"></div>
+			<a href="" title="" alt="">
+				<div class="button button560px button_text" style="margin: 0;">
+					Классическая версия сайта
+				</div>
+			</a>
+		</div>
+		<div class="menu_icon"></div>
+		<script>
+			$(document).ready(function(){
+				$(".menu_icon").click(function(){
+					$(".menu").fadeToggle(700);
+					var con_height = $(".content").attr("style");
+					if (con_height == undefined) {
+						$(".content").height($(".menu").height() + 220);
+					}
+					else {
+						$(".content").removeAttr("style");
+					}
+				});
+			});
+		</script>
+		<a href="" title="" alt="">
+			<div class="logo">
+				<img src="images/logo.png" title="" alt="">
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="bag">
+				<div class="bag_num">10</div>
+			</div>
+		</a>
+		<div class="divider" style="margin: 0 0 10px 0;"></div>
+		<script>
+			$(document).ready(function(){
+				$(".button").mousedown(function(){
+					$(this).addClass("mousedown");
+				});
+				$(".button").mouseup(function(){
+					$(this).removeClass("mousedown");
+				});
+				$(".button").mouseleave(function(){
+					$(this).removeClass("mousedown");
+				});
+			});
+		</script>
+		<div class="centered_text alert_text">
+			В корзине 4 вещи на 75000р
+		</div>
+		<div class="item_wrap" style="margin: -20px 0 0;">
+			<script>
+				$(document).ready(function(){
+					$(".item_image").mouseenter(function(){
+						$(this).find(".img_normal").hide();
+						$(this).find(".img_mouseOver").show();
+					});
+					$(".item_image").mouseleave(function(){
+						$(this).find(".img_normal").show();
+						$(this).find(".img_mouseOver").hide();
+					});
+				});
+			</script>
+			<div class="item_container">
+				<a href="" title="" alt="">
+					<table class="item_image">
+						<tbody><tr>
+							<td>
+								<img title="" alt="" src="images/item_normal.png" class="img_normal" style="display: block;">
+								<img title="" alt="" src="images/item_mouseOver.png" class="img_mouseOver" style="display: none;">
+							</td>
+						</tr>
+					</tbody></table>
+				</a>
+				<div class="item_text">
+					<div class="item_text-name">Кофта</div>
+					<a href="" title="" alt=""><div class="item_text-brand">ZILLI</div></a>
+					<div class="item_text-price">за 45000</div>
+				</div>
+			</div>
+			<div class="item_container">
+				<a href="" title="" alt="">
+					<table class="item_image">
+						<tbody><tr>
+							<td>
+								<img title="" alt="" src="images/item_normal.png" class="img_normal" style="display: block;">
+								<img title="" alt="" src="images/item_mouseOver.png" class="img_mouseOver" style="display: none;">
+							</td>
+						</tr>
+					</tbody></table>
+				</a>
+				<div class="item_text">
+					<div class="item_text-name">Кофта</div>
+					<a href="" title="" alt=""><div class="item_text-brand">ZILLI</div></a>
+					<div class="item_text-price">за 45000</div>
+				</div>
+			</div>
+			<div class="item_container">
+				<a href="" title="" alt="">
+					<table class="item_image">
+						<tbody><tr>
+							<td>
+								<img title="" alt="" src="images/item_normal.png" class="img_normal">
+								<img title="" alt="" src="images/item_mouseOver.png" class="img_mouseOver" style="display: none;">
+							</td>
+						</tr>
+					</tbody></table>
+				</a>
+				<div class="item_text">
+					<div class="item_text-name">Кофта</div>
+					<a href="" title="" alt=""><div class="item_text-brand">ZILLI</div></a>
+					<div class="item_text-price">за 45000</div>
+				</div>
+			</div>
+			<div class="item_container">
+				<a href="" title="" alt="">
+					<table class="item_image">
+						<tbody><tr>
+							<td>
+								<img title="" alt="" src="images/item_normal.png" class="img_normal">
+								<img title="" alt="" src="images/item_mouseOver.png" class="img_mouseOver" style="display: none;">
+							</td>
+						</tr>
+					</tbody></table>
+				</a>
+				<div class="item_text">
+					<div class="item_text-name">Кофта</div>
+					<a href="" title="" alt=""><div class="item_text-brand">ZILLI</div></a>
+					<div class="item_text-price">за 45000</div>
+				</div>
+			</div>
+		</div>
+		<div class="button_wrap" style="margin: 10px 0 25px 40px;">
+			<a href="" title="" alt="">
+				<div class="button button200px_black button_text_white" style="margin: 0 43px 0 0;">
+					Купить
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button320px button_text">
+					Продолжить покупки
+				</div>
+			</a>
+		</div>
+		<div class="centered_text alert_text">
+			Доставка и оплата
+		</div>
+		<div class="left_text descr_text" style="margin: 30px 0 30px 40px;">
+			Доставка бесплатно! Курьером до двери. Оплата наличными курьеру по факту получения заказа. Оплата банковской картой через RBK money.
+		</div>
+		<div class="divider" style="margin: 10px 0 10px 0;"></div>
+	</div>
+</body>
+</html>

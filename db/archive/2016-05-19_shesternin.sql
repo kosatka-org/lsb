@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `from_mixmarket` TINYINT UNSIGNED NOT NULL DEFAULT '0' COMMENT 'определяем откуда заказ';

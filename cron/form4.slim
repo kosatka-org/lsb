@@ -1,0 +1,238 @@
+doctype html
+html
+  head
+    title Анкета товара
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    script src="https://code.jquery.com/jquery-2.1.4.min.js"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+    javascript:
+      !function(e,i){if("function"==typeof define&&define.amd)define(["exports","jquery"],function(e,r){return i(e,r)});else if("undefined"!=typeof exports){var r=require("jquery");i(exports,r)}else i(e,e.jQuery||e.Zepto||e.ender||e.$)}(this,function(e,i){function r(e,r){function n(e,i,r){return e[i]=r,e}function a(e,i){for(var r,a=e.match(t.key);void 0!==(r=a.pop());)if(t.push.test(r)){var u=s(e.replace(/\[\]$/,""));i=n([],u,i)}else t.fixed.test(r)?i=n([],r,i):t.named.test(r)&&(i=n({},r,i));return i}function s(e){return void 0===h[e]&&(h[e]=0),h[e]++}function u(e){switch(i('[name="'+e.name+'"]',r).attr("type")){case"checkbox":return"on"===e.value?!0:e.value;default:return e.value}}function f(i){if(!t.validate.test(i.name))return this;var r=a(i.name,u(i));return l=e.extend(!0,l,r),this}function d(i){if(!e.isArray(i))throw new Error("formSerializer.addPairs expects an Array");for(var r=0,t=i.length;t>r;r++)this.addPair(i[r]);return this}function o(){return l}function c(){return JSON.stringify(o())}var l={},h={};this.addPair=f,this.addPairs=d,this.serialize=o,this.serializeJSON=c}var t={validate:/^[a-z_][a-z0-9_]*(?:\[(?:\d*|[a-z0-9_]+)\])*$/i,key:/[a-z0-9_]+|(?=\[\])/gi,push:/^$/,fixed:/^\d+$/,named:/^[a-z0-9_]+$/i};return r.patterns=t,r.serializeObject=function(){return new r(i,this).addPairs(this.serializeArray()).serialize()},r.serializeJSON=function(){return new r(i,this).addPairs(this.serializeArray()).serializeJSON()},"undefined"!=typeof i.fn&&(i.fn.serializeObject=r.serializeObject,i.fn.serializeJSON=r.serializeJSON),e.FormSerializer=r,r});
+
+  body
+    .container
+      h1 Анкета товара
+      select class="form-control" id="select"
+        option value="1" Обувь
+        option value="2" Трикотаж
+        option value="3" Верхняя одежда
+        option value="4" selected="true" Рубашки
+        option value="5" Пиджаки
+      .row style="margin-bottom:30px;"
+        form id="form" action="/rest_api/product_form" method="POST" enctype="multipart/form-data"
+          .col-md-6
+
+            .form-group
+              label for="sku" Артикул
+              input type="text" class="form-control" name="sku" id="sku"
+            .form-group
+              label for="sizes" Размеры
+              input type="text" class="form-control" name="sizes" id="sizes"
+            .form-group
+              label for="model" Название модели
+              input type="text" class="form-control" name="model" id="model"
+            .form-group
+              label for="brand_name" Брендовое имя (если есть)
+              input type="text" class="form-control" name="brand_name" id="brand_name"
+            .form-group
+              label for="firm_tech" Фирменные характеристики, материалы и технологии
+              input type="text" class="form-control" name="firm_tech" id="firm_tech"
+
+            .h3 Состав
+            .radio
+              label
+                input type="radio" name="contains" value="Лен"
+                | Лен
+            .radio
+              label
+                input type="radio" name="contains" value="Хлопок"
+                | Хлопок
+            .radio
+              label
+                input type="radio" name="contains" value="Шелк"
+                | Шелк
+            .radio
+              label
+                input type="radio" name="contains" value="Другое"
+                | Другое
+
+            .h3 Воротник рубашки
+            .radio
+              label
+                input type="radio" name="shirt_neck" value="Бабочка"
+                | На пуговицах
+            .radio
+              label
+                input type="radio" name="shirt_neck" value="На 'скрытых пуговицах'"
+                | На 'скрытых пуговицах'
+            .radio
+              label
+                input type="radio" name="shirt_neck" value="Классический"
+                | Классический
+            .radio
+              label
+                input type="radio" name="shirt_neck" value="Короткий"
+                | Короткий
+            .radio
+              label
+                input type="radio" name="shirt_neck" value="На булавке"
+                | На булавке
+            .radio
+              label
+                input type="radio" name="shirt_neck" value="Бабочка"
+                | Бабочка
+            .radio
+              label
+                input type="radio" name="shirt_neck" value="На кнопке"
+                | На кнопке
+              .radio
+              label
+                input type="radio" name="shirt_neck" value="Закругленные концы"
+                | Закругленные концы
+
+            .h3 Передняя сторона рубашки
+            .radio
+              label
+                input type="radio" name="shirt_front" value="Планка"
+                | Планка
+            .radio
+              label
+                input type="radio" name="shirt_front" value="Карман"
+                | Карман
+            .radio
+              label
+                input type="radio" name="shirt_front" value="Жабо"
+                | Жабо
+            .radio
+              label
+                input type="radio" name="shirt_front" value="Без всего"
+                | Без всего
+
+            .h3 Задняя сторона рубашки
+            .radio
+              label
+                input type="radio" name="shirt_back" value="Вытачки"
+                | Вытачки
+            .radio
+              label
+                input type="radio" name="shirt_back" value="2 защипа"
+                | 2 защипа
+            .radio
+              label
+                input type="radio" name="shirt_back" value="Центральный защип"
+                | Центральный защип
+            .radio
+              label
+                input type="radio" name="shirt_back" value="Без всего"
+                | Без всего
+
+          .col-md-6
+            .h3 Манжет
+            .radio
+              label
+                input type="radio" name="shirt_manzhet" value="Пуговица"
+                | Пуговица
+            .radio
+              label
+                input type="radio" name="shirt_manzhet" value="Запонка"
+                | Запонка
+            .radio
+              label
+                input type="radio" name="shirt_manzhet" value="Мультифункциональный (пуговица и запонка)"
+                | Мультифункциональный (пуговица и запонка)
+
+
+            .h3 Цвет
+            .row
+              .col-xs-6
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Черный (серый)" Черный (серый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Белый" Белый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Коричневый (рыжий,бежевый)" Коричневый (рыжий,бежевый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Синий (голубой, бирюзовый)" Синий (голубой, бирюзовый)
+              .col-xs-6
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Красный (бордовый)" Красный (бордовый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Зеленый" Зеленый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Желтый" Желтый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Яркие цвета (электрики, кислотные цвета и т.д.)" Яркие цвета (электрики, кислотные цвета и т.д.)
+
+
+            .h3 Узор
+            .radio
+              label
+                input type="radio" name="pattern" value="Полоска"
+                | Полоска
+            .radio
+              label
+                input type="radio" name="pattern" value="Клетка"
+                | Клетка
+            .radio
+              label
+                input type="radio" name="pattern" value="Однотонный"
+                | Однотонный
+            .radio
+              label
+                input type="radio" name="pattern" value="Принт"
+                | Принт
+
+            .h3 Посадка
+            .radio
+              label
+                input type="radio" name="fit" value="Супер приталенная (super slim)"
+                | Супер приталенная (super slim)
+            .radio
+              label
+                input type="radio" name="fit" value="Приталенная (slim)"
+                | Приталенная (slim)
+            .radio
+              label
+                input type="radio" name="fit" value="Классическая (regular)"
+                | Классическая (regular)
+
+
+            h3 Комментарии
+            .form-group
+              textarea class="form-control" name="comments" id="comments" rows="4" autocomplete="off"
+
+            .form-group
+              label for="photo" Фотография товара
+              input type="file" name="photo" id="photo" accept="image/*" capture="camera"
+
+            button type="submit" id="submit" class="btn btn-primary" Отправить
+            button type="button" id="reset" class="btn btn-default" style="margin-left:10px;" Очистить
+
+  javascript:
+    /* $('#form').on('submit', function() {
+      event.preventDefault();
+      $.post("https://lsboutique.ru/rest_api/product_form", $( this ).serializeJSON(), function() {
+        alert("Анкета успешно отправлена");
+        $('input').val("");
+        $('input').attr("checked", false);
+      });
+    }); */
+
+    $('#select').on('change', function() {
+      event.preventDefault();
+      window.location = $(this).val();
+    });
+
+    $('#reset').on('click', function() {
+      event.preventDefault();
+      $('input').val("");
+      $('input').attr("checked", false);
+    });

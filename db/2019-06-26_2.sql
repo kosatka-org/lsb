@@ -1,0 +1,1 @@
+CREATE TABLE `lsboutique`.`delivery_prices` ( `id` INT NOT NULL AUTO_INCREMENT , `delivery_method_id` INT NOT NULL , `city_id` INT NOT NULL , `price` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

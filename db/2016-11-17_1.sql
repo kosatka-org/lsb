@@ -1,0 +1,1 @@
+ALTER TABLE  `users` DROP `ios_app_token`;

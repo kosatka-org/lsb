@@ -1,0 +1,3 @@
+ALTER TABLE `delivery_companies` ADD `track_link` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `phone`;
+UPDATE `delivery_companies` SET `track_link` = 'https://www.cdek.ru/track.html?order_id=' WHERE `delivery_companies`.`id` = 5;
+UPDATE `delivery_companies` SET `track_link` = 'https://www.ponyexpress.ru/support/servisy-samoobsluzhivaniya/track/?_&trace_ids=' WHERE `delivery_companies`.`id` = 4;

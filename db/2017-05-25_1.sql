@@ -1,0 +1,1 @@
+ALTER TABLE `product_views` ADD `app_view` TINYINT( 2 ) NOT NULL DEFAULT '0';

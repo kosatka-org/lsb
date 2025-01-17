@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style_mobile.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+</head>
+<title></title>
+<body>
+	<div class="content">
+		<a href="" title="" alt="">
+			<div class="menu_icon"></div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="logo">
+				<img src="images/logo.png" title="" alt="">
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="bag">
+				<div class="bag_num">10</div>
+			</div>
+		</a>
+		<div class="divider" style="margin: 0;"></div>
+		<script>
+			$(document).ready(function(){
+				$(".button").mousedown(function(){
+					$(this).addClass("mousedown");
+				});
+				$(".button").mouseup(function(){
+					$(this).removeClass("mousedown");
+				});
+				$(".button").mouseleave(function(){
+					$(this).removeClass("mousedown");
+				});
+			});
+		</script>
+		<a href="" title="" alt="">
+			<div class="button button560px button_text">
+				Одежда
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="button button560px button_text">
+				Обувь
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="button button560px button_text">
+				Аксессуары
+			</div>
+		</a>
+		<div class="button_wrap" style="margin: 10px 0 10px 40px;">
+			<a href="" title="" alt="">
+				<div class="button button240px button_text" style="margin: 0 83px 0 0;">
+					Что нового
+				</div>
+			</a>
+			<a href="" title="" alt="">
+				<div class="button button240px button_text">
+					Дизайнеры
+				</div>
+			</a>
+		</div>
+		<a href="" title="" alt="">
+			<div class="button button560px button_text">
+				Outlet
+			</div>
+		</a>
+		<div class="divider" style="margin: 0;"></div>
+		<form>
+			<div class="input_wrap" style="margin: 10px 40px;"><input type="text" class="text_input" placeholder="Поиск по названию, бренду или артикулу" name=""></div>
+		</form>
+		<div class="divider"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style_mobile.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+</head>
+<title></title>
+<body>
+	<div class="content">
+		<a href="" title="" alt="">
+			<div class="menu_icon"></div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="logo">
+				<img src="images/logo.png" title="" alt="">
+			</div>
+		</a>
+		<a href="" title="" alt="">
+			<div class="bag">
+				<div class="bag_num">10</div>
+			</div>
+		</a>
+		<div class="divider" style="margin: 0 0 10px 0;"></div>
+		<script>
+			$(document).ready(function(){
+				$(".button").mousedown(function(){
+					$(this).addClass("mousedown");
+				});
+				$(".button").mouseup(function(){
+					$(this).removeClass("mousedown");
+				});
+				$(".button").mouseleave(function(){
+					$(this).removeClass("mousedown");
+				});
+			});
+		</script>
+		<div class="centered_text alert_text">
+			Бесплатная доставка
+		</div>
+		<div class="left_text2 descr_text" style="margin: 30px 0 30px 80px;">
+			Бесплатная доставка осуществляется в любой регион России при заказе товара на сумму более 10000 рублей.
+		</div>
+		<div class="centered_text alert_text">
+			Курьерская доставка
+		</div>
+		<div class="left_text2 descr_text" style="margin: 30px 0 30px 80px;">
+			Стоимость доставки определяется в соответствии с тарифами СПСР и зависит от веса, стоимости товара и места назначения.
+		</div>
+		<div class="centered_text alert_text">
+			Самовывоз
+		</div>
+		<div class="left_text2 descr_text" style="margin: 30px 0 30px 80px;">
+			Вы можете оплатить или отложить понравившийся вам товар и забрать его самостоятельно. (Только по Нижнему Новгороду).
+		</div>
+		<a href="" title="" alt="">
+			<div class="button button320px button_text" style="margin: 10px 0 10px 160px;">
+				Задать вопрос
+			</div>
+		</a>
+		<div class="divider" style="margin: 10px 0 10px 0;"></div>
+	</div>
+</body>
+</html>

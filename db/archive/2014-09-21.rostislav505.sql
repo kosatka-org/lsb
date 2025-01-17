@@ -1,0 +1,1 @@
+ALTER TABLE  `copywriters_tasks` ADD  `task_comment` VARCHAR( 255 ) NOT NULL AFTER  `field`;

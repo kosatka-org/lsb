@@ -1,0 +1,1 @@
+ALTER TABLE `users` CHANGE `cashbox_ids` `cashbox_ids` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Id кассы к которым прикреплен аккаунт менеджера-кассира';

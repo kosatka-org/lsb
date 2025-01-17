@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS `shop_names` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `shop_id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

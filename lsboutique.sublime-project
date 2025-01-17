@@ -1,0 +1,11 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+            "folder_exclude_patterns": ["node_modules", ".svn", ".git", ".vagrant", "third_party", "vendor"],
+            "file_exclude_patterns": ["*compiled/*.php"],
+            "default_line_ending": "unix"
+		}
+	]
+}

@@ -1,0 +1,11 @@
+.pbar .ui-progressbar-value {display:block !important}
+	.pbar {overflow: hidden}
+	.percent {position:relative;text-align: right;}
+	.elapsed {position:relative;text-align: right;}
+	.ShAA_progressBarBlock .ui-widget-content {
+		width: 100% !important;
+		height: 20px !important;
+	}
+	.ShAA_progressBarBlock .pbar .ui-progressbar-value {
+		background: rgb(216, 0, 104) none repeat scroll 0 0 !important;
+	}	

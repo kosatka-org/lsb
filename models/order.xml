@@ -1,0 +1,40 @@
+<root xmlns="http://spsr.ru/webapi/xmlconverter/1.3">
+    <Params Name="WAXmlConverter" Ver="1.3" xmlns="http://spsr.ru/webapi/WA/1.0" />
+    <Login SID="LoginSID"/>
+    <XmlConverter>
+        <GeneralInfo
+                    TotalCOD="InvoiceInsuranceSum"
+                    TotalInsurance="InvoiceInsuranceSum"
+                    ContractNumber="LoginIKN">
+        <Invoice    CODDeliverySum="InvoiceDeliverySum"
+                    CODGoodsSum="InvoiceGoodsSum"
+                    DeliveryDate="InvoiceDeliveryDate"
+                    InsuranceSum="InvoiceInsuranceSum"
+                    PiecesCount="InvoicePiecesCount"
+                    ShipRefNum="InvoiceShipmentNumber"
+                    InsuranceType="INS"
+                    CODDeliveryVAT="6"
+                    CODDeliveryVATSum="0"
+                    Action="N" FullDescription="Одежда и аксессуары" ProductCode="GepOn" PickUpType="C" >
+        <Shipper    Phone="+79200277337"
+                    ContactName="ИП Жехарев Илья Всеволодович"
+                    Address="Нижневолжская набережная, 8/7"
+                    City="Нижний Новгород"
+                    Region="Нижегородская область"
+                    Country="Россия" />
+        <Receiver   Phone="ReceiverPhone"
+                    ContactName="ReceiverContactName"
+                    Address="ReceiverAddress"
+                    City="ReceiverCity"
+                    Region="ReceiverRegion"
+                    Country="ReceiverCountry"
+                    ConsigneeCollect=""/>
+        <AdditionalServices COD="1" PartDelivery="InvoicePartDelivery" TryOn="1" AgreedDelivery="1"/>
+        <SMS SMSNumberReceiver="ReceiverPhone" SMStoReceiver="0" SMSNumberShipper="+79200277337" SMStoShipper="1"/>
+        <Pieces>
+            InvoicePieces
+        </Pieces>
+        </Invoice>
+    </GeneralInfo>
+</XmlConverter>
+</root>

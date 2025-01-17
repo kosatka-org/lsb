@@ -1,0 +1,23 @@
+# http://editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+#indent_style = space
+#end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.php]
+#indent_size = 4
+
+[*.rb]
+indent_size = 2
+
+[Gemfile*]
+indent_size = 2
+
+# https://google.github.io/styleguide/htmlcssguide.xml?showone=Indentation#Indentation
+[*.{tpl,html}]
+#indent_size = 2

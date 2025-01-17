@@ -1,0 +1,1 @@
+ALTER TABLE  `brands` ADD  `video` VARCHAR( 255 ) NOT NULL

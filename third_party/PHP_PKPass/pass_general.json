@@ -1,0 +1,68 @@
+{
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "{passTypeIdentifier}",
+  "serialNumber" : "{serialNumber}",
+  "webServiceURL" : "https://lsboutique.ru/pass_service/",
+  "authenticationToken" : "{authenticationToken}",
+  "teamIdentifier" : "LRM67SVKY6",
+  "barcode" : {
+    "message" : "{CardNumber}",
+    "format" : "PKBarcodeFormatCode128",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "organizationName" : "Лакшери Store",
+  "description" : "{description}",
+  "logoText" : "Лакшери Store",
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "backgroundColor" : "{backgroundColor}",
+  "generic" : {
+    "primaryFields" : [
+      {
+        "key" : "member",
+        "value" : "{UserName}"
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "card_number",
+        "label" : "{CardNumberLabel}",
+        "value" : "{CardNumber}"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "level",
+        "label" : "{StatusLevelLabel}",
+        "value" : "{StatusLevel}"
+      },
+      {
+        "key" : "offer",
+        "label" : "{StatusSaleLabel}",
+        "value" : "{StatusSale}",
+        "textAlignment" : "PKTextAlignmentRight"
+      }
+    ],
+    "backFields" : [
+      {
+        "label" : "{UserPhoneLabel}",
+        "key" : "phone_number",
+        "value" : "{UserPhone}"
+      },
+      {
+        "label" : "{site}",
+        "key" : "site",
+        "value" : "https://lsboutique.ru",
+      },
+      {
+        "label" : "{help_phone}",
+        "key" : "help_phone",
+        "value" : "+78314303630 {UserPhoneValue} 88003332138"
+      },
+      {
+        "label" : "{infoLabel}",
+        "key" : "info",
+        "value" : "{infoValue}",
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+ALTER TABLE  `brands` ADD  `title_descr` VARCHAR( 255 ) NOT NULL

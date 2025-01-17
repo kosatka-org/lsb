@@ -1,0 +1,28 @@
+<?php global $smarty; ?>
+<a href="" title="" alt="">
+	<div class="menu_icon"></div>
+</a>
+<a href="/" title="На главную">
+	<div class="logo">
+		<img src="/mobile_html/images/logo.png" title="" alt="">
+	</div>
+</a>
+<a href="/cart/" title="" alt="">
+	<div class="bag">
+		<div class="bag_num">10</div>
+	</div>
+</a>
+<div class="divider" style="margin: 0;"></div>
+<script>
+	$(document).ready(function(){
+		$(".button").mousedown(function(){
+			$(this).addClass("mousedown");
+		});
+		$(".button").mouseup(function(){
+			$(this).removeClass("mousedown");
+		});
+		$(".button").mouseleave(function(){
+			$(this).removeClass("mousedown");
+		});
+	});
+</script>

@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `intagramm_user` TINYINT(3) NOT NULL AFTER `debt_limit`;

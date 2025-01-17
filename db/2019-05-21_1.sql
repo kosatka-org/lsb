@@ -1,0 +1,1 @@
+ALTER TABLE `inkass` ADD `im_agent_fee` INT(2) NOT NULL AFTER `hash`;

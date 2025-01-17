@@ -1,0 +1,1 @@
+ALTER TABLE  `users` ADD  `home_phone` VARCHAR( 32 ) NOT NULL AFTER  `phone_number`;

@@ -1,0 +1,22 @@
+{foreach from=$brands_full item=brand}
+	<a href="/brands/{$brand->url}/" title="{$brand->name}" alt="{$brand->name}">
+		<div class="button button560px button_text">
+			{$brand->name}
+		</div>
+	</a>
+{/foreach}
+<div class="divider" style="margin: 0;"></div>
+<div class="button_wrap" style="margin: 10px 0 10px 200px;">
+	<a href="/catalog/" title="Назад к разделам">
+		<div class="button button240px button_text">
+			<table>
+				<tr>
+					<td>
+						Назад к разделам
+					</td>
+				</tr>
+			</table>
+		</div>
+	</a>
+</div>
+<div class="divider"></div>

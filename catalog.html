@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LuxuryStore</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link media="all" href="/css/style.css" rel="stylesheet" type="text/css" />    
+    <script type="text/javascript" src="/jscript/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="/jscript/checkbox.js"></script>
+</head>
+<body>
+
+    <div class="headBlock">
+        <div class="logoOnline">
+            <a href="/"><img src="/images/logo.png"  width="220" height="64" /></a>
+        </div>
+        <div class="manOrWoman">
+            <div class="switch2"><a href="#">Мужской</a></div>
+        </div>
+        <div class="rightTopLinks">
+            <div class="links">
+	            <div><a href="#"><span class="wishImg"></span>Wish List (9)</a></div>
+	            <div><a href="#"><span class="cartImg"></span><span class="text">Корзина (8)</span></a></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="mainMenu">
+        <ul class="menuList">
+	        <li><a href="new">Что нового?</a></li>
+	        <li>|</li>
+	        <li><a href="design">Дизайнеры</a></li>
+	        <li>|</li>
+	        <li><a href="clothes">Одежда</a></li>
+	        <li>|</li>
+	        <li><a href="shoes">Обувь</a></li>
+	        <li>|</li>
+	        <li><a href="linen">Белье</a></li>
+	        <li>|</li>
+	        <li><a href="accessory">Аксессуары</a></li>
+	    </ul>
+        <div class="search">
+            <input type="text" name="search" value="Ищем по сайту" />
+            <img src="/images/search.png" width="15" height="15" />
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footerLine"></div>
+    <div class="mainContent">
+        <div class="content">
+	        <div class="topContent">
+                <div class="breadCrumbs">
+                    <a href="#">главная</a> &gt;платье &gt;
+                    <b>Все размеры</b>
+                </div>
+	        </div>
+	        <div class="clear"></div>
+	        <div class="centerContent">
+	        	<div class="centerLeftContent" style="margin-right: 0px;">
+	        		<div class="ShAA_filterLeft">
+	        			<div class="title">Верхняя одежда</div>
+	        			<ul>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" checked /></span> Жакет (16)
+		        			</li>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" checked /></span> Жилет (12)
+		        			</li>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" /></span> Шуба (100)
+		        			</li>
+		        		</ul>
+	        		</div>
+	        		<div class="ShAA_filterLeft">
+	        			<div class="title">Ткань</div>
+	        			<ul>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" checked /></span> Трикотаж (16)
+		        			</li>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" /></span> Шелк (5)
+		        			</li>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" /></span> Шерсть (100)
+		        			</li>
+		        		</ul>
+	        		</div>
+	        		<div class="ShAA_filterLeft">
+	        			<div class="title">По размеру</div>
+	        			<ul>
+		        			<li>
+		        				<input type="radio" name="size_product" value="" checked /> Все размеры (16)
+		        			</li>
+		        			<li>
+		        				<input type="radio" name="size_product" /> XXL (12)
+		        			</li>
+		        			<li>
+		        				<input type="radio" name="size_product" /> XXX (5)
+		        			</li>
+		        		</ul>
+	        		</div>
+	        		<div class="ShAA_filterLeft">
+	        			<div class="title">По сезону</div>
+	        			<ul>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" checked /></span> Зима (16)
+		        			</li>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" /></span> Лето (12)
+		        			</li>
+		        			<li>
+		        				<span class="niceCheck"><input type="checkbox" /></span> Межсезонье (5)
+		        			</li>
+		        		</ul>
+	        		</div>
+	        	</div>
+	        	
+			<script language="javascript">
+				$(document).ready( function () {
+					$('.ShAA_catalogItem').bind('mouseenter', function() {
+						$('#img_' + $(this).eq(0).attr('id')).removeClass("imgCatalog").addClass("imgCatalogHover");
+						$('#title_' + $(this).eq(0).attr('id') + ' a').css({borderBottom: "2px solid #777"});
+						return false;
+					});
+					$('.ShAA_catalogItem').bind('mouseleave', function() {
+						$('#img_' + $(this).eq(0).attr('id')).removeClass("imgCatalogHover").addClass("imgCatalog");
+						$('#title_' + $(this).eq(0).attr('id') + ' a').css({borderBottom: "none"});
+						return false;
+					});
+				});
+</script>
+
+	        	<div class="centerRightContentCatalog">
+	        		<div id="1" class="ShAA_catalogItem">
+	        			<div id="img_1" class="imgCatalog">
+	        				<img src="/images/products/1.png" />
+	        				<div class="ShAA_stock"></div>
+	        			</div>
+	        			
+	        			<div id="title_1" class="titleCatalog">
+	        				<a href="#"><b>Phillip Lim</b></a>
+	        			</div>
+	        			<div class="ShAA_descriptionCatalog">
+	        				<span>Платье, шелк-шифон</span><br>
+	        				<span>€ 1064</span>
+	        			</div>
+	        		</div>
+	        		<div id="2" class="ShAA_catalogItem">
+	        			<div id="img_2" class="imgCatalog">
+	        				<img src="/images/products/2.png" />
+	        				<div class="ShAA_outOfStock"></div>
+	        			</div>
+	        			<div id="title_2" class="titleCatalog">
+	        				<a href="#"><b>Phillip Lim</b></a>
+	        			</div>
+	        			<div class="ShAA_descriptionCatalog">
+	        				<span>Платье, шелк-шифон</span><br>
+	        				<span>€ 1064</span>
+	        			</div>
+	        		</div>
+	        		<div id="3" class="ShAA_catalogItem">
+	        			<div id="img_3" class="imgCatalog">
+	        				<img src="/images/products/3.png" />
+	        				<div class="ShAA_order"></div>
+	        			</div>
+	        			<div id="title_3" class="titleCatalog">
+	        				<a href="#"><b>Phillip Lim</b></a>
+	        			</div>
+	        			<div class="ShAA_descriptionCatalog">
+	        				<span>Платье, шелк-шифон</span><br>
+	        				<span>€ 1064</span>
+	        			</div>
+	        		</div>
+	        		
+	        		
+	        		<div id="4" class="ShAA_catalogItem">
+	        			<div id="img_4" class="imgCatalog">
+	        				<img src="/images/products/1.png" />
+	        			</div>
+	        			<div id="title_4" class="titleCatalog">
+	        				<a href="#"><b>Phillip Lim</b></a>
+	        			</div>
+	        			<div class="ShAA_descriptionCatalog">
+	        				<span>Платье, шелк-шифон</span><br>
+	        				<span>€ 1064</span>
+	        			</div>
+	        		</div>
+	        		<div id="5" class="ShAA_catalogItem">
+	        			<div id="img_5" class="imgCatalog">
+	        				<img src="/images/products/4.png" />
+	        			</div>
+	        			<div id="title_5" class="titleCatalog">
+	        				<a href="#"><b>Phillip Lim</b></a>
+	        			</div>
+	        			<div class="ShAA_descriptionCatalog">
+	        				<span>Платье, шелк-шифон</span><br>
+	        				<span>€ 1064</span>
+	        			</div>
+	        		</div>
+	        		<div id="6" class="ShAA_catalogItem">
+	        			<div id="img_6" class="imgCatalog">
+	        				<img src="/images/products/3.png" />
+	        			</div>
+	        			<div id="title_6" class="titleCatalog">
+	        				<a href="#"><b>Phillip Lim</b></a>
+	        			</div>
+	        			<div class="ShAA_descriptionCatalog">
+	        				<span>Платье, шелк-шифон</span><br>
+	        				<span>€ 1064</span>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	    </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footerLine"></div>
+        <div class="footerMenu">
+            <ul>
+                <li><a href="help">Помощь</a></li>
+                <li><a href="shop">Магазины</a></li>
+                <li><a href="reklama">Реклама на сайте</a></li>
+                
+                <li><a href="help">Вакансии</a></li>
+                <li>
+                    <a href="shop">Подписка</a>
+                    <img src="/images/rss.png" width="17" height="17" />
+                </li>
+                <li><a href="reklama">Сотрудничество</a></li>
+            </ul>
+            
+            <div class="copy">&copy; Luxury Store 2011</div>
+        </div>
+        <div class="ok">
+            <a href="http://www.ooook.ru">Сделано в</a> <img src="/images/ok_logo.png" />
+        </div>
+    </div>
+</body>
+</html>

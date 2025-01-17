@@ -1,0 +1,1 @@
+ALTER TABLE `orders_products` ADD `status` TINYINT UNSIGNED NOT NULL DEFAULT '0' AFTER `product_id`;

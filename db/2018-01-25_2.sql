@@ -1,0 +1,2 @@
+ALTER TABLE `users` ADD `alt_phones` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `phone_number`;
+ALTER TABLE `users` ADD `alt_addresses` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `adress`;

@@ -1,0 +1,1 @@
+ALTER TABLE `inkassators` ADD `warehouse` INT(11) NOT NULL AFTER `phone`;

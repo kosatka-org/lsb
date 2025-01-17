@@ -1,0 +1,1182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="/css/invoice.css?v=1.0" type="text/css" />
+</head>
+<title></title>
+<body>
+	<div class="ponyOrderWrap" style="page-break-after:always;">
+		<div class="ponyCut">
+			<div class="scrissors"></div>
+			<div class="cutline"></div>
+		</div>
+		<div class="ponyOrder_left">
+			<div class="ponyCode"><img src="http://www.barcodesinc.com/generator/image.php?code={BarcodeInvoiceShipmentNumber}&style=198&type=C39&width=350&height=70&xres=1&font=6"></div>
+			<div class="ponyTitle_small"><strong>ДОСТАВКА ИМ МАГАЗИНА</strong></div>
+			<table class="ponyTable" style="width: 435px;">
+				<tr>
+					<td class="nobottom">
+						<div class="Top">Дата</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">Время</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">ORG</div>
+						<span>NNG</span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">DEST</div>
+						<span>{PONI_DEST}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Отправитель</strong>
+					</td>
+					<td>
+						<div class="Top">Код отправителя</div>
+						<span>20-5031</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Ф.И.О. отправителя</div>
+						<span>Жехарев Илья Всеволодович</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="Top">Компания</div>
+						<span>ИП Казачкова Алиса Сергеевна</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Телефон</div>
+						<span>88003332138</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="Top"></div>
+						<span><strong>Нижний Новгород</strong>, Нижегородская, Россия</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" >
+						<div class="Top"></div>
+						<span>ул. Нижневолжская набережная 8/7</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="nobottom">
+						<div class="Top">Примечание отправителя</div>
+						<span>{notes}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Получатель</strong>
+					</td>
+					<td>
+						<div class="Top">Код получателя</div>
+						<span>0-0</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Ф.И.О. получателя</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="Top">Компания</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Телефон</div>
+						<span>{ReceiverPhone}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<div class="Top"></div>
+						<span><strong>{ReceiverCity}</strong>, {ReceiverRegion}</span>
+					</td>
+					<td>
+						<div class="Top">Индекс</div>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="nobottom">
+						<div class="Top"></div>
+						<span>{ReceiverAddress}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Описание</strong>
+					</td>
+					<td colspan="3">
+						<div class="pseudoTD" style="border: none;font-size: 12px;width: 85px">
+							<div class="ShAA_divMiniWithBorder" style="margin: 0 0 0 3px;border-top: none;"></div> Только документы
+						</div>
+						<div class="pseudoTD" style="width: 236px">
+							<div class="Top">Описание вложения</div>
+							<span>товары народного потребления (без техники)</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Кол-во мест</div>
+						<span>{InvoicePiecesCount}</span>
+					</td>
+					<td>
+						<div class="Top">Вес(кг)</div>
+						<span>{InvoicePiecesWeight}</span>
+					</td>
+					<td>
+						<div class="Top">Контр. взвеш.(кг)</div>
+						<span></span>
+					</td>
+					<td>
+						<div class="Top">Обьем, вес(кг)</div>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="pseudoTD" style="border: none;width: 170px">
+							<div class="Top">Режим доставки</div>
+							<span>Экспресс</span>
+						</div>
+						<div class="pseudoTD" style="width: 170px">
+							<div class="Top">Категория отправления</div>
+						</div>
+						<div class="pseudoTD" style="font-size: 12px;width: 83px">
+							<div class="ShAA_divMiniWithBorder" style="margin: 0 0 0 3px;border-top: none;"></div> Опасный Груз
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="Top">Специальные инструкции</div>
+						<span></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="ponyOrder_right">
+			<div class="ponyNumber"><span>{InvoiceShipmentNumber}</span><br>распечатана {CurrentDate}</div>
+			<div class="ponyStamp1"><strong>PONY EXPRESS</strong></div>
+			<div class="ponyStamp2"><strong>ИМ</strong></div>
+			<div class="ponyInfo"><strong>Информация о доставке</strong></div>
+			<div class="ponyVerticalStamp"><img src="/images/origponi.jpg"></div>
+			<table class="ponyTable" style="width: 392px;">
+				<tr>
+					<td style="width: 50%;">
+						<div class="Top">Об. ценность</div>
+						<span>{InvoiceInsuranceSum}</span>
+					</td>
+					<td style="width: 50%;">
+						<div class="Top">Тип оплаты</div>
+						<span>{InvoicePaymentType}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Оплата</div>
+						<span>Отправителем</span>
+					</td>
+					<td>
+						<div class="Top">Сумма платежа по заказу</div>
+						<span>{InvoicePaymentSum}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Код плательщика</div>
+						<span>20-5031</span>
+					</td>
+					<td>
+						<div class="Top">№ заказа клиента</div>
+						<span>{ORDER_ID}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="nobottom">
+						<div class="Top">Вид оплаты</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="nobottom" style="font-size: 10px;padding: 0 4px;">
+						Я подтверждаю, что отправление не содержит предметы, запрещенные к пересылке. Обязуюсь соблюдать все правила и условия, изложенные в Руководстве по услугам Исполнителя.
+					</td>
+					<td class="nobottom">
+						<div class="Top">Подпись отправителя</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="nobottom" style="height: 71px">
+						<div class="Top">Примечание экспедитора</div>
+					</td>
+					<td class="nobottom" style="width: 96px">
+						<div class="pseudoTD" style="border: none;width: 97px">
+							<div class="Top">Код</div>
+						</div>
+						<div class="pseudoTD" style="width: 96px">
+							<div class="Top">Подпись</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div style="float: left;font-size: 12px;margin: 7px 0 0 4px;">Код безопасности </div>
+						<div class="divBiggerWithBorder" style="margin: 3px 25px 3px 0;"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+					</td>
+				</tr>
+			</table>
+			<div class="ponyInfo" style="margin: 7px 0;"><strong>Подтвеждение доставки</strong></div>
+			<table class="ponyTable" style="width: 392px;">
+				<tr>
+					<td colspan="2" style="font-size: 10px;padding: 0 4px;">
+						Я подтверждаю, что отправление доставлено и вручено в закрытом виде, без внешних повреждений упаковки, упаковочных материалов и пломб, вес отправления соответствует весу, определенному при его приеме.
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 50%;">
+						<div class="Top">Подпись получателя</div>
+						<span></span>
+					</td>
+					<td style="width: 50%;">
+						<div class="Top">Ф.И.О. получателя</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="pseudoTD" style="border: none;width: 129px">
+							<div class="Top">Дата</div>
+						</div>
+						<div class="pseudoTD" style="width: 129px">
+							<div class="Top">Время</div>
+						</div>
+						<div class="pseudoTD" style="width: 129px">
+							<div class="Top">№</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="ponyTitle_Big"><strong>ДОСТАВКА ИМ МАГАЗИНА</strong></div>
+	</div>
+	<div class="ponyOrderWrap" style="page-break-after:always;">
+		<div class="ponyCut">
+			<div class="scrissors"></div>
+			<div class="cutline"></div>
+		</div>
+		<div class="ponyOrder_left">
+			<div class="ponyCode"><img src="http://www.barcodesinc.com/generator/image.php?code={BarcodeInvoiceShipmentNumber}&style=198&type=C39&width=350&height=70&xres=1&font=6"></div>
+			<div class="ponyTitle_small"><strong>ДОСТАВКА ИМ МАГАЗИНА</strong></div>
+			<table class="ponyTable" style="width: 435px;">
+				<tr>
+					<td class="nobottom">
+						<div class="Top">Дата</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">Время</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">ORG</div>
+						<span>NNG</span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">DEST</div>
+						<span>{PONI_DEST}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Отправитель</strong>
+					</td>
+					<td>
+						<div class="Top">Код отправителя</div>
+						<span>20-5031</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Ф.И.О. отправителя</div>
+						<span>Жехарев Илья Всеволодович</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="Top">Компания</div>
+						<span>ИП Казачкова Алиса Сергеевна </span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Телефон</div>
+						<span>88003332138</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="Top"></div>
+						<span><strong>Нижний Новгород</strong>, Нижегородская, Россия</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" >
+						<div class="Top"></div>
+						<span>ул. Нижневолжская набережная 8/7</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="nobottom">
+						<div class="Top">Примечание отправителя</div>
+						<span>{notes}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Получатель</strong>
+					</td>
+					<td>
+						<div class="Top">Код получателя</div>
+						<span>0-0</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Ф.И.О. получателя</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="Top">Компания</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Телефон</div>
+						<span>{ReceiverPhone}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<div class="Top"></div>
+						<span><strong>{ReceiverCity}</strong>, {ReceiverRegion}</span>
+					</td>
+					<td>
+						<div class="Top">Индекс</div>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="nobottom">
+						<div class="Top"></div>
+						<span>{ReceiverAddress}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Описание</strong>
+					</td>
+					<td colspan="3">
+						<div class="pseudoTD" style="border: none;font-size: 12px;width: 85px">
+							<div class="ShAA_divMiniWithBorder" style="margin: 0 0 0 3px;border-top: none;"></div> Только документы
+						</div>
+						<div class="pseudoTD" style="width: 236px">
+							<div class="Top">Описание вложения</div>
+							<span>товары народного потребления (без техники)</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Кол-во мест</div>
+						<span>{InvoicePiecesCount}</span>
+					</td>
+					<td>
+						<div class="Top">Вес(кг)</div>
+						<span>{InvoicePiecesWeight}</span>
+					</td>
+					<td>
+						<div class="Top">Контр. взвеш.(кг)</div>
+						<span></span>
+					</td>
+					<td>
+						<div class="Top">Обьем, вес(кг)</div>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="pseudoTD" style="border: none;width: 170px">
+							<div class="Top">Режим доставки</div>
+							<span>Экспресс</span>
+						</div>
+						<div class="pseudoTD" style="width: 170px">
+							<div class="Top">Категория отправления</div>
+						</div>
+						<div class="pseudoTD" style="font-size: 12px;width: 83px">
+							<div class="ShAA_divMiniWithBorder" style="margin: 0 0 0 3px;border-top: none;"></div> Опасный Груз
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="Top">Специальные инструкции</div>
+						<span></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="ponyOrder_right">
+			<div class="ponyNumber"><span>{InvoiceShipmentNumber}</span><br>распечатана {CurrentDate}</div>
+			<div class="ponyStamp1"><strong>PONY EXPRESS</strong></div>
+			<div class="ponyStamp2"><strong>ИМ</strong></div>
+			<div class="ponyInfo"><strong>Информация о доставке</strong></div>
+			<div class="ponyVerticalStamp"><img src="/images/copisend.jpg"></div>
+			<table class="ponyTable" style="width: 392px;">
+				<tr>
+					<td style="width: 50%;">
+						<div class="Top">Об. ценность</div>
+						<span>{InvoiceInsuranceSum}</span>
+					</td>
+					<td style="width: 50%;">
+						<div class="Top">Тип оплаты</div>
+						<span>{InvoicePaymentType}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Оплата</div>
+						<span>Отправителем</span>
+					</td>
+					<td>
+						<div class="Top">Сумма платежа по заказу</div>
+						<span>{InvoicePaymentSum}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Код плательщика</div>
+						<span>20-5031</span>
+					</td>
+					<td>
+						<div class="Top">№ заказа клиента</div>
+						<span>{ORDER_ID}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="nobottom">
+						<div class="Top">Вид оплаты</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="nobottom" style="font-size: 10px;padding: 0 4px;">
+						Я подтверждаю, что отправление не содержит предметы, запрещенные к пересылке. Обязуюсь соблюдать все правила и условия, изложенные в Руководстве по услугам Исполнителя.
+					</td>
+					<td class="nobottom">
+						<div class="Top">Подпись отправителя</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="nobottom" style="height: 71px">
+						<div class="Top">Примечание экспедитора</div>
+					</td>
+					<td class="nobottom" style="width: 96px">
+						<div class="pseudoTD" style="border: none;width: 97px">
+							<div class="Top">Код</div>
+						</div>
+						<div class="pseudoTD" style="width: 96px">
+							<div class="Top">Подпись</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div style="float: left;font-size: 12px;margin: 7px 0 0 4px;">Код безопасности </div>
+						<div class="divBiggerWithBorder" style="margin: 3px 25px 3px 0;"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+					</td>
+				</tr>
+			</table>
+			<div class="ponyInfo" style="margin: 7px 0;"><strong>Подтвеждение доставки</strong></div>
+			<table class="ponyTable" style="width: 392px;">
+				<tr>
+					<td colspan="2" style="font-size: 10px;padding: 0 4px;">
+						Я подтверждаю, что отправление доставлено и вручено в закрытом виде, без внешних повреждений упаковки, упаковочных материалов и пломб, вес отправления соответствует весу, определенному при его приеме.
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 50%;">
+						<div class="Top">Подпись получателя</div>
+						<span></span>
+					</td>
+					<td style="width: 50%;">
+						<div class="Top">Ф.И.О. получателя</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="pseudoTD" style="border: none;width: 129px">
+							<div class="Top">Дата</div>
+						</div>
+						<div class="pseudoTD" style="width: 129px">
+							<div class="Top">Время</div>
+						</div>
+						<div class="pseudoTD" style="width: 129px">
+							<div class="Top">№</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="ponyTitle_Big"><strong>ДОСТАВКА ИМ МАГАЗИНА</strong></div>
+	</div>
+	<div class="ponyOrderWrap" style="page-break-after:always;">
+		<div class="ponyCut">
+			<div class="scrissors"></div>
+			<div class="cutline"></div>
+		</div>
+		<div class="ponyOrder_left">
+			<div class="ponyCode"><img src="http://www.barcodesinc.com/generator/image.php?code={BarcodeInvoiceShipmentNumber}&style=198&type=C39&width=350&height=70&xres=1&font=6"></div>
+			<div class="ponyTitle_small"><strong>ДОСТАВКА ИМ МАГАЗИНА</strong></div>
+			<table class="ponyTable" style="width: 435px;">
+				<tr>
+					<td class="nobottom">
+						<div class="Top">Дата</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">Время</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">ORG</div>
+						<span>NNG</span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">DEST</div>
+						<span>{PONI_DEST}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Отправитель</strong>
+					</td>
+					<td>
+						<div class="Top">Код отправителя</div>
+						<span>20-5031</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Ф.И.О. отправителя</div>
+						<span>Жехарев Илья Всеволодович</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="Top">Компания</div>
+						<span>ИП Казачкова Алиса Сергеевна</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Телефон</div>
+						<span>88003332138</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="Top"></div>
+						<span><strong>Нижний Новгород</strong>, Нижегородская, Россия</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" >
+						<div class="Top"></div>
+						<span>ул. Нижневолжская набережная 8/7</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="nobottom">
+						<div class="Top">Примечание отправителя</div>
+						<span>{notes}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Получатель</strong>
+					</td>
+					<td>
+						<div class="Top">Код получателя</div>
+						<span>0-0</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Ф.И.О. получателя</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="Top">Компания</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Телефон</div>
+						<span>{ReceiverPhone}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<div class="Top"></div>
+						<span><strong>{ReceiverCity}</strong>, {ReceiverRegion}</span>
+					</td>
+					<td>
+						<div class="Top">Индекс</div>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="nobottom">
+						<div class="Top"></div>
+						<span>{ReceiverAddress}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Описание</strong>
+					</td>
+					<td colspan="3">
+						<div class="pseudoTD" style="border: none;font-size: 12px;width: 85px">
+							<div class="ShAA_divMiniWithBorder" style="margin: 0 0 0 3px;border-top: none;"></div> Только документы
+						</div>
+						<div class="pseudoTD" style="width: 236px">
+							<div class="Top">Описание вложения</div>
+							<span>товары народного потребления (без техники)</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Кол-во мест</div>
+						<span>{InvoicePiecesCount}</span>
+					</td>
+					<td>
+						<div class="Top">Вес(кг)</div>
+						<span>{InvoicePiecesWeight}</span>
+					</td>
+					<td>
+						<div class="Top">Контр. взвеш.(кг)</div>
+						<span></span>
+					</td>
+					<td>
+						<div class="Top">Обьем, вес(кг)</div>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="pseudoTD" style="border: none;width: 170px">
+							<div class="Top">Режим доставки</div>
+							<span>Экспресс</span>
+						</div>
+						<div class="pseudoTD" style="width: 170px">
+							<div class="Top">Категория отправления</div>
+						</div>
+						<div class="pseudoTD" style="font-size: 12px;width: 83px">
+							<div class="ShAA_divMiniWithBorder" style="margin: 0 0 0 3px;border-top: none;"></div> Опасный Груз
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="Top">Специальные инструкции</div>
+						<span></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="ponyOrder_right">
+			<div class="ponyNumber"><span>{InvoiceShipmentNumber}</span><br>распечатана {CurrentDate}</div>
+			<div class="ponyStamp1"><strong>PONY EXPRESS</strong></div>
+			<div class="ponyStamp2"><strong>ИМ</strong></div>
+			<div class="ponyInfo"><strong>Информация о доставке</strong></div>
+			<div class="ponyVerticalStamp"><img src="/images/copipony.jpg"></div>
+			<table class="ponyTable" style="width: 392px;">
+				<tr>
+					<td style="width: 50%;">
+						<div class="Top">Об. ценность</div>
+						<span>{InvoiceInsuranceSum}</span>
+					</td>
+					<td style="width: 50%;">
+						<div class="Top">Тип оплаты</div>
+						<span>{InvoicePaymentType}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Оплата</div>
+						<span>Отправителем</span>
+					</td>
+					<td>
+						<div class="Top">Сумма платежа по заказу</div>
+						<span>{InvoicePaymentSum}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Код плательщика</div>
+						<span>20-5031</span>
+					</td>
+					<td>
+						<div class="Top">№ заказа клиента</div>
+						<span>{ORDER_ID}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="nobottom">
+						<div class="Top">Вид оплаты</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="nobottom" style="font-size: 10px;padding: 0 4px;">
+						Я подтверждаю, что отправление не содержит предметы, запрещенные к пересылке. Обязуюсь соблюдать все правила и условия, изложенные в Руководстве по услугам Исполнителя.
+					</td>
+					<td class="nobottom">
+						<div class="Top">Подпись отправителя</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="nobottom" style="height: 71px">
+						<div class="Top">Примечание экспедитора</div>
+					</td>
+					<td class="nobottom" style="width: 96px">
+						<div class="pseudoTD" style="border: none;width: 97px">
+							<div class="Top">Код</div>
+						</div>
+						<div class="pseudoTD" style="width: 96px">
+							<div class="Top">Подпись</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div style="float: left;font-size: 12px;margin: 7px 0 0 4px;">Код безопасности </div>
+						<div class="divBiggerWithBorder" style="margin: 3px 25px 3px 0;"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+					</td>
+				</tr>
+			</table>
+			<div class="ponyInfo" style="margin: 7px 0;"><strong>Подтвеждение доставки</strong></div>
+			<table class="ponyTable" style="width: 392px;">
+				<tr>
+					<td colspan="2" style="font-size: 10px;padding: 0 4px;">
+						Я подтверждаю, что отправление доставлено и вручено в закрытом виде, без внешних повреждений упаковки, упаковочных материалов и пломб, вес отправления соответствует весу, определенному при его приеме.
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 50%;">
+						<div class="Top">Подпись получателя</div>
+						<span></span>
+					</td>
+					<td style="width: 50%;">
+						<div class="Top">Ф.И.О. получателя</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="pseudoTD" style="border: none;width: 129px">
+							<div class="Top">Дата</div>
+						</div>
+						<div class="pseudoTD" style="width: 129px">
+							<div class="Top">Время</div>
+						</div>
+						<div class="pseudoTD" style="width: 129px">
+							<div class="Top">№</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="ponyTitle_Big"><strong>ДОСТАВКА ИМ МАГАЗИНА</strong></div>
+	</div>
+	<div class="ponyOrderWrap" style="page-break-after:always;">
+		<div class="ponyCut">
+			<div class="scrissors"></div>
+			<div class="cutline"></div>
+		</div>
+		<div class="ponyOrder_left">
+			<div class="ponyCode"><img src="http://www.barcodesinc.com/generator/image.php?code={BarcodeInvoiceShipmentNumber}&style=198&type=C39&width=350&height=70&xres=1&font=6"></div>
+			<div class="ponyTitle_small"><strong>ДОСТАВКА ИМ МАГАЗИНА</strong></div>
+			<table class="ponyTable" style="width: 435px;">
+				<tr>
+					<td class="nobottom">
+						<div class="Top">Дата</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">Время</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">ORG</div>
+						<span>NNG</span>
+					</td>
+					<td class="nobottom">
+						<div class="Top">DEST</div>
+						<span>{PONI_DEST}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Отправитель</strong>
+					</td>
+					<td>
+						<div class="Top">Код отправителя</div>
+						<span>20-5031</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Ф.И.О. отправителя</div>
+						<span>Жехарев Илья Всеволодович</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="Top">Компания</div>
+						<span>ИП Казачкова Алиса Сергеевна</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Телефон</div>
+						<span>88003332138</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="Top"></div>
+						<span><strong>Нижний Новгород</strong>, Нижегородская, Россия</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" >
+						<div class="Top"></div>
+						<span>ул. Нижневолжская набережная 8/7</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="nobottom">
+						<div class="Top">Примечание отправителя</div>
+						<span>{notes}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Получатель</strong>
+					</td>
+					<td>
+						<div class="Top">Код получателя</div>
+						<span>0-0</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Ф.И.О. получателя</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="Top">Компания</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+					<td colspan="2">
+						<div class="Top">Телефон</div>
+						<span>{ReceiverPhone}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<div class="Top"></div>
+						<span><strong>{ReceiverCity}</strong>, {ReceiverRegion}</span>
+					</td>
+					<td>
+						<div class="Top">Индекс</div>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="nobottom">
+						<div class="Top"></div>
+						<span>{ReceiverAddress}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="noborder">
+						<strong>Описание</strong>
+					</td>
+					<td colspan="3">
+						<div class="pseudoTD" style="border: none;font-size: 12px;width: 85px">
+							<div class="ShAA_divMiniWithBorder" style="margin: 0 0 0 3px;border-top: none;"></div> Только документы
+						</div>
+						<div class="pseudoTD" style="width: 236px">
+							<div class="Top">Описание вложения</div>
+							<span>товары народного потребления (без техники)</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Кол-во мест</div>
+						<span>{InvoicePiecesCount}</span>
+					</td>
+					<td>
+						<div class="Top">Вес(кг)</div>
+						<span>{InvoicePiecesWeight}</span>
+					</td>
+					<td>
+						<div class="Top">Контр. взвеш.(кг)</div>
+						<span></span>
+					</td>
+					<td>
+						<div class="Top">Обьем, вес(кг)</div>
+						<span></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="pseudoTD" style="border: none;width: 170px">
+							<div class="Top">Режим доставки</div>
+							<span>Экспресс</span>
+						</div>
+						<div class="pseudoTD" style="width: 170px">
+							<div class="Top">Категория отправления</div>
+						</div>
+						<div class="pseudoTD" style="font-size: 12px;width: 83px">
+							<div class="ShAA_divMiniWithBorder" style="margin: 0 0 0 3px;border-top: none;"></div> Опасный Груз
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<div class="Top">Специальные инструкции</div>
+						<span></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="ponyOrder_right">
+			<div class="ponyNumber"><span>{InvoiceShipmentNumber}</span><br>распечатана {CurrentDate}</div>
+			<div class="ponyStamp1"><strong>PONY EXPRESS</strong></div>
+			<div class="ponyStamp2"><strong>ИМ</strong></div>
+			<div class="ponyInfo"><strong>Информация о доставке</strong></div>
+			<div class="ponyVerticalStamp"><img src="/images/copiclient2.jpg"></div>
+			<table class="ponyTable" style="width: 392px;">
+				<tr>
+					<td style="width: 50%;">
+						<div class="Top">Об. ценность</div>
+						<span>{InvoiceInsuranceSum}</span>
+					</td>
+					<td style="width: 50%;">
+						<div class="Top">Тип оплаты</div>
+						<span>{InvoicePaymentType}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Оплата</div>
+						<span>Отправителем</span>
+					</td>
+					<td>
+						<div class="Top">Сумма платежа по заказу</div>
+						<span>{InvoicePaymentSum}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="Top">Код плательщика</div>
+						<span>20-5031</span>
+					</td>
+					<td>
+						<div class="Top">№ заказа клиента</div>
+						<span>{ORDER_ID}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="nobottom">
+						<div class="Top">Вид оплаты</div>
+						<span></span>
+					</td>
+					<td class="nobottom">
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="nobottom" style="font-size: 10px;padding: 0 4px;">
+						Я подтверждаю, что отправление не содержит предметы, запрещенные к пересылке. Обязуюсь соблюдать все правила и условия, изложенные в Руководстве по услугам Исполнителя.
+					</td>
+					<td class="nobottom">
+						<div class="Top">Подпись отправителя</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td class="nobottom" style="height: 71px">
+						<div class="Top">Примечание экспедитора</div>
+					</td>
+					<td class="nobottom" style="width: 96px">
+						<div class="pseudoTD" style="border: none;width: 97px">
+							<div class="Top">Код</div>
+						</div>
+						<div class="pseudoTD" style="width: 96px">
+							<div class="Top">Подпись</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="gray"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div style="float: left;font-size: 12px;margin: 7px 0 0 4px;">Код безопасности </div>
+						<div class="divBiggerWithBorder" style="margin: 3px 25px 3px 0;"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+						<div class="divBiggerWithBorder"></div>
+					</td>
+				</tr>
+			</table>
+			<div class="ponyInfo" style="margin: 7px 0;"><strong>Подтвеждение доставки</strong></div>
+			<table class="ponyTable" style="width: 392px;">
+				<tr>
+					<td colspan="2" style="font-size: 10px;padding: 0 4px;">
+						Я подтверждаю, что отправление доставлено и вручено в закрытом виде, без внешних повреждений упаковки, упаковочных материалов и пломб, вес отправления соответствует весу, определенному при его приеме.
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 50%;">
+						<div class="Top">Подпись получателя</div>
+						<span></span>
+					</td>
+					<td style="width: 50%;">
+						<div class="Top">Ф.И.О. получателя</div>
+						<span>{ReceiverContactName}</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="pseudoTD" style="border: none;width: 129px">
+							<div class="Top">Дата</div>
+						</div>
+						<div class="pseudoTD" style="width: 129px">
+							<div class="Top">Время</div>
+						</div>
+						<div class="pseudoTD" style="width: 129px">
+							<div class="Top">№</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="ponyTitle_Big"><strong>ДОСТАВКА ИМ МАГАЗИНА</strong></div>
+	</div>
+</body>
+</html>

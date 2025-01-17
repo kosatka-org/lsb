@@ -1,0 +1,1 @@
+ALTER TABLE  `one_click` ADD  `from` VARCHAR( 300 ) NOT NULL

@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `delivery_code` VARCHAR( 32 ) NOT NULL AFTER `delivery_price`;

@@ -1,0 +1,1 @@
+ALTER TABLE `web_sessions` ADD `user_id` INT(11) NOT NULL AFTER `ip`;

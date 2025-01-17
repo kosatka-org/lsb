@@ -1,0 +1,1 @@
+ALTER TABLE `inkass` ADD `im_sber_ai` TINYINT(2) NOT NULL AFTER `im_agent_fee`, ADD `im_sber_is` TINYINT(2) NOT NULL AFTER `im_sber_ai`;

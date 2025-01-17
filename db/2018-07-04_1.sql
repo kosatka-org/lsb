@@ -1,0 +1,1 @@
+ALTER TABLE  `users` ADD  `debt_limit` INT( 11 ) NOT NULL DEFAULT  '1000000';

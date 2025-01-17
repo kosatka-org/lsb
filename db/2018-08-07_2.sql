@@ -1,0 +1,1 @@
+ALTER TABLE  `eng_text_upload` ADD  `group` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `type`;

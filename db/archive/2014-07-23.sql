@@ -1,0 +1,1 @@
+ALTER TABLE  `faqs` ENGINE = MYISAM

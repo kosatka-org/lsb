@@ -1,0 +1,1 @@
+ALTER TABLE  `users` ADD  `ios_app_token` VARCHAR( 32 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL

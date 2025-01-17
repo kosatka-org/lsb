@@ -1,0 +1,1 @@
+ALTER TABLE  `orders` ADD  `manager_id` INT( 11 ) NOT NULL AFTER  `user_id`;

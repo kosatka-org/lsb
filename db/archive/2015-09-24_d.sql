@@ -1,0 +1,1 @@
+ALTER TABLE  `products` ADD  `super_price` TINYINT NOT NULL ;

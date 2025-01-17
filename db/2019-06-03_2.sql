@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `stretch` INT(11) NOT NULL AFTER `fitting`;

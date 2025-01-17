@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `offline_price` FLOAT(10,2) NOT NULL DEFAULT 0 AFTER `old_price`;

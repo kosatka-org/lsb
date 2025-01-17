@@ -1,0 +1,447 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/style_s.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+</head>
+<title></title>
+<body style="width: 690px;">
+	<div class="window">
+		<div class="closew">
+			 <a href="" onClick="self.close();"><img src="images/close.png" style="float: right;"> <div class="sizprimline">Закрыть</div></a>
+		</div>
+		<div class="pwt1">
+			<div style="float: left;">Подбираем размер</div>
+			<div class="buttons_m" id="swith">
+				<a href="#" class="button_left" onClick="$('#man_cloth').hide(); $('#woman_cloth').show(); $('#swith').toggleClass('buttons_w buttons_m'); return false;">
+				
+				</a>
+				<a href="#" class="button_right" onClick="$('#woman_cloth').hide(); $('#man_cloth').show(); $('#swith').toggleClass('buttons_w buttons_m'); return false;">
+				
+				</a>
+			</div>
+		</div>
+		<div class="pwt2">
+			<span class="siz">Соответствие размеров</span><br>
+			<span class="sizprim">Представленные размеры являются примерными и не гарантируют точное совпадение.</span>
+		</div>
+		<div id="man_cloth">
+		<div class="pwt3">
+			Конверсия размеров <a href="#" onclick="$('#stab1').slideToggle(1000); $('#bla').toggleClass('slide_button_p'); return false;"><div id="bla" class="slide_button_m"></div></a>
+		</div>
+		<div id="stab1">
+			<table style="width: 100%;" cellpadding="0" border="0" cellspacing="0" class="sizetable">
+				<tbody>
+					<tr class="dgray">
+						<td rowspan="2">
+							Междуна-<br>родный<br>размер
+						</td>
+						<td rowspan="2">Европ./Франц.<br>EU/FR</td>
+						<td rowspan="2">
+							Джинсы
+							<br>
+							обхват талии
+							<br>
+							(дюймы)
+						</td>
+						<td colspan="2">
+							Италия<br>IT
+						</td>
+						<td rowspan="2">
+							США<br>US
+						</td>
+						<td colspan="2">
+							Англия<br>UK
+						</td>
+						<td rowspan="2">
+							Дания<br>DK<br>
+						</td>
+						<td rowspan="2">
+							Япония<br>JP
+						</td>
+					</tr>
+					<tr class="gray">
+					
+						<td>стандарт</td>
+						<td>римские<br> цифры</td>
+						<td>стандарт</td>
+						<td>
+							обхват груди
+							<br>
+							(дюймы)</td>
+					</tr>
+					<tr class="lgray">
+						<td class="gray">
+							XXS
+						</td>
+						<td>32</td>
+						<td>22-23</td>
+						<td>36</td>
+						<td>0</td>
+						<td>0</td>
+						<td>4</td>
+						<td>30</td>
+						<td>32</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td class="gray">
+							XS
+						</td>
+						<td>34</td>
+						<td>24-25</td>
+						<td>38</td>
+						<td>I</td>
+						<td>2</td>
+						<td>6</td>
+						<td>32</td>
+						<td>34</td>
+						<td>7</td>
+					</tr>
+					<tr class="lgray">
+						<td class="gray">
+							S
+						</td>
+						<td>36</td>
+						<td>26-27</td>
+						<td>40</td>
+						<td>II</td>
+						<td>4</td>
+						<td>8</td>
+						<td>34</td>
+						<td>36</td>
+						<td>9</td>
+					</tr>
+					<tr>
+						<td class="gray">
+							M
+						</td>
+						<td>38</td>
+						<td>28-29</td>
+						<td>42</td>
+						<td>III</td>
+						<td>6</td>
+						<td>10</td>
+						<td>36</td>
+						<td>38</td>
+						<td>11</td>
+					</tr>
+					<tr class="lgray">
+						<td class="gray">
+							L
+						</td>
+						<td>40</td>
+						<td>30-31</td>
+						<td>44</td>
+						<td>IV</td>
+						<td>8</td>
+						<td>12</td>
+						<td>38</td>
+						<td>40</td>
+						<td>13</td>
+					</tr>
+					<tr>
+						<td class="gray">
+							XL
+						</td>
+						<td>42</td>
+						<td>32-33</td>
+						<td>46</td>
+						<td>V</td>
+						<td>10</td>
+						<td>14</td>
+						<td>40</td>
+						<td>42</td>
+						<td>15</td>
+					</tr>
+					<tr class="lgray">
+						<td class="gray">
+							XXL
+						</td>
+						<td>44</td>
+						<td>34-35</td>
+						<td>48</td>
+						<td>VI</td>
+						<td>12</td>
+						<td>16</td>
+						<td>42</td>
+						<td>44</td>
+						<td>17</td>
+					</tr>
+					<tr>
+						<td class="gray">
+							XXXL
+						</td>
+						<td>46-48</td>
+						<td>36-38</td>
+						<td>50-52</td>
+						<td>VII</td>
+						<td>14-16</td>
+						<td>18-20</td>
+						<td>44-46</td>
+						<td>46</td>
+						<td>19-21</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tline"></div>
+		<div class="pwt3">
+			Метрические соотношения <a href="#" onclick="$('#stab2').slideToggle(1000); $('#bla2').toggleClass('slide_button_p'); return false;"><div id="bla2" class="slide_button_m"></div></a>
+		</div>
+		<div id="stab2">
+			<table style="width: 100%;" cellpadding="0" border="0" cellspacing="0" class="sizetablem">
+				<tr class="lgray">
+					<td class="gray">
+						Дюймы
+					</td>
+					<td>22</td>
+					<td>24</td>
+					<td>26</td>
+					<td>28</td>
+					<td>30</td>
+					<td>32</td>
+					<td>34</td>
+					<td>36</td>
+					<td>38</td>
+					<td>40</td>
+					<td>42</td>
+					<td>44</td>
+					<td>46</td>
+				</tr>
+				<tr>
+					<td class="gray">
+						Сантиметры
+					</td>
+					<td>56</td>
+					<td>61</td>
+					<td>66</td>
+					<td>71</td>
+					<td>76</td>
+					<td>81</td>
+					<td>86</td>
+					<td>91</td>
+					<td>97</td>
+					<td>102</td>
+					<td>107</td>
+					<td>112</td>
+					<td>117</td>
+				</tr>
+			</table>
+		</div>
+		<div class="tline"></div>
+		<div class="pwt3">
+			Метрические соотношения <a href=""><img src="images/slip_pl.png" style="float: right;"></a>
+		</div>
+	<div class="tline"></div>
+	</div>
+	<div id="woman_cloth">
+		<div class="pwt3">
+			Конверсия размеров <a href="#" onclick="$('.sizetable').slideToggle(); $('#bla').toggleClass('slide_button_p'); return false;"><div id="bla" class="slide_button_m"></div></a>
+		</div>
+		<table style="width: 100%;" cellpadding="0" border="0" cellspacing="0" class="sizetable">
+			<tbody>
+				<tr class="dgray">
+					<td rowspan="2">
+						Междуна-<br>родный<br>размер
+					</td>
+					<td rowspan="2">Европ./Франц.<br>EU/FR</td>
+					<td rowspan="2">
+						Джинсы
+						<br>
+						обхват талии
+						<br>
+						(дюймы)
+					</td>
+					<td colspan="2">
+						Италия<br>IT
+					</td>
+					<td rowspan="2">
+						США<br>US
+					</td>
+					<td colspan="2">
+						Англия<br>UK
+					</td>
+					<td rowspan="2">
+						Дания<br>DK<br>
+					</td>
+					<td rowspan="2">
+						Япония<br>JP
+					</td>
+				</tr>
+				<tr class="gray">
+					
+					<td>стандарт</td>
+					<td>римские цифры</td>
+					<td>стандарт</td>
+					<td>
+						обхват груди
+						<br>
+						(дюймы)</td>
+				</tr>
+				<tr class="lgray">
+						<td class="gray">
+						XXS
+					</td>
+					<td>32</td>
+					<td>22-23</td>
+					<td>36</td>
+					<td>0</td>
+					<td>0</td>
+					<td>4</td>
+					<td>30</td>
+					<td>32</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td class="gray">
+						XS
+					</td>
+					<td>34</td>
+					<td>24-25</td>
+					<td>38</td>
+					<td>I</td>
+					<td>2</td>
+					<td>6</td>
+					<td>32</td>
+					<td>34</td>
+					<td>7</td>
+				</tr>
+				<tr class="lgray">
+					<td class="gray">
+						S
+					</td>
+					<td>36</td>
+					<td>26-27</td>
+					<td>40</td>
+					<td>II</td>
+					<td>4</td>
+					<td>8</td>
+					<td>34</td>
+					<td>36</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td class="gray">
+						M
+					</td>
+					<td>38</td>
+					<td>28-29</td>
+					<td>42</td>
+					<td>III</td>
+					<td>6</td>
+					<td>10</td>
+					<td>36</td>
+					<td>38</td>
+					<td>11</td>
+				</tr>
+				<tr class="lgray">
+					<td class="gray">
+						L
+					</td>
+					<td>40</td>
+					<td>30-31</td>
+					<td>44</td>
+					<td>IV</td>
+					<td>8</td>
+					<td>12</td>
+					<td>38</td>
+					<td>40</td>
+					<td>13</td>
+				</tr>
+				<tr>
+					<td class="gray">
+						XL
+					</td>
+					<td>42</td>
+					<td>32-33</td>
+					<td>46</td>
+					<td>V</td>
+					<td>10</td>
+					<td>14</td>
+					<td>40</td>
+					<td>42</td>
+					<td>15</td>
+				</tr>
+				<tr class="lgray">
+					<td class="gray">
+							XXL
+					</td>
+					<td>44</td>
+					<td>34-35</td>
+					<td>48</td>
+					<td>VI</td>
+					<td>12</td>
+					<td>16</td>
+					<td>42</td>
+					<td>44</td>
+					<td>17</td>
+				</tr>
+				<tr>
+					<td class="gray">
+						XXXL
+						</td>
+					<td>46-48</td>
+					<td>36-38</td>
+					<td>50-52</td>
+					<td>VII</td>
+					<td>14-16</td>
+					<td>18-20</td>
+					<td>44-46</td>
+					<td>46</td>
+					<td>19-21</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="tline"></div>
+		<div class="pwt3">
+			Метрические соотношения <a href="#" onclick="$('.sizetablem').slideToggle(); $('#bla2').toggleClass('slide_button_p'); return false;"><div id="bla2" class="slide_button_m"></div></a>
+		</div>
+		<table style="width: 100%;" cellpadding="0" border="0" cellspacing="0" class="sizetablem">
+			<tr class="lgray">
+				<td class="gray">
+					Дюймы
+				</td>
+				<td>22</td>
+				<td>24</td>
+				<td>26</td>
+				<td>28</td>
+				<td>30</td>
+				<td>32</td>
+				<td>34</td>
+				<td>36</td>
+				<td>38</td>
+				<td>40</td>
+				<td>42</td>
+				<td>44</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td class="gray">
+					Сантиметры
+				</td>
+				<td>56</td>
+				<td>61</td>
+				<td>66</td>
+				<td>71</td>
+				<td>76</td>
+				<td>81</td>
+				<td>86</td>
+				<td>91</td>
+				<td>97</td>
+				<td>102</td>
+				<td>107</td>
+				<td>112</td>
+				<td>117</td>
+			</tr>
+		</table>
+		<div class="tline"></div>
+		<div class="pwt3">
+			Метрические соотношения <a href=""><img src="images/slip_pl.png" style="float: right;"></a>
+		</div>
+	<div class="tline"></div>
+	</div>
+</div>
+</body>
+</html>

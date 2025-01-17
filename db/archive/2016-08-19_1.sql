@@ -1,0 +1,1 @@
+ALTER TABLE orders_products ADD one_click_id INT NOT NULL DEFAULT 0;

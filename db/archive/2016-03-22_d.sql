@@ -1,0 +1,1 @@
+ALTER TABLE  `orders_products` ADD  `transaction_completed` TINYINT( 1 ) NOT NULL DEFAULT  '0';

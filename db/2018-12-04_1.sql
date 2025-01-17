@@ -1,0 +1,1 @@
+CREATE TABLE `lsboutique`.`payments` ( `id` INT NOT NULL AUTO_INCREMENT , `order_id` INT NOT NULL , `payment_method_id` INT NOT NULL , `user_id` INT NOT NULL , `date` DATETIME NOT NULL , `amount` DOUBLE(12,2) NOT NULL , `received` TINYINT(1) NOT NULL , PRIMARY KEY (`id`), INDEX (`order_id`), INDEX (`user_id`)) ENGINE = InnoDB;

@@ -1,0 +1,2 @@
+ALTER TABLE `users` ADD `last_ip` VARCHAR( 16 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `last_login_date` ,
+ADD `last_user_agent` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `last_ip`;

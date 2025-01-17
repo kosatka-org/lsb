@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `delivery_agent_fee` FLOAT(10,2) NOT NULL DEFAULT '0.00' AFTER `delivery_return_price`;

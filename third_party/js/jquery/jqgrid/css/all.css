@@ -1,0 +1,12 @@
+body {
+background:#4282ae;
+font-size:12px;
+font-family:Trebuchet MS;
+}
+.wrapper {
+border:10px solid #246591;
+padding:20px;
+background:#fff;
+width:600px;
+margin: 0 auto;
+}

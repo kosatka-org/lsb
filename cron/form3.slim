@@ -1,0 +1,187 @@
+doctype html
+html
+  head
+    title Анкета товара
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    script src="https://code.jquery.com/jquery-2.1.4.min.js"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+    javascript:
+      !function(e,i){if("function"==typeof define&&define.amd)define(["exports","jquery"],function(e,r){return i(e,r)});else if("undefined"!=typeof exports){var r=require("jquery");i(exports,r)}else i(e,e.jQuery||e.Zepto||e.ender||e.$)}(this,function(e,i){function r(e,r){function n(e,i,r){return e[i]=r,e}function a(e,i){for(var r,a=e.match(t.key);void 0!==(r=a.pop());)if(t.push.test(r)){var u=s(e.replace(/\[\]$/,""));i=n([],u,i)}else t.fixed.test(r)?i=n([],r,i):t.named.test(r)&&(i=n({},r,i));return i}function s(e){return void 0===h[e]&&(h[e]=0),h[e]++}function u(e){switch(i('[name="'+e.name+'"]',r).attr("type")){case"checkbox":return"on"===e.value?!0:e.value;default:return e.value}}function f(i){if(!t.validate.test(i.name))return this;var r=a(i.name,u(i));return l=e.extend(!0,l,r),this}function d(i){if(!e.isArray(i))throw new Error("formSerializer.addPairs expects an Array");for(var r=0,t=i.length;t>r;r++)this.addPair(i[r]);return this}function o(){return l}function c(){return JSON.stringify(o())}var l={},h={};this.addPair=f,this.addPairs=d,this.serialize=o,this.serializeJSON=c}var t={validate:/^[a-z_][a-z0-9_]*(?:\[(?:\d*|[a-z0-9_]+)\])*$/i,key:/[a-z0-9_]+|(?=\[\])/gi,push:/^$/,fixed:/^\d+$/,named:/^[a-z0-9_]+$/i};return r.patterns=t,r.serializeObject=function(){return new r(i,this).addPairs(this.serializeArray()).serialize()},r.serializeJSON=function(){return new r(i,this).addPairs(this.serializeArray()).serializeJSON()},"undefined"!=typeof i.fn&&(i.fn.serializeObject=r.serializeObject,i.fn.serializeJSON=r.serializeJSON),e.FormSerializer=r,r});
+
+  body
+    .container
+      h1 Анкета товара
+      select class="form-control" id="select"
+        option value="1" Обувь
+        option value="2" Трикотаж
+        option value="3" selected="true" Верхняя одежда
+        option value="4" Рубашки
+        option value="5" Пиджаки
+      .row style="margin-bottom:30px;"
+        form id="form" action="/rest_api/product_form" method="POST" enctype="multipart/form-data"
+          .col-md-6
+
+            .form-group
+              label for="sku" Артикул
+              input type="text" class="form-control" name="sku" id="sku"
+            .form-group
+              label for="sizes" Размеры
+              input type="text" class="form-control" name="sizes" id="sizes"
+            .form-group
+              label for="model" Название модели
+              input type="text" class="form-control" name="model" id="model"
+            .form-group
+              label for="brand_name" Брендовое имя (если есть)
+              input type="text" class="form-control" name="brand_name" id="brand_name"
+            .form-group
+              label for="firm_tech" Фирменные характеристики, материалы и технологии
+              input type="text" class="form-control" name="firm_tech" id="firm_tech"
+            .form-group
+              label for="contains" Состав
+              input type="text" class="form-control" name="contains" id="contains"
+
+            .radio
+              label
+                input type="radio" name="type" value="Куртки"
+                | Куртки
+            .radio
+              label
+                input type="radio" name="type" value="Пальто, плащи, тренчкоты"
+                | Пальто, плащи, тренчкоты
+            .radio
+              label
+                input type="radio" name="type" value="Шубы"
+                | Шубы
+            .radio
+              label
+                input type="radio" name="type" value="Жилетки"
+                | Жилетки
+            .radio
+              label
+                input type="radio" name="type" value="Кожаная верхняя одежда"
+                | Кожаная верхняя одежда
+
+
+            .h3 Цвет
+            .row
+              .col-xs-6
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Черный (серый)" Черный (серый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Белый" Белый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Коричневый (рыжий,бежевый)" Коричневый (рыжий,бежевый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Синий (голубой, бирюзовый)" Синий (голубой, бирюзовый)
+              .col-xs-6
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Красный (бордовый)" Красный (бордовый)
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Зеленый" Зеленый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Желтый" Желтый
+                .checkbox
+                  label
+                    input type="checkbox" name="color[]" value="Яркие цвета (электрики, кислотные цвета и т.д.)" Яркие цвета (электрики, кислотные цвета и т.д.)
+
+
+            h3 Длина
+            .radio
+              label
+                input type="radio" name="length" value="Длинное"
+                | Длинное
+            .radio
+              label
+                input type="radio" name="length" value="Короткое"
+                | Короткое
+
+            .h3 Сезон
+            .radio
+              label
+                input type="radio" name="season" id="season1" value="Лето" Лето
+            .radio
+              label
+                input type="radio" name="season" id="season2" value="Весь год" Весь год
+            .radio
+              label
+                input type="radio" name="season" id="season3" value="Зима" Зима
+
+          .col-md-6
+            .h3 Снаружи
+            .form-group
+              label for="outside_material" Материал
+              input type="text" class="form-control" name="outside_material" id="outside_material"
+            .form-group
+              label for="outside_leather" Кожа
+              input type="text" class="form-control" name="outside_leather" id="outside_leather"
+            .form-group
+              label for="outside_suede" Замша
+              input type="text" class="form-control" name="outside_suede" id="outside_suede"
+            .form-group
+              label for="outside_exclusive_leather" Эксклюзивная кожа
+              input type="text" class="form-control" name="outside_exclusive_leather" id="outside_exclusive_leather"
+
+            .checkbox
+              label
+                input type="checkbox" name="outside_laquer_leather" value="Лакированная кожа" Лакированная кожа
+
+            .checkbox
+              label
+                input type="checkbox" name="outside_eco_leather" value="Экокожа" Экокожа
+
+            .h3 Внутри
+            .checkbox
+              label
+                input type="checkbox" name="has_inside" value="Подкладка" Подкладка
+            .checkbox
+              label
+                input type="checkbox" name="half_inside" value="Полуподкладка" Полуподкладка
+            .checkbox
+              label
+                input type="checkbox" name="no_inside" value="Без подкладки" Без подкладки
+
+            .form-group
+              label for="inside_material" Материал
+              input type="text" class="form-control" name="inside_material" id="inside_material"
+            .form-group
+              label for="inside_fur" Мех
+              input type="text" class="form-control" name="inside_fur" id="inside_fur"
+            .form-group
+              label for="inside_down" Пух
+              input type="text" class="form-control" name="inside_down" id="inside_down"
+
+
+            .checkbox
+              label
+                input type="checkbox" name="inside_sintepon" value="Синтепон" Синтепон
+
+            h3 Комментарии
+            .form-group
+              textarea class="form-control" name="comments" id="comments" rows="4" autocomplete="off"
+
+            .form-group
+              label for="photo" Фотография товара
+              input type="file" name="photo" id="photo" accept="image/*" capture="camera"
+
+            button type="submit" id="submit" class="btn btn-primary" Отправить
+            button type="button" id="reset" class="btn btn-default" style="margin-left:10px;" Очистить
+
+  javascript:
+    $('#select').on('change', function() {
+      event.preventDefault();
+      window.location = $(this).val();
+    });
+
+    $('#reset').on('click', function() {
+      event.preventDefault();
+      $('input').val("");
+      $('input').attr("checked", false);
+    });

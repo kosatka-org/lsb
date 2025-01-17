@@ -1,0 +1,1 @@
+ALTER TABLE `movements` ADD `type` INT(11) NOT NULL AFTER `created_user_id`;

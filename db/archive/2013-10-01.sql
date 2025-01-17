@@ -1,0 +1,1 @@
+ALTER TABLE  `specials` ADD  `url` VARCHAR( 255 ) NOT NULL AFTER  `name`;

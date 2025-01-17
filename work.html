@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LuxuryStore</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link media="all" href="/css/style.css" rel="stylesheet" type="text/css" />  
+    <script type="text/javascript" src="http://yandex.st/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="/jscript/validationEngine.jquery.css" type="text/css" media="screen" charset="utf-8" />
+	<script src="/jscript/jquery.validationEngine-ru.js" type="text/javascript"></script>
+	<script src="/jscript/jquery.validationEngine.js"></script>
+    <!--[if gte IE 9]>
+	  <style type="text/css">
+		.gradient {
+		   filter: none;
+		}
+	  </style>
+	<![endif]-->
+	<script type="text/javascript">
+		$(document).ready( function (){
+			$("#show_slide2").click( function() {
+				$("#slide1").slideUp(500);
+				$("#slide2").slideDown(500);
+			});
+			$("#show_slide3").click( function() {
+				$("#slide2").slideUp(500);
+				$("#slide3").slideDown(500);
+			});
+			$("#form_work").validationEngine();
+		});
+		$("input[type=text], textarea").focus(zoomDisable).blur(zoomEnable);
+		function zoomDisable(){
+		  $('head meta[name=viewport]').remove();
+		  $('head').prepend('<meta name="viewport" content="width=device-width user-scalable=0" />');
+		}
+		function zoomEnable(){
+		  $('head meta[name=viewport]').remove();
+		  $('head').prepend('<meta name="viewport" content="width=device-width user-scalable=1" />');
+		}
+	</script>
+</head>
+<body style="width: 100%;padding: 0;">
+	<div class="work_wrap" id="slide1">
+		<div class="work_head_wrap">
+			<div class="work_logo"><a href="" alt="" title=""><img src="/images/ls_logo.jpg" alt="" title="" /></a></div>
+		</div>
+		<div class="work_content_wrap">
+			<div class="work_content gradient">
+				<div class="work_center">
+					<div class="work_foto"><img src="/images/blank_face.png" alt="" title=""></div>
+					<div class="work_text">
+						<strong>ПРИГЛАШАЕМ НА РАБОТУ СОТРУДНИКОВ</strong><br />
+						В новый проект - бутик брендовой одежды первой линии.<br />
+						Мы ищем профессионалов с опытом более 3-х лет.<br />
+						Работа по контракту. Высокая заработная плата.<br />
+						Заполните анкету, чтобы получить работу.<br />
+					</div>
+					<div class="work_button" id="show_slide2" onclick="{literal}rG('GET_OFFER');{/literal}>ПОЛУЧИТЬ РАБОТУ</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="work_wrap" style="display: none;" id="slide2">
+		<div class="work_head_wrap">
+			<div class="work_logo"><a href="" alt="" title=""><img src="/images/ls_logo.jpg" alt="" title="" /></a></div>
+		</div>
+		<div class="work_content_wrap">
+			<div class="work_content gradient">
+				<div class="work_center">
+					<form id="form_work">
+						<input type="file" id="file">
+						<label for="file"><div class="work_foto_bigger"><div class="work_foto_text">ФОТО</div></div></label>
+						<input type="text" class="work_input validate[required]" placeholder="ФИО">
+						<input type="text" class="work_input validate[required]" placeholder="НОМЕР ТЕЛЕФОНА">
+						<input type="text" class="work_input validate[required]" placeholder="СПЕЦИАЛЬНОСТЬ">
+						<input type="text" class="work_input validate[required]" placeholder="РАЗМЕР ЖЛАЕМОЙ ЗАРАБОТНОЙ ПЛАТЫ">
+						<input type="text" class="work_input" placeholder="УКАЖИТЕ ВАШ ВОЗРАСТ">
+						<input type="text" class="work_input" placeholder="УКАЖИТЕ ВАШЕ ПРОШЛОЕ МЕСТО РАБРТЫ">
+						<input type="text" class="work_input" placeholder="УКАЖИТЕ ВАШЕ ОБРАЗОВАНИЕ">
+						<input type="text" class="work_input" placeholder="ЖЕЛАЕМЫЙ ГРАФИК РАБОТЫ">
+						<input type="text" class="work_input" placeholder="СЕМЕЙНОЕ ПОЛОЖЕНИЕ">
+						<input type="text" class="work_input" placeholder="МЕСТО ПОСТОЯННОГО ПРОЖИВАНИЯ">
+						<input type="text" class="work_input" placeholder="ВОДИТЕЛЬСКОЕ УДОСТОВЕРЕНИЕ">
+						<input type="text" class="work_input" placeholder="ДЕТИ">
+						<input type="text" class="work_input" placeholder="ГРАЖДАНСТВО">
+						<input type="text" class="work_input" placeholder="ИНОСТРАННЫЕ ЯЗЫКИ">
+						<input type="text" class="work_input" placeholder="ДОПОЛНИТЕЛЬНЫЕ НАВЫКИ, КУРСЫ">
+						<textarea class="work_input" placeholder="ТЕКСТ РЕЗЮМЕ" style="height: 108px;"></textarea>
+						<div class="work_button" style="margin: 18px auto 0;" id="show_slide3" onclick="{literal}rG('SEND_WORKSHEET');{/literal}">ОТПРАВИТЬ</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="work_wrap" style="display: none;" id="slide3">
+		<div class="work_head_wrap">
+			<div class="work_logo"><a href="" alt="" title=""><img src="/images/ls_logo.jpg" alt="" title="" /></a></div>
+		</div>
+		<div class="work_content_wrap">
+			<div class="work_content gradient">
+				<div class="work_center">
+					<div class="work_text_small">
+						Уважаемый ФИО<br />
+						ваше резуме на должность СПЕЦИАЛИСТА получено<br />
+						Наш сотрудник скоро вам перезвонит на НОМЕР ТЕЛЕФОНА<br /><br />
+
+						СПАСИБО ЗА ВАШЕ ВРЕМЯ<br />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

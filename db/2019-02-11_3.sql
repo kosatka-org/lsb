@@ -1,0 +1,1 @@
+ALTER TABLE `movements` ADD `accepted` TINYINT(1) NOT NULL AFTER `reservation_returned`, ADD `accepted_date` DATETIME NOT NULL AFTER `accepted`, ADD `accepted_user_id` INT NOT NULL AFTER `accepted_date`;

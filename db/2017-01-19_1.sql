@@ -1,0 +1,1 @@
+ALTER TABLE  `orders` ADD  `partner_order` TINYINT( 1 ) NOT NULL

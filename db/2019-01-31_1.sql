@@ -1,0 +1,21 @@
+ALTER TABLE `users` ADD `bookmarks` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER `superuser`;
+UPDATE `users` SET `bookmarks`='1,9,11,12,13,15,17,18' WHERE `group_id`= 4;
+UPDATE `users` SET `bookmarks`='4,6,7,8' WHERE `group_id`= 3;
+UPDATE `users` SET `bookmarks`='2' WHERE `group_id`= 4;
+UPDATE `users` SET `bookmarks`='3,6,7,8' WHERE `group_id`= 6;
+UPDATE `users` SET `bookmarks`='1,6,7,8,15' WHERE `group_id`= 5;
+UPDATE `users` SET `bookmarks`='1,6,7,8,10,15' WHERE `group_id`= 5 AND `subgroup_id`= 3 ;
+UPDATE `users` SET `bookmarks`='1,6' WHERE `group_id`= 7 OR `group_id`= 8;
+UPDATE `users` SET `bookmarks`='6,7,8,9,11,12,13,15' WHERE `group_id`= 9;
+UPDATE `users` SET `bookmarks`='9,10,17' WHERE `group_id`= 12;
+UPDATE `users` SET `bookmarks`='5,6,7,9,11,15' WHERE `group_id`= 13;
+UPDATE `users` SET `bookmarks`='5,7,10,15' WHERE `group_id`= 14;
+UPDATE `users` SET `bookmarks`='10' WHERE `group_id`= 15;
+UPDATE `users` SET `bookmarks`='14' WHERE `cashbox_ids` LIKE '%13%';
+UPDATE `users` SET `bookmarks`='10,16,17' WHERE `cashbox_ids` LIKE '%15'
+UPDATE `users` SET `bookmarks`=CONCAT(`bookmarks`,',6,8,11') WHERE `user_id`= 126884;
+UPDATE `users` SET `bookmarks`=CONCAT(`bookmarks`,',10') WHERE `user_id`= 15532;
+UPDATE `users` SET `bookmarks`=CONCAT(`bookmarks`,',10') WHERE `user_id`= 16275;
+UPDATE `users` SET `bookmarks`=CONCAT(`bookmarks`,',10') WHERE `user_id`= 132165;
+UPDATE `users` SET `bookmarks`=CONCAT(`bookmarks`,',10') WHERE `user_id`= 131403;
+UPDATE `users` SET `bookmarks`=CONCAT(`bookmarks`,',15') WHERE `user_id`= 128338;

@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `delayed` TINYINT NOT NULL DEFAULT '0';

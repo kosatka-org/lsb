@@ -1,0 +1,1 @@
+ALTER TABLE  `users` ADD  `code` INT( 16 ) NOT NULL AFTER  `original_user_id`

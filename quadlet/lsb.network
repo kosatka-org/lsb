@@ -1,0 +1,7 @@
+[Unit]
+Description=Lsb network
+
+[Network]
+Subnet=192.168.90.0/24
+Gateway=192.168.90.1
+Label=app=lsb

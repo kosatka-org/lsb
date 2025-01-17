@@ -1,0 +1,2 @@
+ALTER TABLE `orders_products` ADD `currency` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT  'rub' AFTER  `price` ,
+ADD `currency_rate` FLOAT( 10, 3 ) NOT NULL DEFAULT  '1.000' AFTER  `currency`;

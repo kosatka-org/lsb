@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `subgroup_id` INT(11) NOT NULL DEFAULT '0' AFTER `group_id`;

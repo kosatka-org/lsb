@@ -1,0 +1,1 @@
+ALTER TABLE `one_click` ADD `from_mixmarket` TINYINT( 3 ) NOT NULL DEFAULT '0';
