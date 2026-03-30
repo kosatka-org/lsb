@@ -11,6 +11,9 @@ Environment=MYSQL_USER=lsb
 Environment=MYSQL_PASSWORD=lsb
 Volume=db.volume:/var/lib/mysql
 Network=lsb.network
-PublishPort=3306:3306
+PublishPort=127.0.0.1:3306:3306
 Exec=--character-set-server=utf8 --collation-server=utf8_unicode_ci --sql-mode="IGNORE_SPACE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
 
+[Service]
+Restart=always
+TimeoutStartSec=900
