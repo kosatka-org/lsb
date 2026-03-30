@@ -12,3 +12,6 @@ PublishPort=8000:80
 UserNS=keep-id:uid=33,gid=33
 User=0
 
+[Service]
+Restart=on-failure
+TimeoutStartSec=900
