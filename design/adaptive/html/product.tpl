@@ -351,7 +351,7 @@
 	jQuery(document).ready(function() {
         if($('#size_system').html()){
 			var size_system = String($('#size_system').html());
-			var start_cut = String($('#size_system').html()).indexOf("(");			
+			var start_cut = String($('#size_system').html()).indexOf("(");
 			if(start_cut !=-1) {
 				size_system = size_system.substr(start_cut);
 				$('.size_system_type').text($('.size_system_type').text().replace(size_system, ''));
@@ -486,7 +486,14 @@ jQuery(document).ready(function() {
             tocart.attr('id', 'addToCart');
             tocart.attr('href', '/index.php?module=Cart&product_id={/literal}{$product->product_id}{literal}');
             tocart.find('span').html('В корзину');
+
+
         }
+
+        let sizePrice = jQuery(this).data('price');
+
+        if(sizePrice)
+            jQuery('span[itemprop = highPrice]').text(sizePrice);
 	});
 	function startParallax(width, pos, id, clickId) {
         var height = jQuery(window).height();
@@ -810,7 +817,14 @@ jQuery(document).ready(function() {
                     <ul class="ShAA_sizeUl">
                         {foreach from=$product->sizes item=size_t}
                             <li class="ShAA_sizeNotSelect {if $product->admin_details->sizes_allowed[$size_t]} red_mark{/if}">
-                                <a class="size-select-btn ShAA_sizeLink" data-barcode="{$size_t->barcode}" data-remote-warehouse="{$size_t->remote_warehouse}" title="{$size_t->size}" data-size="{$size_t->size}">{$size_t->size}{if $size_t->remote_warehouse}<i style="margin-top:2px;font-size:16px" class="pull-right icon-info-circle"></i>{/if}</a>
+                                <a class="size-select-btn ShAA_sizeLink"
+                                   data-barcode="{$size_t->barcode}"
+                                   data-remote-warehouse="{$size_t->remote_warehouse}"
+                                   data-size="{$size_t->size}"
+                                   data-price="{$size_t->price}"
+                                   title="{$size_t->size}">
+                                    {$size_t->size}{if $size_t->remote_warehouse}<i style="margin-top:2px;font-size:16px" class="pull-right icon-info-circle"></i>{/if}
+                                </a>
                             </li>
                         {/foreach}
                     </ul>

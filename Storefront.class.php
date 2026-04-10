@@ -1247,7 +1247,7 @@ class Storefront extends Widget
                 LEFT JOIN items i ON i.product_id = p.product_id
                 LEFT JOIN categories c ON c.category_id = p.category_id
                 LEFT JOIN locations2links l ON l.item_location = p.item_location AND l.sex = p.sex
-                WHERE (p.url = '{$product_url}' OR p.product_id = '{$product_url}') 
+                WHERE (p.url = '{$product_url}' OR p.product_id = '{$product_url}')
                 GROUP BY p.product_id
                 LIMIT 1");
 
@@ -1262,7 +1262,7 @@ class Storefront extends Widget
         else {
           $shop_filter = "";
         }
-        $query = "SELECT item_id, size_id, size_type, size_system, size, shop_id, barcode
+        $query = "SELECT *
                     FROM items
                     WHERE quantity != 0 AND product_id={$product->product_id} {$shop_filter} GROUP BY size ORDER BY FIELD(size, 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL', '5XL+'), size + 0, size ASC ";
 
