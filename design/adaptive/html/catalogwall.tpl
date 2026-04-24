@@ -796,7 +796,16 @@ jQuery(document).ready(function() {
                           {/foreach}
                           {/if}
                         {else}
-                          <span class="price rub"><span itemprop="highPrice" class="prod_price client_price">{$product->prices.price|string_format:"%.0f"}</span>&nbsp;<i class="icon-rub"></i></span>
+                          <span class="price rub">
+                            <span itemprop="highPrice" class="prod_price client_price">
+                                {if $product->size_price}
+                                    {$product->size_price|string_format:"%.0f"}
+                                {else}
+                                    {$product->prices.price|string_format:"%.0f"}
+                                {/if}
+                            </span>&nbsp;
+                            <i class="icon-rub"></i>
+                        </span>
                           {foreach from=$cat_currencies item=currency}
                             {assign var="c_name" value="price_`$currency->code`"}
                             <span class="price {$currency->code}" style="display:none;">{$product->prices.$c_name|string_format:"%.0f"}&nbsp;<b>{$currency->sign}</b></span>

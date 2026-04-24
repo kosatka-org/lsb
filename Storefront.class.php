@@ -445,7 +445,7 @@ class Storefront extends Widget
         if ($product->product_id) {
             $product_view_args = array(
                 'product_id' => $product->product_id,
-                'user_agent' => $_SERVER['HTTP_USER_AGENT']
+                'user_agent' => $_SERVER['HTTP_USER_AGENT'],
             );
             $product_view_args['user_id'] = $s_user_id;
             $product_view_args['app_view'] = $this->settings->theme == 'api' ? 1 : 0;
@@ -531,7 +531,7 @@ class Storefront extends Widget
            "италия"  => "Italy",
            "канада"  => "Canada",
            "англия"  => "England",
-           "франция" => "France"
+           "франция" => "France",
         );
 
         if ( is_array($product->properties) && count($product->properties) ) {
@@ -1460,5 +1460,20 @@ class Storefront extends Widget
       header('Content-Type: application/json');
       echo $return;
       die;
+    }
+
+    /**
+     * Выбрать максимальную цену товара из размеров товара
+     *
+     * @param $productId
+     * @return mixed
+     */
+    public static function getMaxPriceFromSizes($productId)
+    {
+        global $database_object;
+
+        $query = "SELECT MAX(price) FROM items WHERE product_id = $productId";
+
+        return $database_object->get_var($query);
     }
 }
