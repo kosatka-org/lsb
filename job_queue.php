@@ -13,7 +13,7 @@ else {
 
     public static function push($job, $args, $time=false, $queue='default') {
       if(!isset(self::$redis))
-        self::$redis = new Predis\Client('tcp://127.0.0.1:6379/0');
+        self::$redis = new Predis\Client('tcp://redis:6379/0');
       if(!isset(self::$client))
         self::$client = new \SidekiqJob\Client(self::$redis, 'resque');
       if ($time) {
