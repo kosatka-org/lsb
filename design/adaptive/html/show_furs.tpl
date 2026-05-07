@@ -7,7 +7,7 @@
         margin: 24px auto;
         width: 100%;
     }
-    
+
     .lightwidget--captions .lightwidget__caption {
         font-size: 2em !important;
         text-align: center;
@@ -15,7 +15,7 @@
     .footer {
         margin-top: -24px;
     }
-    
+
     .ShAA_overlay {
         position: absolute;
         width: 100%;
@@ -24,7 +24,7 @@
         background: #333;
         opacity: 0.3;
     }
-    
+
     .ShAA_srTextOnBanner {
          text-align: center;
          color: #fff;
@@ -121,11 +121,11 @@
         line-height: 24px;
         font-weight: 300;
     }
-    
+
     .paddingNew {
         padding: 60px 0;
     }
-    
+
     .ShAA_stRButton {
         background: #000;
         border-color: #000;
@@ -136,7 +136,7 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    
+
 @media (max-width: 767px) {
     .ShAA_srTextOnBanner {
          top: 30%;
@@ -145,12 +145,12 @@
          width: 86%;
          left: 7%;
     }
-    
+
     .ShAA_srUnderSocTextMini {
         font-size: 14px;
-        line-height: 20px;        
+        line-height: 20px;
     }
-    
+
     .ShAA_instaBlock {
         margin: 30px 0;
     }
@@ -159,7 +159,7 @@
         margin: 0 auto;
         font-size: 21px;
     }
-    
+
     .ShAA_textBlockGray {
         padding: 65px 0 70px;
     }
@@ -190,7 +190,7 @@
         max-width: 760px;
         width: 90%;
     }
-    
+
     .paddingNew {
         padding: 40px 0;
     }
@@ -231,7 +231,7 @@
         font-size: 24px;
         line-height: 28px;
     }
-    
+
     .ShAA_srUnderSocText {
         font-size: 18px;
         margin: 24px auto;
@@ -247,14 +247,14 @@
 
 <script type="text/javascript">
 
-//jQuery('.logoOnline').html('<a href="/"><img width="212" style="margin: -38px 0 0 0;" alt="{/literal}{$showbrand->name|escape}{literal}" title="{/literal}{$showbrand->name|escape}{literal}" src="//lsboutique.ru/reimg/files/brands/212x/{/literal}{$showbrand->image}{literal}" /></a>');
+//jQuery('.logoOnline').html('<a href="/"><img width="212" style="margin: -38px 0 0 0;" alt="{/literal}{$showbrand->name|escape}{literal}" title="{/literal}{$showbrand->name|escape}{literal}" src="/reimg/files/brands/212x/{/literal}{$showbrand->image}{literal}" /></a>');
 
-jQuery(document).ready(function(){    
+jQuery(document).ready(function(){
     jQuery("#gallery").unitegallery({
         gallery_theme: "tiles",
         tiles_type: "justified"	,
         tiles_justified_row_height: 320,	//base row height of the justified type
-		tiles_justified_space_between: 0,	//space between the tiles justified type 
+		tiles_justified_space_between: 0,	//space between the tiles justified type
         lightbox_show_numbers: false,
         lightbox_show_textpanel: false,
     });
@@ -284,7 +284,7 @@ jQuery(document).ready(function(){
             Соболь, норка, шиншилла, лиса, каракульча, рысь, куница, кролик и многое другое.
         </div>
 	</div>
-    
+
     <div class="ShAA_instaBlock">
         <div id="instafeed">
             <div class="ShAA_instaSeasonTitle">Новое в коллекции {$season}</div>
@@ -300,7 +300,7 @@ jQuery(document).ready(function(){
                 Мы подобрали для вас лучшие меха знаменитых итальянских брендов.
             </div>
             <div class="ShAA_srTextDiv">
-                В наличии более 500 моделей разнообразных оттенков и фасонов. 
+                В наличии более 500 моделей разнообразных оттенков и фасонов.
                 Соболь, норка, шиншилла, лиса, каракульча, рысь, куница, кролик и многое другое.
             </div>
             <div class="ShAA_srTextDiv">
@@ -312,7 +312,7 @@ jQuery(document).ready(function(){
                 SIMONETTA RAVIZZA </br>
                 BLACKGLAMA </br>
                 MALAMATI </br>
-                ANTONIO DIDONE 
+                ANTONIO DIDONE
             </div>
             <div class="ShAA_srTextDiv">
                 LP Fashion Gallery, Алексеевская 10/16
@@ -325,7 +325,7 @@ jQuery(document).ready(function(){
         <img alt="Итальянские меха" src="/design/adaptive/images/showfurs_3.jpg" data-image="/design/adaptive/images/showfurs_3.jpg" data-description="Итальянские меха"/>
         <img alt="Итальянские меха" src="/design/adaptive/images/showfurs_1.jpg" data-image="/design/adaptive/images/showfurs_1.jpg" data-description="Итальянские меха"/>
     </div>
-    
+
     <div class="ShAA_srSubscribe">
         <div class="ShAA_srSubscribeTitle">
             Новости, поступления и скидки
@@ -339,7 +339,7 @@ jQuery(document).ready(function(){
             </a>
         </div>
     </div>
-    
+
     <div class="ShAA_textBlockGray paddingNew">
         <div class="ShAA_srSocBlock">
             <a href="https://www.facebook.com/lsboutiq/" target="_blank">

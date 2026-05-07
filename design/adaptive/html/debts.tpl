@@ -331,7 +331,7 @@ post_order = function(order_query, shop, offline_manager_id) {
     }
     $('#order-list').hide();
     $('#found-orders').show();
-    $('#set_url').val("https://lsboutique.ru/index.php?module=OfflineSales&debts=1&cashbox="+cashbox+"&shop_id="+shop+"&offline_manager_id="+offline_manager_id+"&search="+order_query);
+    $('#set_url').val("/index.php?module=OfflineSales&debts=1&cashbox="+cashbox+"&shop_id="+shop+"&offline_manager_id="+offline_manager_id+"&search="+order_query);
   });
 }
 
