@@ -1,0 +1,4 @@
+[Build]
+ImageTag=localhost/webhook
+File=<%= $(pwd) %>/webhook.containerfile
+

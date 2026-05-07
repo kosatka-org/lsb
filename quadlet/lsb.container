@@ -2,12 +2,13 @@
 Description=Lsb application server
 Requires=db.service
 Wants=redis.service
+Wants=webhook.service
 After=db.service
 
 [Container]
 Image=lsb.build
 ContainerName=lsb
-Volume=<%= $(cd .. && pwd) %>:/var/www/html:Z
+Volume=<%= $(cd .. && pwd) %>:/var/www/html:z
 Network=lsb.network
 PublishPort=8000:80
 UserNS=keep-id:uid=33,gid=33
