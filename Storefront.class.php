@@ -445,7 +445,7 @@ class Storefront extends Widget
         if ($product->product_id) {
             $product_view_args = array(
                 'product_id' => $product->product_id,
-                'user_agent' => $_SERVER['HTTP_USER_AGENT']
+                'user_agent' => $_SERVER['HTTP_USER_AGENT'],
             );
             $product_view_args['user_id'] = $s_user_id;
             $product_view_args['app_view'] = $this->settings->theme == 'api' ? 1 : 0;
@@ -531,7 +531,7 @@ class Storefront extends Widget
            "италия"  => "Italy",
            "канада"  => "Canada",
            "англия"  => "England",
-           "франция" => "France"
+           "франция" => "France",
         );
 
         if ( is_array($product->properties) && count($product->properties) ) {
@@ -1247,7 +1247,7 @@ class Storefront extends Widget
                 LEFT JOIN items i ON i.product_id = p.product_id
                 LEFT JOIN categories c ON c.category_id = p.category_id
                 LEFT JOIN locations2links l ON l.item_location = p.item_location AND l.sex = p.sex
-                WHERE (p.url = '{$product_url}' OR p.product_id = '{$product_url}') 
+                WHERE (p.url = '{$product_url}' OR p.product_id = '{$product_url}')
                 GROUP BY p.product_id
                 LIMIT 1");
 
@@ -1262,7 +1262,7 @@ class Storefront extends Widget
         else {
           $shop_filter = "";
         }
-        $query = "SELECT item_id, size_id, size_type, size_system, size, shop_id, barcode
+        $query = "SELECT *
                     FROM items
                     WHERE quantity != 0 AND product_id={$product->product_id} {$shop_filter} GROUP BY size ORDER BY FIELD(size, 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL', '5XL+'), size + 0, size ASC ";
 
@@ -1460,5 +1460,20 @@ class Storefront extends Widget
       header('Content-Type: application/json');
       echo $return;
       die;
+    }
+
+    /**
+     * Выбрать максимальную цену товара из размеров товара
+     *
+     * @param $productId
+     * @return mixed
+     */
+    public static function getMaxPriceFromSizes($productId)
+    {
+        global $database_object;
+
+        $query = "SELECT MAX(price) FROM items WHERE product_id = $productId";
+
+        return $database_object->get_var($query);
     }
 }

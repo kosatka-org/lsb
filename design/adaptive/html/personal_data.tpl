@@ -801,7 +801,7 @@ ul.tabsSett li, ul.tabsSett .tab-current {
                             {if $smarty.session.group->discount}{if $language=='eng'}Bonus{else}Бонус от{/if} {$smarty.session.group->discount|string_format:"%.0f"}%<br />{/if}
                         </div>
                         {if $user->phone_number && $user->card_number}
-                            <div class="ShAA_socialWalletImg" onClick="location.href='https://lsboutique.ru/pass/{$user->phone_number}/{$user->card_number}/?output'"></div>
+                            <div class="ShAA_socialWalletImg" onClick="location.href='/pass/{$user->phone_number}/{$user->card_number}/?output'"></div>
                         {/if}
                     </div>
                 </div>

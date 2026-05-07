@@ -34,7 +34,8 @@ function myShutdownHandler() {
 // Стабилизируем скрипт
 set_time_limit(300);
 ini_set('memory_limit',   '256M');
-ini_set('display_errors', 'Off');
+ini_set('display_errors', 'On');
+ini_set('error_reporting', E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR);
 register_shutdown_function('myShutdownHandler');
 
 

@@ -15,32 +15,32 @@
 	{else}
     <meta name="robots" content="all" />
 	{/if}
-	<meta property="og:url" content="https://lsboutique.ru{$smarty.server.SHOW_URI}">
+	<meta property="og:url" content="{$smarty.server.SHOW_URI}">
 	<meta property="og:title" content="{$title|escape}">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="{$description|escape}">
 	{if $og_image}
-	<meta property="og:image" content="https://lsboutique.ru{$og_image}">
+	<meta property="og:image" content="{$og_image}">
 	{else}
-	<meta property="og:image" content="https://lsboutique.ru/images/og_link_image_l.jpeg ">
-	<meta property="og:image" content="https://lsboutique.ru/images/og_link_image.jpeg ">
-	<meta property="og:image" content="https://lsboutique.ru/images/og_link_image_l.jpeg ">
+	<meta property="og:image" content="/images/og_link_image_l.jpeg ">
+	<meta property="og:image" content="/images/og_link_image.jpeg ">
+	<meta property="og:image" content="/images/og_link_image_l.jpeg ">
 	{/if}
 	<meta property="og:site_name" content="Luxury Store">
 	<meta property="og:image:alt" content="{$title|escape}">
 	{if $og_image}
-	<meta property="og:image:secure_url" content="https://lsboutique.ru{$og_image}">
+	<meta property="og:image:secure_url" content="{$og_image}">
 	{else}
-	<meta property="og:image:secure_url" content="https://lsboutique.ru/images/og_link_image_l.jpeg ">
+	<meta property="og:image:secure_url" content="/images/og_link_image_l.jpeg ">
 	{/if}
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:url" content="https://lsboutique.ru{$smarty.server.SHOW_URI}">
+	<meta name="twitter:url" content="{$smarty.server.SHOW_URI}">
 	<meta name="twitter:title" content="{$title|escape}">
 	{if $og_image}
-	<meta property="twitter:image" content="https://lsboutique.ru{$og_image}">
+	<meta property="twitter:image" content="{$og_image}">
 	{else}
-	<meta property="twitter:image" content="https://lsboutique.ru/images/og_link_image_l.jpeg ">
+	<meta property="twitter:image" content="/images/og_link_image_l.jpeg ">
 	{/if}
 	<meta name="twitter:description" content="{$description|escape}">
 	<meta name="twitter:site" content="@lsboutique">
@@ -983,9 +983,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             {if $show_presale == 1}
                 <a rel="nofollow" href="/catalog/?category=new_season" target="_blank" style="border:none;display: block;text-align: center;" onclick="{literal}rG('MAIN_BANNER');{/literal}">
                     {if $smarty.session.user->purchase_sum_real > 0}
-                        <img src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/images/presale_{if $manOrWoman == '2'}fe{/if}male.jpg" alt="{if $language == 'eng'}Closed pre-sale for VIP customers{else}Закрытая предварительная распродажа для VIP-клиентов{/if}" style="width: 100%;max-width: 927px;" title="{if $language == 'eng'}Closed pre-sale for VIP customers{else}Закрытая предварительная распродажа для VIP-клиентов{/if}" />
+                        <img src="/images/presale_{if $manOrWoman == '2'}fe{/if}male.jpg" alt="{if $language == 'eng'}Closed pre-sale for VIP customers{else}Закрытая предварительная распродажа для VIP-клиентов{/if}" style="width: 100%;max-width: 927px;" title="{if $language == 'eng'}Closed pre-sale for VIP customers{else}Закрытая предварительная распродажа для VIP-клиентов{/if}" />
                     {else}
-                        <img src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/images/presale_5_{if $manOrWoman == '2'}fe{/if}male.png" alt="{if $language == 'eng'}5% discount on first purchase{else}Скидка 5% на первую покупку{/if}" style="width: 100%;max-width: 927px;" title="Скидка 5% на первую покупку" />
+                        <img src="/images/presale_5_{if $manOrWoman == '2'}fe{/if}male.png" alt="{if $language == 'eng'}5% discount on first purchase{else}Скидка 5% на первую покупку{/if}" style="width: 100%;max-width: 927px;" title="Скидка 5% на первую покупку" />
                     {/if}
                 </a>
             {/if}
@@ -1003,23 +1003,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         {if 'swd'|array_key_exists:$promos}
             <a rel="nofollow" href="/sale/" title="{if $language == 'eng'}Weekend discount on DSQUARED clothing and shoes{else}Скидка Выходного Дня на одежду и обувь DSQUARED{/if}" target="_blank" style="border:none;" class="ShAA_miniHoverZoom" data-id="swd_promo" onclick="{literal}rG('BANNER_SWD');{/literal}">
-                <img alt="{if $language == 'eng'}Weekend discount on DSQUARED clothing and shoes{else}Скидка Выходного Дня на одежду и обувь DSQUARED{/if}" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/files/images/swd/{$promos.swd->main_banner}" />
+                <img alt="{if $language == 'eng'}Weekend discount on DSQUARED clothing and shoes{else}Скидка Выходного Дня на одежду и обувь DSQUARED{/if}" src="/files/images/swd/{$promos.swd->main_banner}" />
             </a>
         {else}
             {foreach from=$banners item=banner}
                 <a rel="nofollow" href="{$banner->url}" title="{$banner->title}" target="_blank" style="border:none;" class="ShAA_miniHoverZoom" data-id="ba{$banner->id}" onclick="{literal}rG('MAIN_BANNER');{/literal}">
-                    <img src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/files/banners/{if $language == 'eng' && $banner->eng_image}{$banner->eng_image}{else}{$banner->image}{/if}" alt="{if $language == 'eng' && $banner->eng_title}{$banner->eng_title}{else}{$banner->title}{/if}" title="{if $language == 'eng' && $banner->eng_title}{$banner->eng_title}{else}{$banner->title}{/if}" />
+                    <img src="/files/banners/{if $language == 'eng' && $banner->eng_image}{$banner->eng_image}{else}{$banner->image}{/if}" alt="{if $language == 'eng' && $banner->eng_title}{$banner->eng_title}{else}{$banner->title}{/if}" title="{if $language == 'eng' && $banner->eng_title}{$banner->eng_title}{else}{$banner->title}{/if}" />
                 </a>
             {/foreach}
 
             {foreach from=$banner_obj item=banner}
                 {if !in_array($banner->url, array(''))}
                     <a rel="nofollow" href="/brands/{$banner->url}/" title="{$banner->name}" target="_blank" style="border:none;" class="ShAA_miniHoverZoom" data-id="br{$banner->brand_id}" onclick="{literal}rG('MAIN_BANNER');{/literal}">
-                        <img src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/files/brand_banners/{$banner->banner}" alt="{$banner->title}" title="{$banner->name}" />
+                        <img src="/files/brand_banners/{$banner->banner}" alt="{$banner->title}" title="{$banner->name}" />
                     </a>
                 {else}
                     <a rel="nofollow" href="/{$banner->url}/" title="{$banner->name}" target="_blank" style="border:none;" class="ShAA_miniHoverZoom" data-id="br{$banner->brand_id}" onclick="{literal}rG('MAIN_BANNER');{/literal}">
-                        <img src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/files/brand_banners/{$banner->banner}" alt="{$banner->title}" title="{$banner->name}" />
+                        <img src="/files/brand_banners/{$banner->banner}" alt="{$banner->title}" title="{$banner->name}" />
                     </a>
                 {/if}
             {/foreach}
@@ -1123,9 +1123,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 {foreach from=$brands item=brand}
                     {if $brand->image}
                         {if !in_array($brand->url, array(''))}
-                            <a href="/brands/{$brand->url}/?main_page" target="_blank"><img width="212" alt="{$brand->name|replace:'&':'&amp;'}" title="{$brand->meta_title|replace:'&':'&amp;'}" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/brands/212x/{$brand->image}" style="margin: 32px;" /></a>
+                            <a href="/brands/{$brand->url}/?main_page" target="_blank"><img width="212" alt="{$brand->name|replace:'&':'&amp;'}" title="{$brand->meta_title|replace:'&':'&amp;'}" src="/reimg/files/brands/212x/{$brand->image}" style="margin: 32px;" /></a>
                         {else}
-                            <a href="/{$brand->url}/" target="_blank"><img width="212" alt="{$brand->name|replace:'&':'&amp;'}" title="{$brand->meta_title|replace:'&':'&amp;'}" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/brands/212x/{$brand->image}" style="margin: 32px;" /></a>
+                            <a href="/{$brand->url}/" target="_blank"><img width="212" alt="{$brand->name|replace:'&':'&amp;'}" title="{$brand->meta_title|replace:'&':'&amp;'}" src="/reimg/files/brands/212x/{$brand->image}" style="margin: 32px;" /></a>
                         {/if}
                     {/if}
                 {/foreach}
@@ -1136,7 +1136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 {foreach from=$specials item=special}
                     <div class="ShAA_epItem">
                             <a rel="nofollow" href="/{if $special->look_special}look_{/if}specials/{$special->url}/" target="_blank" class="ShAA_miniHoverZoomTop">
-                                <img src="//lsboutique.ru/files/images/{$special->small_picture}" style="width: 100%; height: 100%;" alt="{if $language=='eng'}{$special->eng_name}{else}{$special->name}{/if}" />
+                                <img src="/files/images/{$special->small_picture}" style="width: 100%; height: 100%;" alt="{if $language=='eng'}{$special->eng_name}{else}{$special->name}{/if}" />
                             </a>
                             <a rel="nofollow" href="/{if $special->look_special}look_{/if}specials/{$special->url}/" target="_blank"><span>{if $language=='eng'}{$special->eng_name}{else}{$special->name}{/if}</span></a>
                     </div>
@@ -1188,7 +1188,7 @@ jQuery(document).ready(function() {
                         <li><a rel="nofollow" href="/catalog/?mobile=1">{if $language=='eng'}Mobile version{else}Мобильная версия сайта{/if}</a></li>
 {/if}
                         <li>
-                            <a rel="nofollow" href="http://ru.lsboutique.ru/zilli-auto/" target="_blank">{if $language=='eng'}Automotive Bespoke{else}Тюнинг ZILLI{/if}</a>
+                            <a rel="nofollow" href="/zilli-auto/" target="_blank">{if $language=='eng'}Automotive Bespoke{else}Тюнинг ZILLI{/if}</a>
                         </li>
                         <li><a rel="nofollow" href="/sections/personal_data{if $language=='eng'}_eng{/if}/">{if $language=='eng'}Privacy & Cookies{else}Согласие на обработку персональных данных{/if}</a></li>
                     </ul>
@@ -1199,7 +1199,7 @@ jQuery(document).ready(function() {
                 <div>
                     <ul>
                         {if $language != 'eng'}<li><a href="/feed/" target="_blank" rel="nofollow">Новости</a></li>{/if}
-                        <!-- {if $language != 'eng'}<li><a rel="nofollow" href="http://ru.lsboutique.ru/diskont" target="_blank">{if $language=='eng'}VIP discount{else}VIP скидки{/if}</a></li>{/if} -->
+                        <!-- {if $language != 'eng'}<li><a rel="nofollow" href="/diskont" target="_blank">{if $language=='eng'}VIP discount{else}VIP скидки{/if}</a></li>{/if} -->
                         {if $language != 'eng'}<li><a href="http://ru.lsboutique.ru/doctxt/atele/" target="_blank" rel="nofollow">{if $language=='eng'}Bespoke{else}Пошив костюма{/if}</a></li>{/if}
                         {if $language != 'eng'}<li><a href="http://fur.lsboutique.ru/" target="_blank" rel="nofollow">{if $language=='eng'}Italian furs{else}Итальянские меха{/if}</a></li>{/if}
                         <!--<li><a rel="nofollow" href="/brands/luxury-store/">{if $language=='eng'}Gift certificate{else}Подарочные сертификаты{/if}</a></li>-->

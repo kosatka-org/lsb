@@ -783,6 +783,8 @@ class Catalog extends Widget
                   $products[$k]->model = $proditem->eng_single_name . ' ' . $proditem->brand;
                   $products[$k]->group_name = $proditem->eng_single_name;
                 }
+
+                $products[$k]->size_price = Storefront::getMaxPriceFromSizes($proditem->product_id);
             }
 
             if ( $log_search && !empty($_SESSION['user']->user_id) && (!isset($_SESSION['group']->group_id) || $_SESSION['group']->group_id == 1 || $_SESSION['group']->group_id == 0) ) {
@@ -817,11 +819,11 @@ class Catalog extends Widget
                     }
 
                     $product->can_buy_from_site = $user->can_buy_from_site($product->brand_id);
-                    
+
                     $product_from_wl = $this->db->results($sql="SELECT * FROM users2wishlist WHERE product_id = '{$product->product_id}' AND user_id = '{$s_user_id}'");
                     if($product_from_wl) $product->product_from_wl = true;
                     else $product->product_from_wl = false;
-                    
+
                     $cart = $this->db->result($sql="SELECT * FROM users2carts WHERE product_id = '{$product->product_id}' AND user_id = '{$s_user_id}'");
                     if($cart) $product->product_from_cart = true;
                     else $product->product_from_cart = false;
@@ -1136,7 +1138,7 @@ class Catalog extends Widget
             if($oc_ordered_product){
               $oc_ordered_product->prices = $user->product_prices($oc_ordered_product);
               $oc_ordered_product->price = $oc_ordered_product->prices['personal_price'];
-              $this->smarty->assign('oc_ordered', $oc_ordered); 
+              $this->smarty->assign('oc_ordered', $oc_ordered);
               $this->smarty->assign('oc_ordered_product', $oc_ordered_product);
             }
         }

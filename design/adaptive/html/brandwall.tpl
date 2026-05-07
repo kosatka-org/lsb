@@ -9,7 +9,7 @@
                     <div class="abcNames ShAAlogoBrandDiv">
                         <h1 style="line-height:24px;">
                             <a href={if $brand->url}"/brands/{$brand->url}/"{else}"/catalog/?brand={$brand->brand_id}&showbrand={$brand->brand_id}"{/if} style="font-size:24px;" {if $brand->bigsize_on_brandwall}style="font-size:24px;"{/if}>
-                                <img src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/brands/212x/{$brand->image}" alt="{$brand->name}" title="{$brand->name}" />
+                                <img src="/reimg/files/brands/212x/{$brand->image}" alt="{$brand->name}" title="{$brand->name}" />
                             </a>
                         </h1>
                     </div>

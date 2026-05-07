@@ -1,0 +1,13 @@
+[Unit]
+Description=Redis container
+PartOf=lsb.service
+
+[Container]
+Image=docker.io/library/redis:6.2
+ContainerName=redis
+Network=lsb.network
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+

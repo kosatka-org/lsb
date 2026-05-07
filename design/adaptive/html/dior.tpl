@@ -7,7 +7,7 @@
         margin: 24px auto;
         width: 100%;
     }
-    
+
     .lightwidget--captions .lightwidget__caption {
         font-size: 2em !important;
         text-align: center;
@@ -15,7 +15,7 @@
     .footer {
         margin-top: -24px;
     }
-    
+
     .ShAA_overlay {
         position: absolute;
         width: 100%;
@@ -24,7 +24,7 @@
         background: #333;
         opacity: 0.3;
     }
-    
+
     .ShAA_srTextOnBanner {
          text-align: center;
          color: #fff;
@@ -121,11 +121,11 @@
         line-height: 24px;
         font-weight: 300;
     }
-    
+
     .paddingNew {
         padding: 60px 0;
     }
-    
+
     .ShAA_stRButton {
         background: #000;
         border-color: #000;
@@ -140,7 +140,7 @@
     .ShAA_srTextOnBanner {
         top: 36%;
     }
-}    
+}
 @media (max-width: 767px) {
     .ShAA_srTextOnBanner {
          top: 18%;
@@ -149,12 +149,12 @@
          width: 86%;
          left: 7%;
     }
-    
+
     .ShAA_srUnderSocTextMini {
         font-size: 14px;
-        line-height: 20px;        
+        line-height: 20px;
     }
-    
+
     .ShAA_instaBlock {
         margin: 30px 0;
     }
@@ -163,7 +163,7 @@
         margin: 0 auto;
         font-size: 21px;
     }
-    
+
     .ShAA_textBlockGray {
         padding: 65px 0 70px;
     }
@@ -194,7 +194,7 @@
         max-width: 760px;
         width: 90%;
     }
-    
+
     .paddingNew {
         padding: 40px 0;
     }
@@ -234,7 +234,7 @@
         font-size: 24px;
         line-height: 28px;
     }
-    
+
     .ShAA_srUnderSocText {
         font-size: 18px;
         margin: 24px auto;
@@ -250,14 +250,14 @@
 
 <script type="text/javascript">
 
-jQuery('.logoOnline').html('<a href="/"><img style="margin: 0;" alt="{/literal}{$showbrand->name|escape}{literal}" title="{/literal}{$showbrand->name|escape}{literal}" src="//lsboutique.ru/files/brands/{/literal}{$showbrand->image}{literal}" /></a>');
+jQuery('.logoOnline').html('<a href="/"><img style="margin: 0;" alt="{/literal}{$showbrand->name|escape}{literal}" title="{/literal}{$showbrand->name|escape}{literal}" src="/files/brands/{/literal}{$showbrand->image}{literal}" /></a>');
 
-jQuery(document).ready(function(){    
+jQuery(document).ready(function(){
     jQuery("#gallery").unitegallery({
         gallery_theme: "tiles",
         tiles_type: "justified"	,
         tiles_justified_row_height: 320,	//base row height of the justified type
-		tiles_justified_space_between: 0,	//space between the tiles justified type 
+		tiles_justified_space_between: 0,	//space between the tiles justified type
         lightbox_show_numbers: false,
         lightbox_show_textpanel: false,
     });
@@ -288,7 +288,7 @@ jQuery(document).ready(function(){
             Основной акцент в коллекциях делается на изящных аксессуарах и подборе нестандартных тканей для одежды.
         </div>
 	</div>
-    
+
     <div class="ShAA_instaBlock">
         <div id="instafeed">
             <div class="ShAA_instaSeasonTitle">Новое в коллекции {$season}</div>
@@ -301,15 +301,15 @@ jQuery(document).ready(function(){
             <div class="ShAA_srTextDiv ShAA_srLineUnderTitle">
             </div>
             <div class="ShAA_srTextDiv">
-                Dior – французский Дом моды. Специализируется на выпуске одежды, обуви, аксессуаров и парфюма. 
+                Dior – французский Дом моды. Специализируется на выпуске одежды, обуви, аксессуаров и парфюма.
                 Основной акцент в коллекциях делается на изящных аксессуарах и подборе нестандартных тканей для одежды.
             </div>
             <div class="ShAA_srTextDiv">
-                Французский дом моды Christian Dior стал стал в XX веке символом новой послевоенной эпохи. 
+                Французский дом моды Christian Dior стал стал в XX веке символом новой послевоенной эпохи.
                 Он не только вернул в моду летящие ткани, женственные силуэты и изящество, но и стал бессмертным эталоном
             </div>
             <div class="ShAA_srTextDiv">
-                Под маркой Christian Dior производится не только одежда, парфюмерия, декоративная косметика и аксессуары, 
+                Под маркой Christian Dior производится не только одежда, парфюмерия, декоративная косметика и аксессуары,
                 но и чулки, нижнее бельё и средства по уходу за кожей.
             </div>
             <div class="ShAA_srTextDiv">
@@ -323,7 +323,7 @@ jQuery(document).ready(function(){
         <img alt="Dior" src="/design/adaptive/images/dior_3.jpg" data-image="/design/adaptive/images/dior_3.jpg" data-description="Dior"/>
         <img alt="Dior" src="/design/adaptive/images/dior_4.jpg" data-image="/design/adaptive/images/dior_4.jpg" data-description="Dior"/>
     </div>
-    
+
     <div class="ShAA_srSubscribe">
         <div class="ShAA_srSubscribeTitle">
             Новости, поступления и скидки
@@ -337,7 +337,7 @@ jQuery(document).ready(function(){
             </a>
         </div>
     </div>
-    
+
     <div class="ShAA_textBlockGray paddingNew">
         <div class="ShAA_srSocBlock">
             <a href="https://www.facebook.com/lsboutiq/" target="_blank">

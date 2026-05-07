@@ -578,7 +578,7 @@ jQuery(document).ready(function() {
 {if isset($showbrand) }
     {literal}
         <script type="text/javascript">
-            jQuery('.logoOnline').html('<a href="/"><img style="margin: 0;" alt="{/literal}{$showbrand->name|escape}{literal}" title="{/literal}{$showbrand->name|escape}{literal}" src="//lsboutique.ru/files/brands/{/literal}{$showbrand->image}{literal}" /></a>');
+            jQuery('.logoOnline').html('<a href="/"><img style="margin: 0;" alt="{/literal}{$showbrand->name|escape}{literal}" title="{/literal}{$showbrand->name|escape}{literal}" src="/files/brands/{/literal}{$showbrand->image}{literal}" /></a>');
         </script>
     {/literal}
     <div class="centerRightContent" style="width:100%;">
@@ -637,7 +637,7 @@ jQuery(document).ready(function() {
 			{if $brand_for_special}
 				{literal}
 					<script type="text/javascript">
-						jQuery('.logoOnline').html('<a href="/brands/{/literal}{$brand_for_special->url}{literal}/?sex={/literal}{$special_fields->gender}{literal}"><img style="margin: 0;" alt="{/literal}{$brand_for_special->name|escape}{literal}" title="{/literal}{$brand_for_special->name|escape}{literal}" src="//lsboutique.ru/files/brands/{/literal}{$brand_for_special->image}{literal}" /></a>');
+						jQuery('.logoOnline').html('<a href="/brands/{/literal}{$brand_for_special->url}{literal}/?sex={/literal}{$special_fields->gender}{literal}"><img style="margin: 0;" alt="{/literal}{$brand_for_special->name|escape}{literal}" title="{/literal}{$brand_for_special->name|escape}{literal}" src="/files/brands/{/literal}{$brand_for_special->image}{literal}" /></a>');
 					</script>
 				{/literal}
 				<span>&nbsp;&nbsp;<i class="icon-caret-right"></i>&nbsp;&nbsp;</span>
@@ -796,7 +796,16 @@ jQuery(document).ready(function() {
                           {/foreach}
                           {/if}
                         {else}
-                          <span class="price rub"><span itemprop="highPrice" class="prod_price client_price">{$product->prices.price|string_format:"%.0f"}</span>&nbsp;<i class="icon-rub"></i></span>
+                          <span class="price rub">
+                            <span itemprop="highPrice" class="prod_price client_price">
+                                {if $product->size_price}
+                                    {$product->size_price|string_format:"%.0f"}
+                                {else}
+                                    {$product->prices.price|string_format:"%.0f"}
+                                {/if}
+                            </span>&nbsp;
+                            <i class="icon-rub"></i>
+                        </span>
                           {foreach from=$cat_currencies item=currency}
                             {assign var="c_name" value="price_`$currency->code`"}
                             <span class="price {$currency->code}" style="display:none;">{$product->prices.$c_name|string_format:"%.0f"}&nbsp;<b>{$currency->sign}</b></span>

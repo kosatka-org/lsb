@@ -1,6 +1,7 @@
 [Unit]
 Description=Lsb application server
 Requires=db.service
+Wants=redis.service
 After=db.service
 
 [Container]
