@@ -92,7 +92,7 @@ class Special extends Widget
                                   $this->item->sale);
           $this->db->query($query);
 	  			$inserted_id = $this->db->insert_id();
-          Resque::enqueue('default', 'UrlUpdateJob', array('fast' => true));
+          // Resque::enqueue('default', 'UrlUpdateJob', array('fast' => true));
 
             }
   			else
@@ -113,7 +113,7 @@ class Special extends Widget
 			                            $this->item->sale,
   			                          $item_id);
                 $this->db->query($query);
-                Resque::enqueue('default', 'UrlUpdateJob', array('fast' => true));
+                // Resque::enqueue('default', 'UrlUpdateJob', array('fast' => true));
             }
 
         if (isset($_FILES['image']) && !empty($_FILES['image']['tmp_name'])) {

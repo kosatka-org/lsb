@@ -816,9 +816,9 @@ class Cart extends Widget
       $user_id = (int)$_GET['user_id'];
       $delete = isset($_GET['del']) ? true : false;
       $user = new luser($user_id);
-      
+
       if(is_array($_GET['p_id'])){
-        foreach(($_GET['p_id']) as $k=>$s) $products[$k]->sizes = $s; 
+        foreach(($_GET['p_id']) as $k=>$s) $products[$k]->sizes = $s;
       }
       else{
         $products[$_GET['p_id']]->size = $_GET['size'];
@@ -935,7 +935,7 @@ class Cart extends Widget
     }
     die;
   }
-  
+
   function get_networks() {
         $return->networks = $this->db->results("SELECT name, keyword, app_keys FROM `networks` WHERE active = 1 ");
         foreach($return->networks as $k=>$network){
@@ -1336,7 +1336,7 @@ class Cart extends Widget
 		$_COOKIE['sex'] = 0;
 	}
 	$mw = $_GET['sex'] ? (int)$this->url_filtered_param('sex') : $_COOKIE['sex'];
-	
+
     $user = new luser();
     $keys = $user->get_keys($_SESSION['user']->user_id);
     $str = '';
@@ -1478,7 +1478,7 @@ class Cart extends Widget
 	$this->smarty->assign('filter_url', '/personal_data/?');
     return $this->body = $this->smarty->fetch('personal_data.tpl');
   }
-  
+
   function get_managers() {
     $return->managers = $this->db->results("SELECT original_user_id, email, name, photo, phone_number, pref_messenger as messengers FROM users WHERE group_id = 5 AND subgroup_id IN (1) ORDER BY name DESC");
     foreach ( $return->managers as $manager) {
@@ -1901,7 +1901,7 @@ class Cart extends Widget
                 $order->delivery_status = $delivery_st[$order->delivery_status];
                 $order->manager_id = $orders_object[$order->order_id]['order']->manager_id;
                 $order->manager = $this->db->results("SELECT name, phone_number, email, wh.start, wh.end FROM `users` u LEFT JOIN work_hours wh ON wh.user_id = u.user_id AND wh.date = DATE(NOW()) WHERE u.user_id = '{$order->manager_id}'");
-				
+
 				$orders_object[$order->order_id]->with_online_discount = false;
 				foreach ($orders_object[$order->order_id]['products'] as $product) {
 				  if ( ($product->order_price - 0.1) > $product->last_price_online ) {
@@ -2893,7 +2893,7 @@ class Cart extends Widget
 
             // Создаем карточку на Trello
             $args = array( 'error' => $em, 'message' => $message );
-            Resque::enqueue('default', 'TrelloJob', $args);
+            // Resque::enqueue('default', 'TrelloJob', $args);
 
             $from = "{$user->name} <{$user->email}>";
             if ( $em == 'Ошибка в описании товара' ) {
