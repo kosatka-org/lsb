@@ -125,7 +125,7 @@
             <div class="panel-body">
               {foreach from=$order->products item=product}
                 <div class="row ShAA_salesItemOff">
-                  {if $product->image}<div class="col-md-2 mt10"><img src="//lsboutique.ru/reimg/files/products/60x/{$product->image}" alt="{$product->product_name}" /></div>{/if}
+                  {if $product->image}<div class="col-md-2 mt10"><img src="/reimg/files/products/60x/{$product->image}" alt="{$product->product_name}" /></div>{/if}
                   <div class="col-md-3 mt10"><b>{$product->product_name}</b></div>
                   <div class="col-md-2 mt10">{$product->sku}</div>
                   <div class="col-md-2 mt10">{$product->color}</div>
@@ -423,7 +423,7 @@
       <div class="panel-body">
         {{#each this.products}}
           <div class="row ShAA_salesItemOff">
-            {{#if this.image}}<div class="col-md-2 mt10"><img src="//lsboutique.ru/reimg/files/products/60x/{{this.image}}" alt="{{this.product_name}}" /></div>{{/if}}
+            {{#if this.image}}<div class="col-md-2 mt10"><img src="/reimg/files/products/60x/{{this.image}}" alt="{{this.product_name}}" /></div>{{/if}}
             <div class="col-md-3 mt10">{{this.product_name}}</div>
             <div class="col-md-2 mt10">{{this.sku}}</div>
             <div class="col-md-2 mt10">{{this.color}}</div>
@@ -462,7 +462,7 @@ $('script[type="text/x-handlebars-template"]').each(function() {
 });
 
 Handlebars.registerHelper('formatMoney', function(n) {
-  return new Intl.NumberFormat('ru-RU', { 
+  return new Intl.NumberFormat('ru-RU', {
    maximumFractionDigits: 0, minimumFractionDigits: 0 }).format(Number(n));
 });
 

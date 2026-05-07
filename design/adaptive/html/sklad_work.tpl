@@ -74,7 +74,7 @@
        <a href="/products/{{this.url}}/" target="_blank" style="float: right;">страница</a>
       </div>
       <div class="panel-heading" style="overflow:hidden;">
-          {{#if this.image}}<img src="//lsboutique.ru/reimg/files/products/120x/{{this.large_image}}" style="float:left; margin-right:10px;">{{/if}}
+          {{#if this.image}}<img src="/reimg/files/products/120x/{{this.large_image}}" style="float:left; margin-right:10px;">{{/if}}
           <div class="ShAA_salesItemOff">
             <div style="float: left;margin-right: 20px;">
               <b>{{this.model}}</br>

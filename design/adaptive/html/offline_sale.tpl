@@ -404,7 +404,7 @@
     {{#if payment.unpaid}}
       <div class="form-group">
         <label for="cashbox-select">
-          <button class="btn btn-clipboard" style="margin:0;" data-clipboard-text="https://lsboutique.ru/spay/{{payment.hash}}/">
+          <button class="btn btn-clipboard" style="margin:0;" data-clipboard-text="/spay/{{payment.hash}}/">
             <i class="icon-copy"></i>
           </button>
         </label>
