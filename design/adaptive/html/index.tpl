@@ -1180,32 +1180,21 @@ jQuery(document).ready(function() {
                     <ul>
                         {if $language != 'eng'}<li><a rel="nofollow" href="/citiesselect/" id="city_link">{if !$x_city && !$smarty.session.user->city && !$x_region}{if $language=='eng'}Choose your city{else}Выберите город{/if}{/if}</a></li>{/if}
                         <li><a rel="nofollow" href="{if $city->url}/city/{$city->url}{else}/sections/shipping{if $language=='eng'}_eng{/if}{/if}" target="_blank">{if $language=='eng'}Shipping and payment{else}Доставка {if $x_city}{$x_city}{elseif $smarty.session.user->city}{$smarty.session.user->city}{elseif $x_region}{$x_region}{else} и оплата{/if}{/if}</a></li>
-                        <li><a rel="nofollow" href="/sizes/allsizes.php?sex={if $manOrWoman == '2'}2{else}1{/if}" target="_blank">{if $language=='eng'}Size table{else}Таблица размеров{/if}</a></li>
                         <li><a rel="nofollow" href="/sections/sitemap/" target="_blank">{if $language=='eng'}Sitemap{else}Карта сайта{/if}</a></li>
                         {if $language != 'eng'}<li><a rel="nofollow" href="/faq/">{if $language=='eng'}Help{else}Вопрос-ответ{/if}</a></li>{/if}
                         {if $language != 'eng'}<li><a rel="nofollow" href="http://market.yandex.ru/shop/105646/reviews?clid=703" target="_blank" >{if $language=='eng'}Client feedback{else}Отзывы клиентов{/if}</a></li>{/if}
 {if $is_mobile}
                         <li><a rel="nofollow" href="/catalog/?mobile=1">{if $language=='eng'}Mobile version{else}Мобильная версия сайта{/if}</a></li>
 {/if}
-                        <li>
-                            <a rel="nofollow" href="/zilli-auto/" target="_blank">{if $language=='eng'}Automotive Bespoke{else}Тюнинг ZILLI{/if}</a>
-                        </li>
                         <li><a rel="nofollow" href="/sections/personal_data{if $language=='eng'}_eng{/if}/">{if $language=='eng'}Privacy & Cookies{else}Согласие на обработку персональных данных{/if}</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footerMenuBlock">
-                <div class="footerMenuTitle">{if $language=='eng'}Luxury Store{else}Бутик "Лакшери Стор"{/if}:</div>
                 <div>
                     <ul>
                         {if $language != 'eng'}<li><a href="/feed/" target="_blank" rel="nofollow">Новости</a></li>{/if}
-                        <!-- {if $language != 'eng'}<li><a rel="nofollow" href="/diskont" target="_blank">{if $language=='eng'}VIP discount{else}VIP скидки{/if}</a></li>{/if} -->
-                        {if $language != 'eng'}<li><a href="http://ru.lsboutique.ru/doctxt/atele/" target="_blank" rel="nofollow">{if $language=='eng'}Bespoke{else}Пошив костюма{/if}</a></li>{/if}
-                        {if $language != 'eng'}<li><a href="http://fur.lsboutique.ru/" target="_blank" rel="nofollow">{if $language=='eng'}Italian furs{else}Итальянские меха{/if}</a></li>{/if}
-                        <!--<li><a rel="nofollow" href="/brands/luxury-store/">{if $language=='eng'}Gift certificate{else}Подарочные сертификаты{/if}</a></li>-->
-                        <li><a href="http://ru.lsboutique.ru/db/shops/" target="_blank" rel="nofollow">{if $language=='eng'}Boutiques' interiors {else}Бутики{/if}</a></li>
                         <li><a rel="nofollow" href="/sections/{if $language=='eng'}Boutiques{else}contacts{/if}/" target="_blank">{if $language=='eng'}Contact us{else}Контакты{/if}</a></li>
-                        {if $language != 'eng'}<li><a rel="nofollow" href="/work/" target="_blank">Работа</a></li>{/if}
                     </ul>
                 </div>
             </div>
@@ -1213,49 +1202,9 @@ jQuery(document).ready(function() {
             <div class="footerMenuBlock ShAA_socFooterBlock">
                 <div class="footerMenuTitle">{if $language=='eng'}Follow us{else}Социальные сети{/if}:</div>
                 <div class="noLinkUnderline">
-                    <i class="icon-instagram icon-2x"></i>
-                    <a href="//instagram.com/ls.boutique.ru/" class="socialList instagram" title="Instagram {if $language=='eng'}new arrivals for men{else}новинки для мужчин{/if}" rel="nofollow" target="_blank" onclick="{literal}rG('SOC_INSTG');{/literal}">
-                        {if $language=='eng'}New arrivals for men{else}Мужские новинки{/if}
-                    </a>
-                    <a href="//instagram.com/lsboutique.ru/" class="socialList instagram" title="Instagram {if $language=='eng'}new arrivals for women{else}новинки для женщин{/if}" rel="nofollow" target="_blank" onclick="{literal}rG('SOC_INSTG');{/literal}">
-                        {if $language=='eng'}New arrivals for women{else}Женские новинки{/if}
-                    </a>
-                    <a href="//instagram.com/lsboutique.me/" class="socialList instagram" title="Instagram индивидуальный пошив" rel="nofollow" target="_blank" onclick="{literal}rG('SOC_INSTG');{/literal}">
-                        {if $language=='eng'}Bespoke{else}Индивидуальный пошив{/if}
-                    </a>
-                    </br>
-                    <i class="icon-facebook icon-2x"></i>
-                    <a href="//www.facebook.com/lsboutiq/?ref=bookmarks" class="socialList fb" title="Facebook мужской" target="_blank" rel="nofollow" onclick="{literal}rG('SOC_FB');{/literal}">
-                        {if $language=='eng'}Luxury Store{else}Лакшери Store{/if}
-                    </a>
-                    <a href="//www.facebook.com/lsboutique.ru/?ref=bookmarks" class="socialList fb" title="Facebook женский" target="_blank" rel="nofollow" onclick="{literal}rG('SOC_FB');{/literal}">
-                        {if $language=='eng'}Luxury Store for women{else}Лакшери Store для женщин{/if}
-                    </a>
-                    </br>
                     <i class="icon-vk icon-2x"></i>
-                    <a href="//vk.com/lsboutiq" class="socialList vk" title="ВКонтакте Лакшери стор" target="_blank" rel="nofollow" onclick="{literal}rG('SOC_VK');{/literal}">
-                        {if $language=='eng'}General group Luxury Store{else}Общая страница Лакшери Store{/if}
-                    </a>
                     </br>
                     <i class="icon-telegram icon-2x"></i>
-                    <a href="//t.me/lsnetru" class="socialList telegram" title="Telegram Лакшери стор" target="_blank" rel="nofollow" onclick="{literal}rG('SOC_TELEGRAM');{/literal}">
-                        {if $language=='eng'}Telegram Luxury Store {else}Telegram канал Лакшери Store{/if}
-                    </a>
-                    </br>
-                    <i class="icon-youtube-play icon-2x"></i><br>
-                    <a href="//www.youtube.com/channel/UCLCtEXaZq_h2jAOfE2wtwFw" class=" ytub" title="Youtube" rel="nofollow" target="_blank">
-                        {if $language=='eng'}YouTube Luxury Store{else}YouTube канал Лакшери Store{/if}
-                    </a>
-                    <br />
-                </div>
-                <div class="footerMenuTitle">{if $language=='eng'}Apps{else}Приложения{/if}:</div>
-                <div class="noLinkUnderline">
-                    <a rel="nofollow" href="https://itunes.apple.com/us/app/internet-magazin-brendovoj/id913481541?ls=1&amp;mt=8" onclick="rG('wannaIOS');" style="float: left;">
-                        {if $language=='eng'}<img style="margin: 2px" width="120" src="/images/download_app_eng.png"/>{else}<img style="margin: 2px" width="120" src="/images/download_app_ru.png"/>{/if}<!-- <i class="icon-apple icon-4x" style="margin-right: 27px;"></i> -->
-                    </a>
-                    <a rel="nofollow" href="https://play.google.com/store/apps/details?id=com.lsboutqiue.app" onclick="rG('wannaAndroid');" style="float: left;">
-                        {if $language=='eng'}<img style="margin: 2px" width="120" src="/images/download_google_eng.png"/>{else}<img style="margin: 2px" width="120" src="/images/download_google_ru.png"/>{/if}<!-- <i class="icon-android icon-4x"></i> -->
-                    </a>
                 </div>
             </div>
 
