@@ -16,3 +16,4 @@ mailhog
 node_modules/
 vendor/
 public/
+/files/banners/*

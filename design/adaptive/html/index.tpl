@@ -1011,18 +1011,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="/files/banners/{if $language == 'eng' && $banner->eng_image}{$banner->eng_image}{else}{$banner->image}{/if}" alt="{if $language == 'eng' && $banner->eng_title}{$banner->eng_title}{else}{$banner->title}{/if}" title="{if $language == 'eng' && $banner->eng_title}{$banner->eng_title}{else}{$banner->title}{/if}" />
                 </a>
             {/foreach}
-
-            {foreach from=$banner_obj item=banner}
-                {if !in_array($banner->url, array(''))}
-                    <a rel="nofollow" href="/brands/{$banner->url}/" title="{$banner->name}" target="_blank" style="border:none;" class="ShAA_miniHoverZoom" data-id="br{$banner->brand_id}" onclick="{literal}rG('MAIN_BANNER');{/literal}">
-                        <img src="/files/brand_banners/{$banner->banner}" alt="{$banner->title}" title="{$banner->name}" />
-                    </a>
-                {else}
-                    <a rel="nofollow" href="/{$banner->url}/" title="{$banner->name}" target="_blank" style="border:none;" class="ShAA_miniHoverZoom" data-id="br{$banner->brand_id}" onclick="{literal}rG('MAIN_BANNER');{/literal}">
-                        <img src="/files/brand_banners/{$banner->banner}" alt="{$banner->title}" title="{$banner->name}" />
-                    </a>
-                {/if}
-            {/foreach}
         {/if}
         </div>
     {/if}
