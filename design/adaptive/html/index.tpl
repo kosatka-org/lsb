@@ -789,8 +789,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!--END переключатель пола desktop-->
         <div class="logoOnline" style="text-align:left;">
 
-            <a href="/"><img style='display: none' src="/images/logo_svetlov.png" class="main_logo" alt="Лакшери Стор" width="220" height="64" /></a>
-            <a href="/"><img style='display: none' src="/images/logo_svetlov.png" class="main_logo_mobile" alt="Лакшери Стор" width="220"  /></a>
+            <a href="/"><img style='display: none' src="/images/logo_svetlov.png" class="main_logo" alt="Лакшери Стор" /></a>
+            <a href="/"><img style='display: none' src="/images/logo_svetlov.png" class="main_logo_mobile" alt="Лакшери Стор"   /></a>
         </div>
 
 {literal}
