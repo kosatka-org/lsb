@@ -1799,6 +1799,12 @@ class Cart extends Widget
                         if($_COOKIE['language'] === 'eng'){$product->model = $product->eng_single_name . ' ' . $product->brand;}
                         $total_price       += $product->price*$product->amount;
                         $product->size      = $size != 'undefined' && strpos($size, 'задан') === false && strpos($size, 'азмер') === false ? $size : '';
+
+                        $product->size_data = false;
+
+                        if($product->size)
+                            $product->size_data = Storefront::getSizeData($product->size, $product->product_id);
+
                         $res_products[]     = $product;
                         $visibility_check = $this->db->result("SELECT * FROM products p LEFT JOIN brands b ON p.brand_id = b.brand_id LEFT JOIN categories c ON p.category_id = c.category_id WHERE c.enabled = 1 AND b.visibility <= 1 AND b.offline_only = 0 AND b.hidden = 0 AND p.product_id = ".$product->product_id);
                         if(!empty($visibility_check)){
@@ -1807,6 +1813,8 @@ class Cart extends Widget
 
                         $weight_tmp = $this->db->result( sql_placeholder("SELECT weight FROM `categories` WHERE category_id=? LIMIT 1", $product->category_id) );
                         $weight += !empty($weight_tmp->weight) ? $weight_tmp->weight : 0;
+
+                        $product->with_online_discount = false;
                     }
                     // в противном случае - удаляем из корзины
                     else {
@@ -2445,6 +2453,13 @@ class Cart extends Widget
                 if ($this->settings->theme == 'api') {
                     $product->size  = $v != 'undefined' && strpos($v, 'зад') === false && strpos($v, 'азмер') === false ? $v : '';
                 }
+
+                  $product->size_data = false;
+
+                if($product->size)
+                    $product->size_data = Storefront::getSizeData($product->size, $product->product_id);
+
+                  $product->price = $product->size_data->price  ?: $product->price;
 
                 $total_price   += $product->price*$product->amount;
                 $res_products[] = $product;

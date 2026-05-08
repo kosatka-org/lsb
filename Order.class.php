@@ -91,7 +91,7 @@ class Order extends Widget {
         if (!$order) {
             return false;
         }
-        
+
         $total_price = $this->db->result("SELECT SUM(price) as total FROM `orders_products` WHERE order_id = {$order->order_id} AND status != 4")->total;
         $delivery_price = $this->db->result("SELECT delivery_price FROM `orders` WHERE order_id = {$order->order_id}")->delivery_price;
         $paid_already = $this->db->result("SELECT (payment_prepaid + deposit_payment) as total FROM `orders` WHERE order_id = {$order->order_id}")->total;
@@ -168,9 +168,12 @@ class Order extends Widget {
             $order->c_coupon_discount->$code = $order->c_coupon_discount/$c->rate_to;
           }
         }
+
+        $order->with_online_discount = false;
+
         $this->smarty->assign('order', $order);
         $this->smarty->assign('DL_products', $DL_products);
-        
+
         $sber_on = $this->db->result("SELECT COUNT(enabled) AS t FROM payment_methods WHERE payment_method_id = 15 AND (enabled = 1 OR (enabled = 0 AND block_date < DATE_SUB(NOW(), INTERVAL 3 HOUR) AND block_date != 0))" )->t;
         if($sber_on){
           $this->db->query("UPDATE payment_methods SET enabled=1, block_date = 0 WHERE payment_method_id = 15" );
@@ -179,7 +182,7 @@ class Order extends Widget {
           $this->db->query("UPDATE app_payments SET ad_enabled=1, block_date = 0 WHERE id = 4" );
         }
         $this->smarty->assign('sber_on', $sber_on);
-        
+
         $rfi_on = $this->db->result("SELECT COUNT(enabled) AS t FROM payment_methods WHERE payment_method_id = 18 AND (enabled = 1 OR (enabled = 0 AND block_date < DATE_SUB(NOW(), INTERVAL 3 HOUR) AND block_date != 0))" )->t;
         if($rfi_on){
           $this->db->query("UPDATE payment_methods SET enabled=1, block_date = 0 WHERE payment_method_id = 18" );

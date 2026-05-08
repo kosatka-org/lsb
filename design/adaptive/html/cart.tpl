@@ -546,7 +546,14 @@ ul.tabsSett li, ul.tabsSett .tab-current {
                                             {if (isset($product->size) && !empty($product->size) && ($product->size !='undefined'))}({$product->size}){/if}
                                         </td>
                                         <td class="ShAA_cartOrderTableTd">
-                                            <span class="price rub">{$product->price|string_format:"%.0f"}&nbsp;<i class="icon-rub"></i></span>
+                                            <span class="price rub">
+                                                {if $product->size_data->price}
+                                                    {$product->size_data->price|string_format:"%.0f"}
+                                                {else}
+                                                    {$product->price|string_format:"%.0f"}&nbsp;
+                                                {/if}
+                                                <i class="icon-rub"></i>
+                                            </span>
                           {foreach from=$cat_currencies item=currency}
                             {assign var="c_name" value="price_`$currency->code`"}
                             <span class="price {$currency->code}" style="display:none;">{$product->c_prices->$c_name|string_format:"%.0f"}&nbsp;<b>{$currency->sign}</b></span>
@@ -800,14 +807,14 @@ ul.tabsSett li, ul.tabsSett .tab-current {
 										<span>{$order_details.total_amount_online|string_format:"%.0f"}&nbsp&nbsp;<i class="icon-rub"></i></span>
 									{/if}
 -->
-                                    <div class="clear"></div>									
+                                    <div class="clear"></div>
 									{if $sber_on}
 										<div id="payment_button_sber" style="width: 68%; float: left;">
 											<a href="/sberbankpayment/?order_id={$order_details.order->code}&amp;order_total={$order_details.total_amount_online}">
 												<input type="submit" value="{if $language=='eng'}Pay{else}Оплатить{/if}" class="ShAA_popButton_input">
 											</a>
 										</div>
-									{/if}									
+									{/if}
                                 </div>
                                 {if $order_details.order->manager}
                                     <div class="ShAA_managerInfoFromOrder">

@@ -1476,4 +1476,20 @@ class Storefront extends Widget
 
         return $database_object->get_var($query);
     }
+
+    /**
+     * Получить данные размера у товара
+     *
+     * @param string $size
+     * @param int $productId
+     * @return mixed
+     */
+    public static function getSizeData($size, $productId)
+    {
+        global $database_object;
+
+        $query = "SELECT * FROM items WHERE size = '$size' AND product_id = $productId LIMIT 1";
+
+        return $database_object->get_row($query);
+    }
 }

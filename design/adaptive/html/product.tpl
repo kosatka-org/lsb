@@ -659,7 +659,16 @@ jQuery(document).ready(function() {
                         {/foreach}
                       {/if}
                     {else}
-                      <span class="price rub"><span itemprop="highPrice">{$product->prices.price|string_format:"%.0f"}</span>&nbsp;<i class="icon-rub"></i></span>
+                      <span class="price rub">
+                          <span itemprop="highPrice">
+                        {if $product->sizes[0]->price}
+                            {$product->sizes[0]->price|string_format:"%.0f"}
+                        {else}
+                            {$product->prices.price|string_format:"%.0f"}
+                        {/if}
+                          </span>&nbsp;
+                          <i class="icon-rub"></i>
+                      </span>
                       {foreach from=$cat_currencies item=currency}
                         {assign var="c_name" value="price_`$currency->code`"}
                         <span class="price {$currency->code}" style="display:none;">{$product->prices.$c_name|string_format:"%.0f"}&nbsp;<b>{$currency->sign}</b></span>
@@ -815,8 +824,8 @@ jQuery(document).ready(function() {
                         <div style="clear:both;"></div>
                     {/if}
                     <ul class="ShAA_sizeUl">
-                        {foreach from=$product->sizes item=size_t}
-                            <li class="ShAA_sizeNotSelect {if $product->admin_details->sizes_allowed[$size_t]} red_mark{/if}">
+                        {foreach from=$product->sizes key=k item=size_t}
+                            <li class="ShAA_sizeNotSelect {if $product->admin_details->sizes_allowed[$size_t]} red_mark{/if} {if $k == 0} on{/if} ">
                                 <a class="size-select-btn ShAA_sizeLink"
                                    data-barcode="{$size_t->barcode}"
                                    data-remote-warehouse="{$size_t->remote_warehouse}"
