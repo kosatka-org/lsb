@@ -55,6 +55,7 @@ gem "uuid"
 gem "nori"
 gem "http"
 gem "rexml"
+gem "stringio", "3.2"
 
 # group :development do
 # gem "rerun", git: "https://github.com/alexch/rerun"

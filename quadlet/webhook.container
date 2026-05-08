@@ -1,0 +1,16 @@
+[Unit]
+Description=Github deploy webhook
+
+[Container]
+Image=webhook.build
+ContainerName=webhook
+Volume=<%= $(cd .. && pwd) %>:/app:z
+Volume=lsb-ruby-bundle:/usr/local/bundle
+Volume=%h/.ssh/id_ed25519:/root/.ssh/id_ed25519:Z
+Volume=%h/.ssh/known_hosts:/root/.ssh/known_hosts:Z
+WorkingDir=/app
+Network=lsb.network
+
+[Service]
+Restart=always
+TimeoutStartSec=900
