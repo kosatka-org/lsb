@@ -1,9 +1,12 @@
 <?php
 
 spl_autoload_register(function ($class) {
-    $file = realpath(__DIR__.'/../').DIRECTORY_SEPARATOR.$class.'.php';
+    $files[] = realpath(__DIR__.'/../').DIRECTORY_SEPARATOR.$class.'.php';
+    $files[] = realpath(__DIR__.'/../').DIRECTORY_SEPARATOR.$class.'.class.php';
 
-    $file = str_replace('\\', '/', $file);
+    foreach ($files as &$file) {
+        $file = str_replace('\\', '/', $file);
 
-    is_file($file) and require_once $file;
+        is_file($file) and require_once $file;
+    }
 });

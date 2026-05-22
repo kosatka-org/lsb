@@ -25,16 +25,20 @@ class Database
         $this->error_msg = "";
     }
 
-    # Connecting to the database
-    function connect() {
-        if (!$this->link = mysql_connect($this->host, $this->user, $this->pass)) {
-            $this->error_msg = "Could not connect to the database on $this->host";
-            return 0;
-        }
-        if (!mysql_select_db($this->db_name, $this->link)) {
-            $this->error_msg = "Could not select the $this->db_name database";
-            return 0;
-        }
+    /**
+     * Connecting to the database
+     *
+     * @return false|resource|void
+     * @throws Exception
+     */
+    function connect()
+    {
+        if (!$this->link = mysql_connect($this->host, $this->user, $this->pass))
+            throw new Exception("Could not connect to the database on $this->host");
+
+        if (!mysql_select_db($this->db_name, $this->link))
+            throw new Exception("Could not select the $this->db_name database");
+
         return $this->link;
     }
 
@@ -47,27 +51,31 @@ class Database
         return 1;
     }
 
-    # Execute the query or queries array
-    function query($q) {
+    /**
+     * Execute the query or queries array
+     *
+     * @param string $q
+     * @return bool|resource
+     * @throws Exception
+     */
+    function query($q)
+    {
         if ($this->link) {
-            $start        = microtime(true);
+            $start = microtime(true);
             $this->res_id = mysql_query($q, $this->link);
-            $query        = new stdClass;
-            $query->exec_time = microtime(true)-$start;
-            $query->sql   = $q;
+            $query = new stdClass;
+            $query->exec_time = microtime(true) - $start;
+            $query->sql = $q;
             $this->queries[] = $query;
-            if ($query->exec_time > 1 && isset($_GET['profiler'])) {
+            if ($query->exec_time > 1 && isset($_GET['profiler']))
                 echo "<br>{$q}<br>";
-            }
         }
-        else {
-            $this->error_msg = "Could not execute query to $this->db_name database, wrong database link";
-            return 0;
-        }
-        if(!$this->res_id) {
-            $this->error_msg = "Could not execute query to $this->db_name database, wrong result id";
-            return 0;
-        }
+        else
+            throw new Exception("Could not execute query to $this->db_name database, wrong database link");
+
+        if ($error = mysql_error($this->link))
+            throw new Exception($error);
+
         return $this->res_id;
     }
 
