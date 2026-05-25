@@ -22,8 +22,7 @@ class Import
 
         $products = PriceList::parse($priceList);
 
-        Products::importProducts($products);
+        (new Products)->importProducts($products);
     }
-
 
 }
