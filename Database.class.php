@@ -12,6 +12,8 @@ class Database
     var $error_msg;
     var $queries = array();
 
+    public static $exceptionOnError = false;
+
     # Constructor
     function Database($database_name, $host_name = "localhost", $user_name = "", $password = "") {
         $this->db_name = $database_name;
@@ -70,11 +72,33 @@ class Database
             if ($query->exec_time > 1 && isset($_GET['profiler']))
                 echo "<br>{$q}<br>";
         }
-        else
-            throw new Exception("Could not execute query to $this->db_name database, wrong database link");
+        else {
+            $error = "Could not execute query to $this->db_name database, wrong database link";
+            if (self::$exceptionOnError)
+                throw new Exception($error);
+            else {
+                $this->error_msg = $error;
 
-        if ($error = mysql_error($this->link))
-            throw new Exception($error);
+                return 0;
+            }
+        }
+
+        if (self::$exceptionOnError) {
+            if ($error = mysql_error($this->link))
+                throw new Exception($error);
+        }
+
+        if (!$this->res_id) {
+            $error = "Could not execute query to $this->db_name database, wrong result id";
+            if (self::$exceptionOnError)
+                throw new Exception($error);
+            else {
+                $this->error_msg = $error;
+
+                return 0;
+            }
+
+        }
 
         return $this->res_id;
     }

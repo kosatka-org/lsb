@@ -48,10 +48,12 @@ class Products
 
         $config = new Config;
 
-        self::$db = new Database($config->dbname, $config->dbhost, $config->dbuser, $config->dbpass);
+        self::$db = $db = new Database($config->dbname, $config->dbhost, $config->dbuser, $config->dbpass);
 
-        self::$db->connect();
+        $db::$exceptionOnError = true;
 
-        self::$db->query('SET NAMES UTF8');
+        $db->connect();
+
+        $db->query('SET NAMES UTF8');
     }
 }
