@@ -7,7 +7,7 @@ use Exception;
 /**
  * Класс для обработки прайса
  */
-class PriceList
+class PriceList extends _Base
 {
     /**
      * Спарсить файл прайса
@@ -18,6 +18,8 @@ class PriceList
      */
     public static function parse($priceList)
     {
+        self::print_l("Start parsing price from file '$priceList'...");
+
         if (!is_file($priceList))
             throw new Exception("Файла прайса нет: '$priceList'");
 

@@ -11,31 +11,87 @@ use helpers\StringHelper;
 class Products extends _Base
 {
     /**
+     * Импортировать все товары в БД
+     *
      * @param $products
      * @return void
      * @throws Exception
      */
     public function importProducts($products)
     {
-        foreach ($products as $sku => $productSizes) {
-            $product = current($productSizes);
+        $total = count($products);
 
-            if (!self::isAvailable($product))
+        self::print_l("Start import products. Total products: $total...");
+
+        $i = 0;
+        foreach ($products as $sku => $productSizes) {
+            $i++;
+
+            if ($i % 10 == 0)
+                self::print_l("Handled next $i products of $total...");
+
+            $product = self::getFirstAvailableSize($productSizes);
+
+            if (!$product)
                 continue;
 
-            self::addProduct($product);
+            $productId = self::addProduct($product);
+
+            self::addAllProductSizes($productId, $productSizes);
+
+            echo "ok";
+            exit;
         }
     }
 
     /**
-     * @param stdClass $product
+     * Добавить в БД все размеры товара
+     *
+     * @param int   $productId
+     * @param array $productSizes
      * @return void
+     * @throws Exception
+     */
+    protected static function addAllProductSizes($productId, $productSizes)
+    {
+        foreach ($productSizes as $size => $product) {
+            if (!self::isAvailable($product))
+                continue;
+
+            (new ProductSizes)->addProductSize($productId, $product);
+        }
+    }
+
+    /**
+     * Получить первый доступный товар, у которого есть в наличии размер для продажи
+     *
+     * @param array $productSizes
+     * @return null
+     */
+    protected static function getFirstAvailableSize($productSizes)
+    {
+        foreach ($productSizes as $product) {
+            if (!self::isAvailable($product))
+                continue;
+
+            return $product;
+        }
+
+        return null;
+    }
+
+    /**
+     * Добавить товар в БД
+     *
+     * @param stdClass $product
+     * @return int
      * @throws Exception
      */
     protected static function addProduct(stdClass $product)
     {
         $params = [
             'model'    => $name = self::getProductName($product),
+            'sku'      => $product->sku,
             'brand_id' => self::getDBBrandId($product),
             'sex'      => self::getGender($product),
         ];
@@ -46,8 +102,9 @@ class Products extends _Base
 
         (new Categories)->updateProductCategory($id, $product);
 
-        echo "TODO";
-        exit;
+        (new Colors)->updateProductColor($id, $product);
+
+        return $id;
     }
 
     /**

@@ -75,4 +75,15 @@ abstract class _Base
 
         $db->query('SET NAMES UTF8');
     }
+
+    /**
+     * Вывести строку в консоль
+     *
+     * @param string $str
+     * @return void
+     */
+    public static function print_l($str)
+    {
+        echo $str.PHP_EOL;
+    }
 }
