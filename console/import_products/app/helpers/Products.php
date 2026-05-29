@@ -10,6 +10,10 @@ use helpers\StringHelper;
  */
 class Products extends _Base
 {
+    protected static $adamasBrandId = 1;
+
+    protected static $svetlovBrandId = 2;
+
     /**
      * Импортировать все товары в БД
      *
@@ -38,10 +42,9 @@ class Products extends _Base
             $productId = self::addProduct($product);
 
             self::addAllProductSizes($productId, $productSizes);
-
-            echo "ok";
-            exit;
         }
+
+        self::print_l('Import products completed');
     }
 
     /**
@@ -92,6 +95,7 @@ class Products extends _Base
         $params = [
             'model'    => $name = self::getProductName($product),
             'sku'      => $product->sku,
+            'price'    => round($product->base_price),
             'brand_id' => self::getDBBrandId($product),
             'sex'      => self::getGender($product),
         ];
@@ -163,9 +167,9 @@ class Products extends _Base
     {
         switch ($brand = $product->wb_product->brand) {
             case 'ADAMAS':
-                return 494;
+                return self::$adamasBrandId;
             case 'SVETLOV':
-                return 495;
+                return self::$svetlovBrandId;
             default:
                 throw new Exception("Unknown brand '$brand'");
         }

@@ -10,7 +10,7 @@ use helpers\StringHelper;
  */
 class Categories extends _Base
 {
-    protected static $rootCatId = 102012;
+    protected static $rootCatId = 1;
 
     /**
      * Обновить категорию товара

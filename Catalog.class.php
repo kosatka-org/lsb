@@ -579,12 +579,7 @@ class Catalog extends Widget
         }
 
         if ( ($user_group == 1 || $user_group == 0) || (empty($search) && $user_group == 2) ) {
-            // только товары в наличии
-            $where .= " AND products.size <> '' ";
             $where .= " AND products.enabled=1 ";
-
-            // только с фотографией
-            $where .= " AND products.large_image <> '' ";
 
             // показывать скрытые бренды только избранным
             if ($this->settings->theme == 'discount') {
@@ -765,7 +760,7 @@ class Catalog extends Widget
                     LEFT JOIN product_view_counters pvc ON pvc.product_id = products.product_id
                   WHERE {$where}
                   ORDER BY {$sort_by} {$limit}";
-            // if ($size_filter) { exit($query); }
+
             $products = $this->db->results($query);
 
             foreach ($products as $k=>$proditem) {

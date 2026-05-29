@@ -10,7 +10,6 @@ use helpers\StringHelper;
  */
 class Colors extends _Base
 {
-    protected static $rootCatId = 102012;
 
     /**
      * Обновить цвет товара

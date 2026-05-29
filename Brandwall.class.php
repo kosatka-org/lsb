@@ -137,7 +137,8 @@ class Brandwall extends Widget
             $where_mw = '';
         }
 
-		$query = "SELECT brands.* FROM brands INNER JOIN products ON products.brand_id=brands.brand_id WHERE brands.show_on_brandwall=1 AND brands.image != '' AND (products.small_image != '' OR products.large_image != '') {$where_mw} {$squery} GROUP BY brands.brand_id ORDER BY brands.name ASC";
+		$query = "SELECT brands.* FROM brands INNER JOIN products ON products.brand_id=brands.brand_id WHERE brands.show_on_brandwall=1 AND brands.image != ''  {$where_mw} {$squery} GROUP BY brands.brand_id ORDER BY brands.name ASC";
+
 		$this->db->query($query);
 		$brands = $this->db->results();
 

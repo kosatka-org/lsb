@@ -40,10 +40,7 @@ abstract class _Base
             }
         }
 
-        if (!$genders)
-            throw new Exception("Empty genders in product {$product->id}");
-
-        if (in_array('Детский', $genders) or (in_array('Женский', $genders) and in_array('Мужской', $genders)))
+        if (!$genders or in_array('Детский', $genders) or (in_array('Женский', $genders) and in_array('Мужской', $genders)))
             return 0;
 
         if (in_array('Мужской', $genders))
