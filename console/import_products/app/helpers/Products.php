@@ -204,6 +204,6 @@ class Products extends _Base
      */
     protected static function isAvailable(stdClass $product)
     {
-        return $product->available_for_marketplace_qty and $product->wb_product and $product->ozon_product;
+        return $product->wb_product and $product->ozon_product;
     }
 }

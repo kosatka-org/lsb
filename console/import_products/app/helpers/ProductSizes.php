@@ -19,7 +19,7 @@ class ProductSizes extends _Base
      */
     public function addProductSize($productId, stdClass $product)
     {
-        $quantity = $product->other_shops_qty + $product->available_for_marketplace_qty;
+        $quantity = 1000;
 
         $query = "INSERT INTO items SET
                       product_id = $productId,
