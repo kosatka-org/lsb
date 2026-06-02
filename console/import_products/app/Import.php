@@ -9,7 +9,7 @@ use console\import_products\app\helpers\Products;
 use Exception;
 
 /**
- * Основной класс импорта товаров
+ * Входной класс импорта товаров
  */
 class Import extends _Base
 {

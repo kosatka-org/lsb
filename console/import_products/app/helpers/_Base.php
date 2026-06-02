@@ -9,8 +9,8 @@ use Database, Config, stdClass, Exception;
  */
 abstract class _Base
 {
-    /* @var $db Database */
-    protected static $db;
+    /* @var $db Database|null */
+    protected static $db = null;
 
     /**
      * @throws Exception
@@ -55,11 +55,14 @@ abstract class _Base
     /**
      * Инициализация БД
      *
-     * @return void
+     * @return true
      * @throws Exception
      */
     protected static function initDb()
     {
+        if (self::$db)
+            return true;
+
         require_once __DIR__.'/../../../../Config.class.php';
 
         $config = new Config;
@@ -71,6 +74,8 @@ abstract class _Base
         $db->connect();
 
         $db->query('SET NAMES UTF8');
+
+        return true;
     }
 
     /**

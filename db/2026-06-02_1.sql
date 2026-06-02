@@ -1,0 +1,3 @@
+ALTER TABLE `products`
+DROP INDEX `sku`,
+ADD UNIQUE INDEX `sku`(`sku`) USING BTREE;

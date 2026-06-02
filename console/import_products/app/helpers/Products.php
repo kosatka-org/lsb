@@ -3,10 +3,9 @@
 namespace console\import_products\app\helpers;
 
 use Exception, stdClass;
-use helpers\StringHelper;
 
 /**
- * Класс для импорта товаров в БД
+ * Входной класс для импорта товаров в БД
  */
 class Products extends _Base
 {
@@ -39,31 +38,46 @@ class Products extends _Base
             if (!$product)
                 continue;
 
-            $productId = self::addProduct($product);
-
-            self::addAllProductSizes($productId, $productSizes);
+            if (ImportedProducts::isNewProduct($sku))
+                self::addProduct($product, $productSizes);
+            else
+                self::updateProduct($sku, $product, $productSizes);
         }
 
         self::print_l('Import products completed');
     }
 
     /**
-     * Добавить в БД все размеры товара
+     * Добавить товар и его размеры в БД
      *
-     * @param int   $productId
-     * @param array $productSizes
+     * @param stdClass $product
+     * @param array    $productSizes
      * @return void
      * @throws Exception
      */
-    protected static function addAllProductSizes($productId, $productSizes)
+    protected static function addProduct($product, $productSizes)
     {
-        foreach ($productSizes as $size => $product) {
-            if (!self::isAvailable($product))
-                continue;
+        $productId = (new ProductDB)->addProduct($product);
 
-            (new ProductSizes)->addProductSize($productId, $product);
-        }
+        (new ProductSizes)->addAllProductSizes($productId, $productSizes);
     }
+
+    /**
+     * Обновить товар и его размеры в БД
+     *
+     * @param string   $sku
+     * @param stdClass $product
+     * @param array    $productSizes
+     * @return void
+     * @throws Exception
+     */
+    protected static function updateProduct($sku, $product, $productSizes)
+    {
+        $productId = (new ProductDB)->updateProduct($sku, $product);
+
+        (new ProductSizes)->updateAllProductSizes($productId, $productSizes);
+    }
+
 
     /**
      * Получить первый доступный товар, у которого есть в наличии размер для продажи
@@ -84,69 +98,13 @@ class Products extends _Base
     }
 
     /**
-     * Добавить товар в БД
-     *
-     * @param stdClass $product
-     * @return int
-     * @throws Exception
-     */
-    protected static function addProduct(stdClass $product)
-    {
-        $params = [
-            'model'    => $name = self::getProductName($product),
-            'sku'      => $product->sku,
-            'price'    => round($product->base_price),
-            'brand_id' => self::getDBBrandId($product),
-            'sex'      => self::getGender($product),
-        ];
-
-        $id = self::addProductToDB($params);
-
-        self::updateUrl($id, $name);
-
-        (new Categories)->updateProductCategory($id, $product);
-
-        (new Colors)->updateProductColor($id, $product);
-
-        return $id;
-    }
-
-    /**
-     * Добавить товар в БД
-     *
-     * @param array $params
-     * @return int
-     * @throws Exception
-     */
-    protected static function addProductToDB(array $params)
-    {
-        $query = '';
-
-        foreach ($params as $key => $value)
-            $query .= "$key = '$value', ";
-
-        $query = trim($query, ', ');
-
-        $query = "INSERT INTO products SET $query";
-
-        self::$db->query($query);
-
-        $id = self::$db->insert_id();
-
-        if (!$id)
-            throw new Exception('Empty last insert id');
-
-        return $id;
-    }
-
-    /**
      * Получить имя продукта
      *
      * @param stdClass $product
      * @return string mixed
      * @throws Exception
      */
-    protected static function getProductName(stdClass $product)
+    public static function getProductName(stdClass $product)
     {
         $name = $product->wb_product->title ?: $product->ozon_product->title;
 
@@ -163,7 +121,7 @@ class Products extends _Base
      * @return int
      * @throws Exception
      */
-    protected static function getDBBrandId(stdClass $product)
+    public static function getDBBrandId(stdClass $product)
     {
         switch ($brand = $product->wb_product->brand) {
             case 'ADAMAS':
@@ -175,34 +133,13 @@ class Products extends _Base
         }
     }
 
-
-    /**
-     * Обновить url товара
-     *
-     * @param $id
-     * @param $name
-     * @return void
-     * @throws Exception
-     */
-    protected static function updateUrl($id, $name)
-    {
-        if (!$id or !$name)
-            throw new Exception('Empty id or name');
-
-        $url = $id.'-'.StringHelper::translit($name);
-
-        $query = "UPDATE products SET url = '$url' WHERE product_id = $id";
-
-        self::$db->query($query);
-    }
-
     /**
      * Товар доступен?
      *
      * @param stdClass $product
      * @return bool
      */
-    protected static function isAvailable(stdClass $product)
+    public static function isAvailable(stdClass $product)
     {
         return $product->wb_product and $product->ozon_product;
     }
