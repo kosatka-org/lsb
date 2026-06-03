@@ -755,19 +755,19 @@ jQuery(document).ready(function() {
 
             <div id="img_main_{$product->product_id}" class="imgCatalog_new" {if ($is_iphone || $is_ipod || $is_ipad)}style="display: block !important;"{/if}>
                 <a target="blank" name="{$product->product_id}" href="/{if $big_size}b{/if}products/{$product->url}/{if $recommended_by}?recommended_by={$recommended_by}{/if}" title="{if $language=='eng'}{$product->group_name} {$product->brand}{else}{$product->model} из Италии и Франции{/if}" style="border-bottom:none;">
-                    <img onError="this.onerror=null;this.src='/images/noimg.png';" alt="{$product->model} из Италии и Франции" title="{if $language=='eng'}{$product->group_name} {$product->brand}{else}{$product->model} из Италии и Франции{/if}" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" {if (!$is_iphone & !$is_ipod & !$is_ipad)} src_out="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" src_over="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->second_image}{$product->second_image}{else}{if $product->large_image}{$product->large_image}{/if}{/if}"{/if} itemprop="image" />
+                    <img onError="this.onerror=null;this.src='/images/noimg.png';" alt="{$product->model} из Италии и Франции" title="{if $language=='eng'}{$product->group_name} {$product->brand}{else}{$product->model} из Италии и Франции{/if}" src="/files/products/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" {if (!$is_iphone & !$is_ipod & !$is_ipad)} src_out="/files/products/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" src_over="/files/products/{if $product->second_image}{$product->second_image}{else}{if $product->large_image}{$product->large_image}{/if}{/if}"{/if} itemprop="image" />
                 </a>
             </div>
 {if (!$is_iphone & !$is_ipod & !$is_ipad)}
             <div id="owl-demo_main_{$product->product_id}" class="owl-carousel">
                 <div class="item">
                     <a target="blank" href="/{if $big_size}b{/if}products/{$product->url}/{if $recommended_by}?recommended_by={$recommended_by}{/if}" title="{if $language=='eng'}{$product->group_name} {$product->brand}{else}{$product->model} из Италии и Франции{/if}" style="border-bottom:none;">
-                        <img class="lazyOwl" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" alt="{$product->img_desc}" />
+                        <img class="lazyOwl" src="" data-src="/files/products/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" alt="{$product->img_desc}" />
                     </a>
                 </div>
                 <div class="item">
                     <a target="blank" href="/{if $big_size}b{/if}products/{$product->url}/{if $recommended_by}?recommended_by={$recommended_by}{/if}" title="{if $language=='eng'}{$product->group_name} {$product->brand}{else}{$product->model} из Италии и Франции{/if}" style="border-bottom:none;">
-                        <img class="lazyOwl" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->second_image}{$product->second_image}{else}{if $product->large_image}{$product->large_image}{/if}{/if}" alt="" />
+                        <img class="lazyOwl" src="" data-src="/files/products/{if $product->second_image}{$product->second_image}{else}{if $product->large_image}{$product->large_image}{/if}{/if}" alt="" />
                     </a>
                 </div>
             </div>

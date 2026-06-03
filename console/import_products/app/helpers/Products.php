@@ -3,6 +3,7 @@
 namespace console\import_products\app\helpers;
 
 use Exception, stdClass;
+use GuzzleHttp\Exception\GuzzleException;
 
 /**
  * Входной класс для импорта товаров в БД
@@ -53,13 +54,16 @@ class Products extends _Base
      * @param stdClass $product
      * @param array    $productSizes
      * @return void
+     * @throws GuzzleException
      * @throws Exception
      */
-    protected static function addProduct($product, $productSizes)
+    protected static function addProduct(stdClass $product, $productSizes)
     {
         $productId = (new ProductDB)->addProduct($product);
 
         (new ProductSizes)->addAllProductSizes($productId, $productSizes);
+
+        (new Images)->downloadImages($productId, $product);
     }
 
     /**
@@ -69,13 +73,16 @@ class Products extends _Base
      * @param stdClass $product
      * @param array    $productSizes
      * @return void
+     * @throws GuzzleException
      * @throws Exception
      */
-    protected static function updateProduct($sku, $product, $productSizes)
+    protected static function updateProduct($sku, stdClass $product, $productSizes)
     {
         $productId = (new ProductDB)->updateProduct($sku, $product);
 
         (new ProductSizes)->updateAllProductSizes($productId, $productSizes);
+
+        (new Images)->downloadImages($productId, $product);
     }
 
 

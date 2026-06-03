@@ -997,27 +997,27 @@ jQuery(document).ready(function() {
                 {else}
                     {if $product->large_image }
                         <div class="item">
-                            <img class="lazyOwl" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/750x/{$product->large_image}" alt="{$product->img_desc}" />
+                            <img class="lazyOwl" src="" data-src="/reimg/files/products/750x/{$product->large_image}" alt="{$product->img_desc}" />
                         </div>
                     {/if}
                     {if $big_size && $product->bsize_small_image}
                         <div class="item">
-                            <img class="lazyOwl" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/750x/{$product->bsize_small_image}" alt="{$product->img_desc}" />
+                            <img class="lazyOwl" src="" data-src="/reimg/files/products/750x/{$product->bsize_small_image}" alt="{$product->img_desc}" />
                         </div>
                     {elseif $product->small_image}
                         <div class="item">
-                            <img class="lazyOwl" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/750x/{$product->small_image}" alt="{$product->img_desc}" />
+                            <img class="lazyOwl" src="" data-src="/reimg/files/products/750x/{$product->small_image}" alt="{$product->img_desc}" />
                         </div>
                     {/if}
                     {if $product->promo_image}
                         <div class="item">
-                            <img class="lazyOwl" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/750x/{$product->promo_image}" alt="{$product->img_desc}" />
+                            <img class="lazyOwl" src="" data-src="/reimg/files/products/750x/{$product->promo_image}" alt="{$product->img_desc}" />
                         </div>
                     {/if}
                     {if $product->fotos}
                         {foreach from=$product->fotos item=foto}
                             <div class="item">
-                                <img class="lazyOwl" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/750x/{$foto->filename}" alt="{$product->img_desc}" />
+                                <img class="lazyOwl" src="" data-src="/reimg/files/products/750x/{$foto->filename}" alt="{$product->img_desc}" />
                             </div>
                         {/foreach}
                     {/if}
@@ -1059,28 +1059,28 @@ jQuery(document).ready(function() {
                             {if $product->large_image }
 
                                 <span style="width: 33%; float: left;" class="product-image main-image">
-                                    <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="large_image" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{$product->large_image}" data-cloudzoom="disableZoom: true" itemprop="image" />
+                                    <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="large_image" src="/files/products/{$product->large_image}" data-cloudzoom="disableZoom: true" itemprop="image" />
                                 </span>
                             {/if}
                             {if $big_size && $product->bsize_small_image}
                                 <span style="width: 33%; float: left;" class="product-image main-image">
-                                    <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="bsize_small_image" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{$product->bsize_small_image}" data-cloudzoom="disableZoom: true" itemprop="image" />
+                                    <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="bsize_small_image" src="/files/products/{$product->bsize_small_image}" data-cloudzoom="disableZoom: true" itemprop="image" />
                                 </span>
                             {elseif $product->small_image}
                                 <span style="width: 33%; float: left;" class="product-image main-image">
-                                    <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="small_image" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{$product->small_image}" data-cloudzoom="disableZoom: true" itemprop="image" />
+                                    <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="small_image" src="/files/products/{$product->small_image}" data-cloudzoom="disableZoom: true" itemprop="image" />
                                 </span>
                             {/if}
                             {if $product->promo_image}
                                 <span style="width: 33%; float: left;" class="product-image main-image">
-                                    <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="promo_image" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{$product->promo_image}" data-cloudzoom="disableZoom: true" itemprop="image" />
+                                    <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="promo_image" src="/files/products/{$product->promo_image}" data-cloudzoom="disableZoom: true" itemprop="image" />
                                 </span>
                             {/if}
                             {if $product->fotos}
                                 {foreach from=$product->fotos item=foto key=k}
                                     {if ($k==1 && !$product->promo_image) || ($k==0 && $product->promo_image)}</div><div style="float: left; width: 100%;">{/if}
                                     <span style="width: 33%; float: left;" class="product-image main-image">
-                                        <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="{$k}" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{$foto->filename}" data-cloudzoom="disableZoom: true" itemprop="image" />
+                                        <img class="cloudzoom zoomImg" alt="{$product->img_desc}" title="{$product->img_desc}" id="{$k}" src="/files/products/{$foto->filename}" data-cloudzoom="disableZoom: true" itemprop="image" />
                                     </span>
                                     {if $k+1 is div by 3}
                                         </div><div style="float: left; width: 100%;">
