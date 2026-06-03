@@ -51,9 +51,10 @@ class Images extends _Base
 
         $image = self::downloadImage($url, $productId, $type);
 
-        self::updateDBImage($image, $url, $productId, $type);
+        if (!$image)
+            return false;
 
-        self::print_l("Downloading $type image completed");
+        self::updateDBImage($image, $url, $productId, $type);
 
         return true;
     }
@@ -112,6 +113,9 @@ class Images extends _Base
      */
     protected static function downloadImage($url, $productId, $type)
     {
+        if (!$url and $type == 'second')
+            return false;
+
         if (!$url)
             throw new Exception("Empty url of $type image");
 
