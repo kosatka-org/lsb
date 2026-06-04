@@ -44,6 +44,9 @@ class Images extends _Base
 
         $downloadedUrl = self::$db->get_var($query);
 
+        if (!$url)
+            return false;
+
         if ($downloadedUrl and $downloadedUrl == $url)
             return false;
 
