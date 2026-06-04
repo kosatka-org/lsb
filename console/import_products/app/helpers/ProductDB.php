@@ -144,7 +144,7 @@ class ProductDB extends _Base
         return [
             'model'    => Products::getProductName($product),
             'sku'      => $product->sku,
-            'price'    => round($product->base_price),
+            'price'    => round($product->base_price  * Products::$priceMultiplier),
             'brand_id' => Products::getDBBrandId($product),
             'sex'      => self::getGender($product),
         ];

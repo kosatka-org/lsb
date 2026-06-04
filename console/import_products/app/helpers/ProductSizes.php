@@ -93,7 +93,7 @@ class ProductSizes extends _Base
             return false;
 
         $query = "UPDATE items SET
-                      price = ".round($product->base_price).",
+                      price = ".round($product->base_price  * Products::$priceMultiplier).",
                       quantity = $quantity
                   WHERE product_id = $productId AND size = '$size'
                    ";
@@ -121,7 +121,7 @@ class ProductSizes extends _Base
         $query = "INSERT INTO items SET
                       product_id = $productId,
                       size = '$size',
-                      price = ".round($product->base_price).",
+                      price = ".round($product->base_price * Products::$priceMultiplier).",
                       quantity = $quantity
                    ";
 

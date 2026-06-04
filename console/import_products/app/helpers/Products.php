@@ -14,6 +14,8 @@ class Products extends _Base
 
     protected static $svetlovBrandId = 2;
 
+    public static $priceMultiplier = 2.3;
+
     /**
      * Импортировать все товары в БД
      *
