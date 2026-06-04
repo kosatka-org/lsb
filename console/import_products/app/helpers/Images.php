@@ -167,7 +167,7 @@ class Images extends _Base
     {
         return (object)[
             'first'  => $product->ozon_product->primary_image[0],
-            'second' => $product->ozon_product->images[0] ?: false,
+            'second' => isset($product->ozon_product->images[0]) ? $product->ozon_product->images[0] : false,
             'others' => array_slice($product->ozon_product->images, 1),
         ];
     }
