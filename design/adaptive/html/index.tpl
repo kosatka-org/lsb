@@ -716,7 +716,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rightTopLinks">
 		<!--телефон и город-->
 			<div class="ShAA_upBlock">
-				<div class="phoneInfo">
+				<div class="phoneInfo" style="display: none">
 					<a href="tel:+74953748934" style="border: none !important;">
 						<i class="icon-phone"></i>
 						<b style="font-weight: normal; word-spacing: 0.1em;" title="">+7&nbsp;(495)&nbsp;374&ndash;89&ndash;34</b>
