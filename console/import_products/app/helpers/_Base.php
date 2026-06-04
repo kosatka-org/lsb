@@ -3,6 +3,7 @@
 namespace console\import_products\app\helpers;
 
 use Database, Config, stdClass, Exception;
+use GuzzleHttp\Client;
 
 /**
  * Базовый класс для классов импорта
@@ -50,6 +51,29 @@ abstract class _Base
             return 2;
 
         throw new Exception("Can't find gender in product {$product->id}");
+    }
+
+    /**
+     * Получить http-клиента
+     *
+     * @return Client
+     */
+    public static function getHttpClient()
+    {
+        return new Client([
+            'http_errors' => true,
+            'verify'      => false,
+        ]);
+    }
+
+    /**
+     * Получить путь к временной папке
+     *
+     * @return string
+     */
+    public static function getTmpDir()
+    {
+        return realpath(__DIR__.'/../../tmp');
     }
 
     /**

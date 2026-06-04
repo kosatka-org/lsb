@@ -148,19 +148,6 @@ class Images extends _Base
     }
 
     /**
-     * Получить http-клиента
-     *
-     * @return Client
-     */
-    protected static function getHttpClient()
-    {
-        return new Client([
-            'http_errors' => true,
-            'verify'      => false,
-        ]);
-    }
-
-    /**
      * Получить директорию рисунков
      *
      * @return string

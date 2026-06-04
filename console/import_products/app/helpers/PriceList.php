@@ -2,13 +2,49 @@
 
 namespace console\import_products\app\helpers;
 
-use Exception;
+use Config, Exception;
+use GuzzleHttp\Exception\GuzzleException;
 
 /**
- * Класс для обработки прайса
+ * Класс для обработки json-прайса
  */
 class PriceList extends _Base
 {
+
+    /**
+     * Скачать и распарсить прайс
+     *
+     * @return array
+     * @throws GuzzleException
+     * @throws Exception
+     */
+    public static function getPrice()
+    {
+        $price = self::download();
+
+        return self::parse($price);
+    }
+
+    /**
+     * Скачать прайс
+     *
+     * @return string
+     * @throws GuzzleException
+     */
+    protected static function download()
+    {
+        self::print_l('Downloading json-price...');
+
+        $price = self::getTmpDir().'/marketplace_items.json';
+
+        self::getHttpClient()->request('GET', 'https://adamas-analytics-vm-1.kosatka.org/exports/marketplace_items.json', [
+            'sink' => $price,
+            'auth' => Config::$importAuth,
+        ]);
+
+        return $price;
+    }
+
     /**
      * Спарсить файл прайса
      *
@@ -16,7 +52,7 @@ class PriceList extends _Base
      * @return array
      * @throws Exception
      */
-    public static function parse($priceList)
+    protected static function parse($priceList)
     {
         self::print_l("Start parsing price from file '$priceList'...");
 

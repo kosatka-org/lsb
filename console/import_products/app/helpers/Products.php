@@ -17,8 +17,9 @@ class Products extends _Base
     /**
      * Импортировать все товары в БД
      *
-     * @param $products
+     * @param array $products
      * @return void
+     * @throws GuzzleException
      * @throws Exception
      */
     public function importProducts($products)
