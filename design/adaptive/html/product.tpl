@@ -492,8 +492,10 @@ jQuery(document).ready(function() {
 
         let sizePrice = jQuery(this).data('price');
 
-        if(sizePrice)
+        if (sizePrice) {
             jQuery('span[itemprop = highPrice]').text(sizePrice);
+            jQuery('b[itemprop = lowPrice]').text(sizePrice);
+        }
 	});
 	function startParallax(width, pos, id, clickId) {
         var height = jQuery(window).height();
