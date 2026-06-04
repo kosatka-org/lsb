@@ -122,7 +122,7 @@ class Widget
                 $this->settings->rfi_key = $this->settings->$key;
                 $this->settings->rfi_open_key = $this->settings->$openkey;
             }
-            
+
             // Тащим валюты
             $curs = $this->db->results('SELECT name, LOWER(code) AS code, rate_to, main FROM currencies');
             foreach($curs as $cur) {
@@ -130,7 +130,7 @@ class Widget
               $this->currencies->$name = $cur;
             }
             $curs = $this->db->results('SELECT name, sign, LOWER(code) AS code, rate_to, main FROM currencies WHERE def=0');
-            
+
 
             global $smarty;
             // Настраиваем смарти
@@ -219,8 +219,9 @@ class Widget
                 setcookie("show_furs", '1', time()+3600*6, '/'); // Не показываем 6 часов
                 $this->smarty->assign('show_furs', 1);
             }
-            
+
             //Настройка языка
+            $_GET['lang'] = 'ru';
             if (isset($_GET['lang']) || $_COOKIE['language']) {
               if (isset($_GET['lang'])) {
                 setcookie("language", $_GET['lang'], time()+3600*24*365*10, '/');
@@ -365,8 +366,8 @@ class Widget
 
             // проверяем на роботов
             $user_obj = new luser();
-            $user_obj->check_robots(); 
-            
+            $user_obj->check_robots();
+
             // Залогиниваем юзера
             $this->user = null;
             if ( !isset($_SESSION['user']) && !empty($_COOKIE['user_id']) && !empty($_COOKIE['hashcode']) ) {
@@ -397,7 +398,7 @@ class Widget
               $currency = isset($_GET['currency']) ? $_GET['currency'] : '';
               $user_obj->api_login($user_id, $currency);
             }
-            
+
             if ((!isset($_SESSION['user']) && empty($_COOKIE['user_id']) && empty($_COOKIE['hashcode'])) && (!isset($_COOKIE['session_id']) || empty($_COOKIE['session_id']))){
                 $user_obj->set_session_id();
             }
@@ -499,8 +500,8 @@ class Widget
         }
         return $get;
     }
-    
-    
+
+
     function gaParseCookie() {
       $cid = 88888;//это на случай ошибки
       if (isset($_COOKIE['_ga'])) {
@@ -528,7 +529,7 @@ class Widget
 
         return $this;
     }
-    
+
     function email_attach($to, $subject, $message, $from = '', $path, $name) {
         /* Email Detials */
         $mail_to = $to;
@@ -537,11 +538,11 @@ class Widget
         $reply_to = "noreply";
         $subject = $subject;
         $message = $message;
-     
+
         // Attaching File
         $file_name = $name;
         $path = $path;
-         
+
         // Read the file content
         $file = $path.$file_name;
         $file_size = filesize($file);
@@ -549,23 +550,23 @@ class Widget
         $content = fread($handle, $file_size);
         fclose($handle);
         $content = chunk_split(base64_encode($content));
-         
+
         // Set header
         // Generate a boundary
         $boundary = md5(uniqid(time()));
-         
+
         // Email header
         $header = "From: ".$from_name." \r\n";
         $header .= "Reply-To: ".$reply_to."\r\n";
         $header .= "MIME-Version: 1.0\r\n";
-         
+
         // Multipart wraps the Email Content and Attachment
         $header .= "Content-Type: multipart/mixed;\r\n";
         $header .= " boundary=\"".$boundary."\"";
-     
+
         $message .= "This is a multi-part message in MIME format.\r\n\r\n";
         $message .= "--".$boundary."\r\n";
-         
+
         // Email content
         // Content-type can be text/plain or text/html
         $message .= "Content-Type: text/plain; charset=\"iso-8859-1\"\r\n";
@@ -573,7 +574,7 @@ class Widget
         $message .= "\r\n";
         $message .= "$message_body\r\n";
         $message .= "--".$boundary."\r\n";
-         
+
         // Attachment
         // Edit content type for different file extensions
         $message .= "Content-Type: application/xml;\r\n";
@@ -583,7 +584,7 @@ class Widget
         $message .= " filename=\"".$file_name."\"\r\n";
         $message .= "\r\n".$content."\r\n";
         $message .= "--".$boundary."--\r\n";
-         
+
         // Send email
         if (mail($mail_to, $subject, $message, $header)) {
             echo "Sent";
@@ -591,7 +592,7 @@ class Widget
             echo "Error";
         }
     }
-    
+
     function format_field($key, $item){
       if (is_object($item) || is_array($item)){
         $f_item = $this->format_loop($key,$item);
@@ -615,7 +616,7 @@ class Widget
       foreach ($item as $key => $field){
         $f_item->$key = $this->format_field($key,$field);
       }
-      
+
       return $f_item;
     }
     function format_api_response($object) {
@@ -624,12 +625,12 @@ class Widget
           $item->$key = $this->format_loop($key,$item);
         }
         else{$item->$key = $this->format_field($key,$item);}
-        
+
       }
       //var_dump($object);
       return $object;
     }
-    
+
     function rus_date() {
       $translate = array(
         "am" => "дп",
@@ -682,7 +683,7 @@ class Widget
       if (func_num_args() > 1) {
         $timestamp = func_get_arg(1);
         return strtr(date(func_get_arg(0), $timestamp), $translate);
-      } 
+      }
       else {
         return strtr(date(func_get_arg(0)), $translate);
       }

@@ -612,7 +612,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           {/foreach}
                         </select>
                       </div>
-                      <div style="float: left;margin:0 20px 20px 0;">
+                      <div style="float: left;margin:0 20px 20px 0; display: none">
                         {if $language == 'eng'}<a href="{if $query}{$smarty.server.PATH_INFO}?{$query}&lang=ru{else}{$smarty.server.PATH_INFO}?lang=ru{/if}" title="Русская версия"><img width="30" src="/images/eng_icon.png" style="" alt="RU" /></a>
                         {else}<a href="{if $query}{$smarty.server.PATH_INFO}?{$query}&lang=eng{else}{$smarty.server.PATH_INFO}?lang=eng{/if}" title="English version"><img width="30" src="/images/rus_icon.png?v=2" style="" alt="RU" /></a>{/if}
                       </div>
@@ -736,7 +736,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   {/foreach}
                 </select>
               </div>
-              <div id='flag_img' style="float: left; margin:27px 20px 0 0;">
+              <div id='flag_img' style="float: left; margin:27px 20px 0 0; display: none">
                 {if $language == 'eng'}<a href="{if $query}{$smarty.server.PATH_INFO}?{$query}&lang=ru{else}{$smarty.server.PATH_INFO}?lang=ru{/if}" title="Русская версия"><img width="26" src="/images/eng_icon.png" style="" alt="RU" /></a>
                 {else}<a href="{if $query}{$smarty.server.PATH_INFO}?{$query}&lang=eng{else}{$smarty.server.PATH_INFO}?lang=eng{/if}" title="English version"><img width="26" src="/images/{if $geolocation=='KZ'}Flag_of_Kazakhstan.png{else}rus_icon.png?v=2{/if}" style="" alt="RU" /></a>{/if}
               </div>
