@@ -116,7 +116,7 @@ class ProductSizes extends _Base
         $quantity = 1000;
 
         if (!$size = $product->size)
-            return null;
+            throw new Exception("Нет размера у товара ID $productId");
 
         $query = "INSERT INTO items SET
                       product_id = $productId,
@@ -164,7 +164,7 @@ class ProductSizes extends _Base
         $dbSizes = self::getSizesOfProduct($productId);
 
         if (!$dbSizes)
-            return null;
+            return $priceSizes;
 
         return array_diff($priceSizes, $dbSizes);
     }

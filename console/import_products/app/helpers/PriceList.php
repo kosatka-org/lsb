@@ -82,8 +82,11 @@ class PriceList extends _Base
     {
         $result = [];
 
-        foreach ($products as $product)
+        foreach ($products as $product) {
+            $product->size = $product->size ?: 'не задан';
+
             $result[$product->sku][$product->size] = $product;
+        }
 
         return $result;
     }
