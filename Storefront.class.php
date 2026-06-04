@@ -1188,13 +1188,8 @@ class Storefront extends Widget
 
                   $product->prices = $user->product_prices_for_api($product, $_GET['currency'], $product->can_buy_from_site);
 
-                  // Фильтр по магазинам
-                  if ($_SESSION['user']->group_id <= 1 || $user->group_id <= 1) {
-                    $shop_filter = "AND warehouse_id IN (SELECT warehouse_id FROM warehouses WHERE im_show=1)";
-                  }
-                  else {
-                    $shop_filter = "";
-                  }
+                  $shop_filter = "";
+
                   $query = "SELECT size_id, size_type, size_system, size, shop_id
                               FROM items
                               WHERE quantity != 0 AND product_id={$product->product_id} {$shop_filter} GROUP BY size ORDER BY FIELD(size, 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL', '5XL+'), size + 0, size ASC ";
@@ -1255,13 +1250,8 @@ class Storefront extends Widget
           $product->unreturnable = true;
         }
 
-        // Фильтр по магазинам
-        if ($_SESSION['user']->group_id <= 1) {
-          $shop_filter = "AND warehouse_id IN (SELECT warehouse_id FROM warehouses WHERE im_show=1)";
-        }
-        else {
-          $shop_filter = "";
-        }
+        $shop_filter = "";
+
         $query = "SELECT *
                     FROM items
                     WHERE quantity != 0 AND product_id={$product->product_id} {$shop_filter} GROUP BY size ORDER BY FIELD(size, 'XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL', '5XL+'), size + 0, size ASC ";
