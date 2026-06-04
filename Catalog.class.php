@@ -667,10 +667,8 @@ class Catalog extends Widget
             }
         }
 
-        // Фильтр по наличию и доступности размеров
-        if ( $user_group == 1 || $user_group == 0 ) {
-          $user_shop_filter = " AND i.warehouse_id IN (SELECT warehouse_id FROM warehouses WHERE im_show=1) ";
-        }
+        $user_shop_filter = isset($user_shop_filter) ? $user_shop_filter : '';
+
         $where .= " AND (EXISTS (SELECT 1 FROM items i WHERE i.product_id = products.product_id AND i.quantity != 0 {$user_shop_filter} {$size_filter}) OR products.show_out_of_stock = 1) ";
 
 
