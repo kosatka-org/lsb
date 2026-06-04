@@ -729,7 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 		<!--END телефон и город-->
             <div class="links">
-              <div style="float: left;margin:27px 10px 0 0;">
+              <div style="float: left;margin:27px 10px 0 0; display: none">
                 <select name="currency_switch" id="currency_switch" style="height: 26px;">
                   {foreach from=$currencies item=currency}
                     <option value="{$currency->code}" {if $currency->main == 1 && !$smarty.cookies.currency}selected{elseif $currency->code == $smarty.cookies.currency}selected{/if}>{$currency->code}</option>
