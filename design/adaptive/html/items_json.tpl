@@ -81,7 +81,7 @@ limitChecks("materials", {if $listmater}{$listmater}{else}null{/if});
                 {if ($product->large_image == '') && ($product->second_image == '')}
                     <img alt="{if $product->category}{$product->category} {/if}{$product->model}{if $product->brand} {$product->brand}{/if}" src="/images/noimg.png" src_out="/images/noimg.png" itemprop="image" />
                 {else}
-                    <img alt="{if $product->category}{$product->category} {/if}{$product->model}{if $product->brand} {$product->brand}{/if}" src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" {if (!$is_iphone & !$is_ipod & !$is_ipad)} src_out="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" src_over="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->second_image}{$product->second_image}{else}{if $product->large_image}{$product->large_image}{/if}{/if}" {/if} itemprop="image" />
+                    <img alt="{if $product->category}{$product->category} {/if}{$product->model}{if $product->brand} {$product->brand}{/if}" src="/files/products/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" {if (!$is_iphone & !$is_ipod & !$is_ipad)} src_out="/files/products/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{/if}{/if}" src_over="/files/products/{if $product->second_image}{$product->second_image}{else}{if $product->large_image}{$product->large_image}{/if}{/if}" {/if} itemprop="image" />
                 {/if}
 			</a>
 	    </div>
@@ -89,12 +89,12 @@ limitChecks("materials", {if $listmater}{$listmater}{else}null{/if});
 		<div id="owl-demo_main_{$product->product_id}" class="owl-carousel">
 			<div class="item">
 				<a target="blank" href="/products/{$product->url}/{if $recommended_by}?recommended_by={$recommended_by}{/if}" title="{if $language=='eng'}{$product->group_name} {$product->brand}{else}{$product->model} из Италии и Франции{/if}" style="border-bottom:none;">
-					<img class="lazyOwl not_replace" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{else}{$product->small_image}{/if}{/if}" alt="{$product->img_desc}" />
+					<img class="lazyOwl not_replace" src="" data-src="/files/products/{if $product->large_image}{$product->large_image}{else}{if $product->second_image}{$product->second_image}{else}{$product->small_image}{/if}{/if}" alt="{$product->img_desc}" />
 				</a>
 			</div>
 			<div class="item">
 				<a target="blank" href="/products/{$product->url}/{if $recommended_by}?recommended_by={$recommended_by}{/if}" title="{if $language=='eng'}{$product->group_name} {$product->brand}{else}{$product->model} из Италии и Франции{/if}" style="border-bottom:none;">
-					<img class="lazyOwl not_replace" src="" data-src="{if $cdn_image_link}{$cdn_image_link}{else}//lsboutique.ru{/if}/reimg/files/products/340x/{if $product->second_image}{$product->second_image}{else}{if $product->large_image}{$product->large_image}{/if}{/if}" alt="" />
+					<img class="lazyOwl not_replace2" src="" data-src="/files/products/{if $product->second_image}{$product->second_image}{else}{if $product->large_image}{$product->large_image}{/if}{/if}" alt="" />
 				</a>
 			</div>
 		</div>
