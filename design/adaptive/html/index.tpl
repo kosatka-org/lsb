@@ -914,19 +914,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
             <ul class="menuList desktop">
-                <li><a href="/catalog/?category=new_season">{if $language == 'eng'}New arrivals{else}Новый сезон{/if}</a></li>
-                {if $manOrWoman == '2'}
-                    <li><a href="/catalog/?category=furs" style="color: rgb(216, 0, 104);">{if $language == 'eng'}Furs{else}Меха{/if}</a></li>
-                {/if}
-
-                <li><a href="/brandwall/">{if $language == 'eng'}Designers{else}Бренды{/if}</a></li>
-                <li><a href="/looks/">{if $language == 'eng'}Looks{else}Образы{/if}</a></li>
-
-                {foreach from=$categories item=cat}
-                    <li><a href="/categories/{$cat->url}/">{if $language == 'eng'}{$cat->eng_name}{else}{$cat->name}{/if}</a></li>
-                {/foreach}
+                <li>
+                    <a href="#">Новая коллекция</a>
+                </li>
+                <li>
+                    <a href="/categories/yuvelirnye-cepochki/">Цепи</a>
+                </li>
+                <li>
+                    <a href="/categories/yuvelirnye-kolca/">Кольца</a>
+                </li>
+                <li>
+                    <a href="/categories/yuvelirnye-sergi/">Серьги</a>
+                </li>
+                <li>
+                    <a href="/categories/yuvelirnye-braslety/">Браслеты</a>
+                </li>
+                <li>
+                    <a href="/categories/yuvelirnye-podveski/">Подвески</a>
+                </li>
+                <li>
+                    <a href="/categories/yuvelirnye-kole/">Колье</a>
+                </li>
+                <li>
+                    <a href="/categories/yuvelirnye-broshi/">Броши</a>
+                </li>
+                <li>
+                    <a href="/brandwall/">{if $language == 'eng'}Designers{else}Бренды{/if}</a>
+                </li>
+                <li>
+                    <a href="#/looks/">{if $language == 'eng'}Looks{else}Образы{/if}</a>
+                </li>
+                <li>
+                    <a href="/categories/yuvelirnye-izdeliya/">Каталог</a>
+                </li>
 
                 <li><a rel="nofollow" href="/sale" style="color: #C30000;">Sale</a></li>
+
 				<!--Поиск desktop-->
 				<li class="search">
 					<form id="form" name="search" method="get" action="/catalog/" style="cursor:pointer;float: left;margin-top: -2px;">
