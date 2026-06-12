@@ -688,9 +688,18 @@ class Catalog extends Widget
         $name = 'categories.name AS name';
         $eng_filter='';
         if($_COOKIE['language'] == 'eng'){$name = 'categories.eng_name AS name';$eng_filter=" AND categories.eng_name !=''";}
-        $query = "SELECT products.category_id AS id, {$name}, categories.url AS url, categories.prod_count_m AS prod_count_m, categories.prod_count_w AS prod_count_w FROM `products` LEFT JOIN brands ON brands.brand_id = products.brand_id LEFT JOIN items ON items.product_id = products.product_id LEFT JOIN categories ON categories.category_id = products.category_id WHERE {$scope} {$eng_filter} AND (categories.prod_count_m != 0 OR categories.prod_count_w != 0) GROUP BY products.category_id ORDER BY name ASC";
+        $query = "SELECT products.category_id AS id, {$name}, categories.url AS url, categories.prod_count_m AS prod_count_m, categories.prod_count_w AS prod_count_w
+                        FROM `products`
+                  LEFT JOIN brands ON brands.brand_id = products.brand_id
+                  LEFT JOIN items ON items.product_id = products.product_id
+                  LEFT JOIN categories ON categories.category_id = products.category_id
+                        WHERE {$scope} {$eng_filter}
+                  GROUP BY products.category_id
+                  ORDER BY name ASC";
+
         $this->db->query($query);
         $categories = $this->db->results();
+
         if($_COOKIE['language'] == 'eng') foreach($categories as $cat)if($cat->id == 97 && $mw == 1){$cat->name = 'Oxford shoes';}
 
         // определить бренды для чекбокса
