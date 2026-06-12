@@ -933,22 +933,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="/categories/yuvelirnye-podveski/">Подвески</a>
                 </li>
                 <li>
-                    <a href="/categories/yuvelirnye-kole/">Колье</a>
-                </li>
-                <li>
-                    <a href="/categories/yuvelirnye-broshi/">Броши</a>
-                </li>
-                <li>
-                    <a href="/brandwall/">{if $language == 'eng'}Designers{else}Бренды{/if}</a>
-                </li>
-                <li>
                     <a href="#/looks/">{if $language == 'eng'}Looks{else}Образы{/if}</a>
                 </li>
-                <li>
-                    <a href="/categories/yuvelirnye-izdeliya/">Каталог</a>
-                </li>
-
-                <li><a rel="nofollow" href="/sale" style="color: #C30000;">Sale</a></li>
+                <li><a rel="nofollow" href="/sale" style="color: #C30000;">Ликвидация</a></li>
 
 				<!--Поиск desktop-->
 				<li class="search">
