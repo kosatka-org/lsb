@@ -691,11 +691,18 @@ class Storefront extends Widget
             $this->smarty->assign('podium', false);
         }
 
-        $set_product_id = $this->db->result("SELECT id FROM sets WHERE main_product_id = '{$product->product_id}'");
-        $set_id         = !empty($set_product_id->id) ? $set_product_id->id : 0;
-        $set_products = $this->db->results("SELECT product_id
+        $useSetProducts = false;
+
+        if ($useSetProducts) {
+            $set_product_id = $this->db->result("SELECT id FROM sets WHERE main_product_id = '{$product->product_id}'");
+            $set_id = !empty($set_product_id->id) ? $set_product_id->id : 1;
+            $set_products = $this->db->results("SELECT product_id
             FROM sets_products
             WHERE set_id = '{$set_id}' AND product_id != {$product->product_id}");
+        }
+        else
+            $set_products = self::getRecommendedProducts($product);
+
         if (!empty($set_products)){
             $set_product_ids = array();
             foreach ($set_products as $key => $value) {
@@ -894,6 +901,21 @@ class Storefront extends Widget
 		$this->smarty->assign('og_image', '/reimg/files/products/340x/'.$product->large_image);
         $this->body = $this->smarty->fetch('product.tpl');
         return $this->body;
+    }
+
+    /**
+     * Получить рекомендованные продукты
+     *
+     * @param stdClass $product
+     * @return array
+     */
+    public static function getRecommendedProducts(stdClass $product)
+    {
+        global $database_object;
+
+        $query = "SELECT * FROM products WHERE category_id = {$product->category_id} AND product_id != {$product->product_id} ORDER BY RAND() LIMIT 5";
+
+        return $database_object->results($query);
     }
 
 
