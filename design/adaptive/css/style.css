@@ -6833,6 +6833,11 @@ right: 50x;
 	text-align: center !important;
 }
 
+.payment-footer img {
+	height: auto;
+	max-width: 100px;
+}
+
 .hide {
 	display: none;
 }

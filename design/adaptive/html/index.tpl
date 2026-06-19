@@ -85,7 +85,7 @@
         {/literal}
     {/if}
     <link rel="alternate" type="application/rss+xml" title="rss feed" href="/rss/"/>
-    <link media="all" href="/design/adaptive/css/style.css?v=1.253" rel="stylesheet" type="text/css" />
+    <link media="all" href="/design/adaptive/css/style.css?v=1.255" rel="stylesheet" type="text/css" />
 
     <link href="/favicon.ico?v=1.0" rel="icon" type="image/x-icon" />
     <script type="text/javascript" src="/js/jquery/jquery.min.1.9.1.js"></script>
@@ -1208,23 +1208,22 @@ jQuery(document).ready(function() {
 
             <div class="footerMenuBlock">
                 <div class="footerMenuTitle">{if $language=='eng'}Accept payments{else}Прием платежей{/if}:</div>
-                <div class="copy noLinkUnderline"><ul><li>
+                <div class="copy noLinkUnderline payment-footer">
                     <a href="/sections/shipping{if $language=='eng'}_eng{/if}/" class="cardlogos noline">
-                        <i class="icon-cc-visa icon-3x" style="margin-right: 12px;"></i>
-                        <i class="icon-cc-mastercard icon-3x"></i>
-                    </a></li>
-                    </ul></div>
+                        <img src="/design/adaptive/images/mir.jpg" alt="Мир" />
+                    </a>
+                </div>
                 <div class="ShAA_footerPhone">
                     <a href="tel:88003332138">8 (800) 333-21-38</a>
                 </div>
                 <div class="ShAA_footerPhone">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=79200271027">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+70000000000">
                         <i class="icon-whatsapp icon-2x" style="margin-right: 12px; float: left; height: 60px;"></i>
                         <div style="font-size: 14px; line-height: 14px;">
                         {if $language=='eng'}
                             Online-consultant whatsApp (viber, telegram) everyday 10:00-20:00
                         {else}
-                            Менеджер магазина whatsApp (viber, telegram) <br /> ежедневно с 10:00 до 20:00
+                            Менеджер магазина whatsApp (telegram) <br /> ежедневно с 10:00 до 20:00
                         {/if}
                         </div>
                         <!-- <div class="ShAA_whatsAppPhone">
@@ -1236,9 +1235,7 @@ jQuery(document).ready(function() {
                     <ul>
                         <li>
                             <a href="/sections/shipping{if $language=='eng'}_eng{/if}/" class="cardlogos noline">
-                                <img src="/design/adaptive/images/cdek.png" style="width: 30%;" />
-                                <img src="/design/adaptive/images/dhl-express.png" style="width: 30%;" />
-                                <img src="/design/adaptive/images/pony-express.png" style="width: 30%;" />
+                                <img src="/design/adaptive/images/cdek.png" />
                             </a>
                         </li>
                     </ul>
