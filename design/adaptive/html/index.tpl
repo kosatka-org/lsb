@@ -85,7 +85,7 @@
         {/literal}
     {/if}
     <link rel="alternate" type="application/rss+xml" title="rss feed" href="/rss/"/>
-    <link media="all" href="/design/adaptive/css/style.css?v=1.252" rel="stylesheet" type="text/css" />
+    <link media="all" href="/design/adaptive/css/style.css?v=1.253" rel="stylesheet" type="text/css" />
 
     <link href="/favicon.ico?v=1.0" rel="icon" type="image/x-icon" />
     <script type="text/javascript" src="/js/jquery/jquery.min.1.9.1.js"></script>

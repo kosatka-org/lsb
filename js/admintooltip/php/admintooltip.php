@@ -12,8 +12,8 @@ function CreateTooltip() {
     label.style.cssText = "position: absolute; left: 10px; top: 0px; z-index: 1000;";
     label.setAttribute('style', 'position: absolute; left: 10px; top: 0px; z-index: 1000;');
 
-    
-    
+
+
     adminpanel = document.createElement('div');
     adminpanel.classList.add('ShAA_adminTabs');
     adminpanel.style.cssText = " left: 10px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;";
@@ -56,6 +56,7 @@ function CreateTooltip() {
 <?php   if (($user->is_allowed_bookmark(9)) && !($user->is_allowed('offline_manager'))) { ?>
     adminpanel = document.createElement('div');
     adminpanel.classList.add('ShAA_adminTabs');
+    adminpanel.classList.add('hide');
     adminpanel.style.cssText = " left: 10px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;";
     adminpanel.setAttribute('style', ' left: 110px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;');
     adminpanel.innerHTML = "<a href='/index.php?module=OfflineSales'>кассир</a>";
@@ -66,6 +67,7 @@ function CreateTooltip() {
 <?php   if ($user->is_allowed_bookmark(10) && !$user->is_allowed('hostess')) { ?>
     adminpanel = document.createElement('div');
     adminpanel.classList.add('ShAA_adminTabs');
+    adminpanel.classList.add('hide');
     adminpanel.style.cssText = " left: 10px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;";
     adminpanel.setAttribute('style', ' left: 135px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;');
     adminpanel.innerHTML = "<a href='/index.php?module=OfflineSales&movement_list=1'>перемещения</a>";
@@ -76,6 +78,7 @@ function CreateTooltip() {
 <?php   if ($user->is_allowed_bookmark(11) && !in_array($_SESSION['user']->user_id, array(12526))) { ?>
     adminpanel = document.createElement('div');
     adminpanel.classList.add('ShAA_adminTabs');
+    adminpanel.classList.add('hide');
     adminpanel.style.cssText = " left: 10px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;";
     adminpanel.setAttribute('style', ' left: 160px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;');
     adminpanel.innerHTML = "<a href='/index.php?module=OfflineSales&movement_list=1&reservation=1'>отложка</a>";
@@ -86,6 +89,7 @@ function CreateTooltip() {
 <?php   if (($user->is_allowed_bookmark(12)) && !($user->is_allowed('offline_manager'))) { ?>
     adminpanel = document.createElement('div');
     adminpanel.classList.add('ShAA_adminTabs');
+    adminpanel.classList.add('hide');
     adminpanel.style.cssText = " left: 10px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;";
     adminpanel.setAttribute('style', ' left: 185px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;');
     adminpanel.innerHTML = "<a href='/index.php?module=OfflineSales&debts=1<?php if ($_SESSION['user']->user_id == 132165) { ?>&cashbox=15<?php } ?>'>задолженности</a>";
@@ -106,6 +110,7 @@ function CreateTooltip() {
 <?php   if ($user->is_allowed_bookmark(14)) { ?>
     adminpanel = document.createElement('div');
     adminpanel.classList.add('ShAA_adminTabs');
+    adminpanel.classList.add('hide');
     adminpanel.style.cssText = " left: 10px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;";
     adminpanel.setAttribute('style', ' left: 235px; top: 0px; z-index: 1000; float: left; margin: 6px 12px;');
     adminpanel.innerHTML = "<a href='/index.php?module=OfflineSales&mtm=1'>пошив</a>";

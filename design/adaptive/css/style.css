@@ -6022,7 +6022,7 @@ h2.slider{
     .ShAA_withWishlist {
         width: 38%;
     }
-	
+
 	.ShAA_sexMobileBlock {
 		display: block !important;
 		color: #000;
@@ -6040,7 +6040,7 @@ h2.slider{
 		text-align: center;
 		text-transform: uppercase;
 		padding: 10px;
-		
+
 	}
 	.message_fof_KZ__sun{
 		width: 80px;
@@ -6756,36 +6756,36 @@ right: 50x;
 }
 -@media screen and (min-width: 1587px){
 	.adminTabs_container{
-		display: none; 
-		width: 90%; 
-		line-height: 35px;  
-		padding: 0 5% 0 5%; 
-		top: 0px; 
+		display: none;
+		width: 90%;
+		line-height: 35px;
+		padding: 0 5% 0 5%;
+		top: 0px;
 		z-index: 1000;
 	}
 }
 @media screen and (min-width: 923px) and (max-width: 1587px){
 	.adminTabs_container{
-		display: none; 
-		width: 90%; 
-		padding: 0 5% 0 5%; 
-		top: 0px; 
+		display: none;
+		width: 90%;
+		padding: 0 5% 0 5%;
+		top: 0px;
 		z-index: 1000;
 	}
 }
 @media screen and (min-width: 771px) and (max-width: 922px){
 	.adminTabs_container{
-		display: none; 
-		width: 90%; 
-		padding: 0 5% 0 5%; 
-		top: 0px; 
+		display: none;
+		width: 90%;
+		padding: 0 5% 0 5%;
+		top: 0px;
 		z-index: 1000;
 	}
 }
 
 @media screen and (max-width: 770px){
 	#adminTabs_label{
-		display: none; 
+		display: none;
 	}
 }
 .second_list_menu{
@@ -6831,4 +6831,8 @@ right: 50x;
 .caption_container #breadcrumbs, .caption_container .brandDescription, .caption_container .ShAA_catNameStyles{
 	float: none;
 	text-align: center !important;
+}
+
+.hide {
+	display: none;
 }
