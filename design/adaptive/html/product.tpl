@@ -1337,14 +1337,7 @@ jQuery(document).ready(function() {
 		{if $set_products}
 		<div id="set_products" style="position: relative; z-index: 1;">
 			<div style="font-weight: normal; margin: 26px 0; text-align: center; text-transform: uppercase;">
-				<div class="ShAA_styleManPhoto">
-					<img src="/design/adaptive/images/style_man.jpg" title="{if $language=='eng'}Stylist of Luxury Store{else}Стилист Лакшери Store{/if}" alt="{if $language=='eng'}Stylist of Luxury Store{else}Стилист Лакшери Store{/if}" />
-				</div>
-        {if $language=='eng'}
-          Tips from stylist of Luxury Store
-        {else}
-         <!--<b>Игорь Франц</b>--><br />Стилист Лакшери Store<br /> рекомендует к этому товару
-        {/if}
+            Соберите свой комплект
 			</div>
 			<a title="{if $language=='eng'}See total look{else}Посмотреть полный образ{/if}" href="/look/{$set_id}/">
 				<div class="ShAA_oneClickAddOld" style="float: none; margin: 0 auto 12px;">{if $language=='eng'}Total look{else}Полный образ{/if}</div>
