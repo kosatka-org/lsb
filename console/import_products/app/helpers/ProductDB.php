@@ -148,7 +148,7 @@ class ProductDB extends _Base
             'brand_id'        => Products::getDBBrandId($product),
             'sex'             => self::getGender($product),
             'body'            => $product->wb_product->description,
-            'characteristics' => json_encode($product->wb_product->characteristics),
+            'characteristics' => json_encode($product->wb_product->characteristics, JSON_UNESCAPED_UNICODE),
         ];
     }
 
