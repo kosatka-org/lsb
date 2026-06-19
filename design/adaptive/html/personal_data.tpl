@@ -508,7 +508,7 @@ ul.tabsSett li, ul.tabsSett .tab-current {
                   <li class="sett0"><a>{if $language=='eng'}Profile{else}Данные{/if}</a></li>
                   <li class="sett1 hide"><a>{if $language=='eng'}Your manager{else}Ваш менеджер{/if}</a></li>
                   {if $smarty.session.user}
-                      <li class="sett2"><a>{if $language=='eng'}Discount card{else}Дисконтная карта{/if}</a></li>
+                      <li class="sett2 hide"><a>{if $language=='eng'}Discount card{else}Дисконтная карта{/if}</a></li>
                   {/if}
                   <li class="sett3"><a>{if $language=='eng'}Info{else}Инфо{/if}</a></li>
                   <li class="sett4"><a onclick="{literal}rG('SUBSCRIBE_PERSONAL');return false;{/literal}">{if $language=='eng'}Subscriptions{else}Подписки{/if}</a></li>
@@ -806,7 +806,7 @@ ul.tabsSett li, ul.tabsSett .tab-current {
                     </div>
                 </div>
 				<div class="sett4 sett" style="display:none;">
-                    <div class="ShAA_titleForTab">{if $language=='eng'}Subscription to Luxury Store news{else}Подписка на новости Лакшери Store{/if}</div>
+                    <div class="ShAA_titleForTab">{if $language=='eng'}Subscription to Luxury Store news{else}Подписка на новости SVETLOV{/if}</div>
 					<div class="ShAA_pop_title">{if $language=='eng'}Mark your favorite brands{else}Отметьте бренды, новые поступления которые вам интересны{/if}</div>
 					<div class="ShAA_popText">
 						<div id="subscriptions">
@@ -821,11 +821,11 @@ ul.tabsSett li, ul.tabsSett .tab-current {
 					</div>
 					<div style="margin: 20px 0 0 0; float: left; clear: both;">
 						<input type="checkbox" id="stop" onchange="jQuery.get('/index.php?module=Login&do_not_disturb&type=sms&user_id={$user->original_user_id}');" {if $user->stop_sms == 1}checked{/if} autocomplete="off" />
-						{if $language=='eng'}I don't want to receive sms from lsboutique.ru{else}Не получать sms-рассылки от lsboutique.ru{/if}
+						{if $language=='eng'}I don't want to receive sms from lsboutique.ru{else}Не получать sms-рассылки с сайта{/if}
 					</div>
 					<div style="margin: 20px 0 0 0; float: left; clear: both;">
 						<input type="checkbox" id="stop" onchange="jQuery.get('/index.php?module=Login&do_not_disturb&type=email&email={$user->email}&user_id={$user->original_user_id}');" {if $user->stop_email == 1}checked{/if}{if $user->email == ''}checked disabled{/if} autocomplete="off" />
-						{if $language=='eng'}I don't want to receive emails from lsboutique.ru{else}Не получать email-рассылки от lsboutique.ru{/if}
+						{if $language=='eng'}I don't want to receive emails from lsboutique.ru{else}Не получать email-рассылки с сайта{/if}
 					</div>
 					<div id="subscribe_result" style="width:100%;float:left;margin: 24px 0; color: #807f7d;"></div>
 				</div>
