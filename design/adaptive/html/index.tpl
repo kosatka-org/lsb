@@ -48,26 +48,11 @@
 
     <meta name="apple-itunes-app" content="app-id=913481541" />
     <meta name="google-play-app" content="app-id=com.lsboutqiue.app">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="android-touch-icon" href="android-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-touch-icon-57x57.png?v=1.0">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-touch-icon-114x114.png?v=1.0">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-touch-icon-72x72.png?v=1.0">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-touch-icon-144x144.png?v=1.0">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-touch-icon-60x60.png?v=1.0">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-touch-icon-120x120.png?v=1.0">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-touch-icon-76x76.png?v=1.0">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-touch-icon-152x152.png?v=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=1.0">
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-chrome-192x192.png?v=1.0">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=1.0">
+    <link rel="shortcut icon" href="/images/icons/favicon.ico?v=1.1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=1.1">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-chrome-192x192.png?v=1.1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=1.1">
     <link rel="manifest" href="/images/icons/manifest.json">
-    <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/images/icons/favicon.ico?v=1.0">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
-    <meta name="msapplication-config" content="/images/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     {if !$offlineSales && $smarty.session.user->group_id < 2 && $config->enviroment == 'live' }
