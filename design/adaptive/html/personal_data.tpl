@@ -512,7 +512,7 @@ ul.tabsSett li, ul.tabsSett .tab-current {
                   {/if}
                   <li class="sett3"><a>{if $language=='eng'}Info{else}Инфо{/if}</a></li>
                   <li class="sett4"><a onclick="{literal}rG('SUBSCRIBE_PERSONAL');return false;{/literal}">{if $language=='eng'}Subscriptions{else}Подписки{/if}</a></li>
-                  <li class="sett5"><a id="sizes_tab">{if $language=='eng'}Sizes{else}Размеры{/if} <span class="tiptext">({if $language=='eng'}not set{else}не указаны{/if})</span></a></li>
+                  <li class="sett5 hide"><a id="sizes_tab">{if $language=='eng'}Sizes{else}Размеры{/if} <span class="tiptext">({if $language=='eng'}not set{else}не указаны{/if})</span></a></li>
                   {if $smarty.session.user}
                       <li class="sett6"><a>{if $language=='eng'}Services{else}Услуги{/if}</a></li>
                   {/if}
