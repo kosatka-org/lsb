@@ -506,7 +506,7 @@ ul.tabsSett li, ul.tabsSett .tab-current {
 			<div>
 				<ul class="tabsSett tabs1">
                   <li class="sett0"><a>{if $language=='eng'}Profile{else}Данные{/if}</a></li>
-                  <li class="sett1"><a>{if $language=='eng'}Your manager{else}Ваш менеджер{/if}</a></li>
+                  <li class="sett1 hide"><a>{if $language=='eng'}Your manager{else}Ваш менеджер{/if}</a></li>
                   {if $smarty.session.user}
                       <li class="sett2"><a>{if $language=='eng'}Discount card{else}Дисконтная карта{/if}</a></li>
                   {/if}
