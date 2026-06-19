@@ -861,9 +861,18 @@ jQuery(document).ready(function() {
             {if $product->season}
                 <div class="ShAA_newSeasonIcon" {if ($language != 'eng')} title="сезон" {else} title="season" {/if} style="cursor: help;">{$product->season}</div>
             {/if}
-            {if $product->season_type == 'new_season' || $product->season_type == 'next_season'}
-                <div class="ShAA_newSeasonIcon" style="color: white; background: black;">{if $language=='eng'}New season{else}Новый сезон{/if}</div>
-            {/if}
+            <div class="ShAA_newSeasonIcon">
+                {foreach from=$product->characteristics item=characteristic}
+                    {if ($characteristic->id == 1103 || $characteristic->id == 837 || $characteristic->id == 403016 || $characteristic->id == 11369)}
+                        {if ($characteristic->value[0] != 'без вставки' && $characteristic->value[0] != 'без покрытия' && $characteristic->value[0] != 'нет')}
+                            <div>
+                                <span>{$characteristic->name}</span>:
+                                <span>{$characteristic->value[0]}</span>
+                            </div>
+                        {/if}
+                    {/if}
+                {/foreach}
+            </div>
             {if ($product->old_price != 0 && $product->old_price>$product->price && ($furs || $product->super_price) ) }
                 <div class="ShAA_newSeasonIcon" style="color: rgb(216, 0, 104); border: 1px solid rgb(216, 0, 104);">{if $language=='eng'}Super price{else}Супер-цена{/if}</div>
             {/if}

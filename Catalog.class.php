@@ -771,6 +771,7 @@ class Catalog extends Widget
             $products = $this->db->results($query);
 
             foreach ($products as $k=>$proditem) {
+                $proditem->characteristics = json_decode($proditem->characteristics);
                 $proditem->brand = trim($proditem->brand);
                 $proditem->model = trim($proditem->model);
                 $brand_name_short = str_replace(array('.'), '', $proditem->brand);
