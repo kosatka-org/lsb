@@ -142,12 +142,13 @@ class ProductDB extends _Base
     protected static function getParams(stdClass $product)
     {
         return [
-            'model'    => Products::getProductName($product),
-            'sku'      => $product->sku,
-            'price'    => round($product->base_price * Products::$priceMultiplier),
-            'brand_id' => Products::getDBBrandId($product),
-            'sex'      => self::getGender($product),
-            'body'     => $product->wb_product->description,
+            'model'           => Products::getProductName($product),
+            'sku'             => $product->sku,
+            'price'           => round($product->base_price * Products::$priceMultiplier),
+            'brand_id'        => Products::getDBBrandId($product),
+            'sex'             => self::getGender($product),
+            'body'            => $product->wb_product->description,
+            'characteristics' => json_encode($product->wb_product->characteristics),
         ];
     }
 
