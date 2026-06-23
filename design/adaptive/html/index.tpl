@@ -1182,7 +1182,7 @@ jQuery(document).ready(function() {
                 </div>
             </div>
 
-            <div class="footerMenuBlock ShAA_socFooterBlock">
+            <div class="footerMenuBlock ShAA_socFooterBlock hide">
                 <div class="footerMenuTitle">{if $language=='eng'}Follow us{else}Социальные сети{/if}:</div>
                 <div class="noLinkUnderline">
                     <i class="icon-vk icon-2x"></i>
