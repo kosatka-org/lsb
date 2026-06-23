@@ -1199,10 +1199,10 @@ jQuery(document).ready(function() {
                     </a>
                 </div>
                 <div class="ShAA_footerPhone">
-                    <a href="tel:88003332138">8 (800) 333-21-38</a>
+                    <a href="tel:89276910611">8 (927) 691-06-11</a>
                 </div>
                 <div class="ShAA_footerPhone">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+70000000000">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=89276910611">
                         <i class="icon-whatsapp icon-2x" style="margin-right: 12px; float: left; height: 60px;"></i>
                         <div style="font-size: 14px; line-height: 14px;">
                         {if $language=='eng'}
