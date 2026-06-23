@@ -867,22 +867,14 @@ ul.tabsSett li, ul.tabsSett .tab-current {
                 <div class="sett6 sett" style="display:none;">
                     <div class="ShAA_emptyTextForService">
                         <div class="ShAA_titleForTab">
-                            {if $language=='eng'}Special services{else}Спецуслуги Лакшери Стор{/if}:
+                            Специальные услуги SVETLOV:
                         </div>
                         <div class="ShAA_pop_title">
-                            {if $language=='eng'}Atelier, shoe manufactory, dry cleaning{else}Ателье, обувная мастерская, химчистка{/if}
-                        </div>
-                        <div class="ShAA_popText">
-                            &bull; {if $language=='eng'}Fitting your clothes on the figure, repair of clothing and footwear and replacement details{else}Подгонка выбранной вами вещи по фигуре, ремонт изделий и замена фурнитуры{/if};<br />
-                            &bull; {if $language=='eng'}All types of work with shoes{else}Все виды работы с обувью{/if};<br />
-                            &bull; {if $language=='eng'}Professional cleaning of any complexity, including furs, leather and wool{else}Профессиональная химчистка любой сложности, в том числе мехов, кожи и шерсти{/if};<br /><br />
-                            <!--
-                            {if $language=='eng'}You will see the status of readiness of the order in the Services{else}Статус исполнения заказа будет отражаться в разделе "Услуги"{/if}
-                            -->
+                            Профессиональная полировка украшений для безупречного блеска и дополнительная гравировка для создания по-настоящему персонального акцента.
                         </div>
                     </div>
-                    <div class="ShAA_processButton service_tabs act" data-class="st1">{if $language=='eng'}In process ({$services_work_count}){else}В работе ({$services_work_count}){/if}</div>
-                    <div class="ShAA_processButton service_tabs" data-class="st2">{if $language=='eng'}Сomplete{else}Выдано{/if}</div>
+                    <div class="ShAA_processButton service_tabs act hide" data-class="st1">{if $language=='eng'}In process ({$services_work_count}){else}В работе ({$services_work_count}){/if}</div>
+                    <div class="ShAA_processButton service_tabs hide" data-class="st2">{if $language=='eng'}Сomplete{else}Выдано{/if}</div>
                     {if $services_work}
                         <div class="stab st1">
                             {foreach from=$services_work item=service}
