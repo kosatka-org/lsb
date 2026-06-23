@@ -59,9 +59,9 @@
 	</script>
 {/literal}
 <!-- Заголовок  /-->
-<div id="page_title">      
+<div id="page_title">
   <h1 class="float_left">{if $section->header}{$section->header|escape}{else}Карта сайта{/if}</h1>
-</div> 
+</div>
 
 <!-- Текст раздела /-->
 {if $section->body}
@@ -94,7 +94,7 @@
 							<a href='/catalog/?category={$c->category_id}&sex=2' tooltip='category' category_id='{$c->category_id}'>{$c->name|escape} жен</a>
 						</li>
 						<li style="margin: 0 0 0 20px;">
-							{fun name=cats_tree categories=$c->subcategories}        
+							{fun name=cats_tree categories=$c->subcategories}
 							{if $c->products}
 								<span style="margin: 0 0 0 -10px; float: left;">
 									{foreach from=$c->products item=product}
@@ -104,9 +104,9 @@
 							{/if}
 						</li>
 					{/if}
-				{/foreach}  
+				{/foreach}
 			</ul>
-		{/if}    
+		{/if}
 	{/defun}
 </ul>
 {if $brands}
@@ -119,7 +119,7 @@
 						<a href={if $brand->url}"/brands/{$brand->url}/?sex=1"{else}"/catalog/?brand={$brand->brand_id}&showbrand={$brand->brand_id}&sex=1"{/if}>Мужской каталог {$brand->name|escape}</a>,
 						<a href={if $brand->url}"/brands/{$brand->url}/?sex=2"{else}"/catalog/?brand={$brand->brand_id}&showbrand={$brand->brand_id}&sex=2"{/if}>Женский каталог {$brand->name|escape}</a>
 					</li>
-					<!--<li style="margin: 0 0 0 20px;">    
+					<!--<li style="margin: 0 0 0 20px;">
 						{if $brand->products}
 							<span style="margin: 0 0 0 -10px; float: left;">
 								{foreach from=$brand->products item=product}
@@ -137,13 +137,19 @@
 <ul class="catalog_menu">
 	<li><img class="ShAA_iconsSiteMap" src="/images/icon_designers.png" width="16" height="17" /><a href='/brandwall/'>Бренды</a></li>
 	<ul class="catalog_menu">
+		<li>
+			<a href='/brands/adamas/'>ADAMAS</a>
+		</li>
+		<li>
+			<a href='/brands/svetlov/'>SVETLOV</a>
+		</li>
 				{foreach item=good from=$goods}
 					{if $good->title}
 						<li>
 							<a href='/goods/{$good->url}/' tooltip='good' good_id='{$good->id}'>{$good->title|escape}</a>
 						</li>
 						<li style="margin: 0 0 0 20px;">
-							     
+
 							{if $good->products}
 								<span style="margin: 0 0 0 -10px; float: left;">
 									{foreach from=$good->products item=product}
@@ -153,7 +159,7 @@
 							{/if}
 						</li>
 					{/if}
-				{/foreach}  
+				{/foreach}
 			</ul>
 </ul>
 
@@ -185,7 +191,7 @@
 	<ul class="catalog_menu">
 		{foreach from=$stock item=n}
 			<li style="display: inline;">
-				<a class="ShAA_toolPhoto" href='/stock/{$n->url}/' title='{$n->brand|escape}' imurl='{$n->code|str_pad:11:'0':$smarty.const.STR_PAD_LEFT}.jpg'>{$n->category_name|escape} {$n->brand|escape}</a>, 
+				<a class="ShAA_toolPhoto" href='/stock/{$n->url}/' title='{$n->brand|escape}' imurl='{$n->code|str_pad:11:'0':$smarty.const.STR_PAD_LEFT}.jpg'>{$n->category_name|escape} {$n->brand|escape}</a>,
 				</li>
 		{/foreach}
 	</ul>

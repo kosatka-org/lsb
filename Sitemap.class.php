@@ -47,59 +47,9 @@ class Sitemap extends Widget
 		$this->db->query("SELECT url, DATE_FORMAT(modified, '%Y-%m-%d') as lastmod  FROM articles WHERE enabled=1 ORDER BY order_num DESC");
 		$this->articles = $this->db->results();
 
-		//  Остатки
-		$this->db->query("SELECT DISTINCT(url), category_name, brand, code as code FROM ostatki
-											UNION
-											SELECT DISTINCT(url), category_name, brand, NULL as code FROM prodazhi WHERE enabled = 1");
-		$this->stock = $this->db->results();
 
 		// Каталог
 		$this->catalog = Storefront::get_catalog();
-
-		//Бренд
-		$this->db->query("SELECT brands.* FROM brands INNER JOIN products ON products.brand_id=brands.brand_id WHERE brands.show_on_brandwall=1 AND brands.image != '' AND (products.small_image != '' OR products.large_image != '') GROUP BY brands.brand_id ORDER BY brands.name ASC");
-		$brands = $this->db->results();
-		$this->brands = $brands;
-
-		//Бренд-категория
-		$categories = Storefront::get_categories();
-
-		$query = "SELECT * FROM `goods` WHERE `visible` = 1 ORDER BY `position`";
-		$this->db->query($query);
-		$goods = array(); $category_ids = array(); $brand_ids = array();
-		foreach($this->db->results() as  $good){
-
-			$goods[$good->id] = $good;
-
-			$current_category = Storefront::category_by_id($categories, $good->category_id);
-			$subcats_list = $current_category->subcats_ids;
-
-			$goods[$good->id]->subcats_list = $current_category->subcats_ids;
-
-			//----
-			foreach ($subcats_list as $row) {
-				$category_ids[$row] = $row;
-			}
-			$brand_ids[] = $good->brand_id;
-		}
-		if(!empty($goods)){
-			foreach(Storefront::get_products(null, $category_ids, $brand_ids) as $product){
-				foreach($goods as $key=>$good){
-					if(in_array($product->category_id, $good->subcats_list) AND $product->brand_id == $good->brand_id){
-						$goods[$key]->products[] = $product;
-					}
-				}
-			}
-		}
-
-		$this->goods = $goods;
-
-
-		$query = sql_placeholder('SELECT * FROM `cities` WHERE `visible` =? ORDER BY `position`', 1);
-		$this->db->query($query);
-		$cities = $this->db->results();
-		if(!empty($cities))
-			$this->cities = $cities;
 
 		if($this->param('format')=='google') {
 			$this->single = true;
@@ -159,7 +109,7 @@ class Sitemap extends Widget
 
 		//  Товары
 		$map.= $this->category_map_recursive($this->catalog);
-        
+
 		//  Бренды
 		$map.= $this->brands_map_recursive($this->brands);
 
@@ -247,7 +197,7 @@ class Sitemap extends Widget
 		}
 		return $map;
 	}
-    
+
     function brands_map_recursive($brands)
 	{
 		foreach($brands as $brand) {
