@@ -26,6 +26,90 @@ class Images extends _Base
         self::addImage($images->first, $productId, 'first');
 
         self::addImage($images->second, $productId, 'second');
+
+        self::addExtraImages($images->others, $productId);
+    }
+
+    /**
+     * Скачать и добавить доп. рисунки к товару
+     *
+     * @param array $images
+     * @param int   $productId
+     * @return bool
+     * @throws GuzzleException
+     * @throws Exception
+     */
+    protected static function addExtraImages(array $images, $productId)
+    {
+        if (!$images)
+            return false;
+
+        $query = "SELECT extra FROM products_downloaded_img WHERE product_id = $productId";
+
+        $downloadedImg = ($downloadedImg = self::$db->get_var($query)) ? json_decode($downloadedImg) : [];
+
+        if ($downloadedImg == $images)
+            return false;
+
+        self::print_l("Start downloading extra images for product ID $productId...");
+
+        foreach ($images as $k => $url) {
+            $downloadedUrl = isset($downloadedImg[$k]) ? $downloadedImg[$k] : '';
+
+            if ($downloadedUrl == $url)
+                continue;
+
+            $image = self::downloadImage($url, $productId, "extra_$k");
+
+            if (!$image)
+                continue;
+
+            self::updateExtraImageInDB($image, $productId, $k);
+        }
+
+        self::markExtraImagesAsDownloaded($images, $productId);
+
+        return true;
+    }
+
+    /**
+     * Пометить доп. рисунки как скачанные
+     *
+     * @param array $images
+     * @param int   $productId
+     * @return void
+     * @throws Exception
+     */
+    protected static function markExtraImagesAsDownloaded(array $images, $productId)
+    {
+        $images = json_encode($images);
+
+        $query = "UPDATE products_downloaded_img SET extra = '$images' WHERE product_id = $productId";
+
+        self::$db->query($query);
+    }
+
+    /**
+     * Обновить запись о доп. рисунке товара в БД
+     *
+     * @param string $image
+     * @param int    $productId
+     * @param int    $num
+     * @return void
+     * @throws Exception
+     */
+    protected static function updateExtraImageInDB($image, $productId, $num)
+    {
+        $image = basename($image);
+
+        $query = "SELECT EXISTS (SELECT 1 FROM products_fotos WHERE product_id = $productId AND foto_id = $num)";
+
+        if (!self::$db->get_var($query))
+            $query = "INSERT INTO products_fotos SET product_id = $productId, foto_id = $num, filename = '$image'";
+        else
+            $query = "UPDATE products_fotos SET filename = '$image' WHERE product_id = $productId AND foto_id = $num";
+
+        self::$db->query($query);
     }
 
     /**
@@ -171,7 +255,7 @@ class Images extends _Base
         return (object)[
             'first'  => $product->ozon_product->primary_image[0],
             'second' => isset($product->ozon_product->images[0]) ? $product->ozon_product->images[0] : false,
-            'others' => array_slice($product->ozon_product->images, 1),
+            'others' => array_slice($product->ozon_product->images, 1, 6),
         ];
     }
 }
