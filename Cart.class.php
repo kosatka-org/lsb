@@ -1353,7 +1353,7 @@ class Cart extends Widget
 			}
             if ( !empty($user->card_number) ) {
               if($_COOKIE['language'] === 'eng'){$str .= " uses the personal card of Luxury Store №{$user->card_number}";}
-              else{$str .= " использует персональную карту Лакшери стор №{$user->card_number}";}
+              else{$str .= " использует персональную карту №{$user->card_number}";}
             }
             if($user->user_id != $user->original_user_id){
               if($_COOKIE['language'] === 'eng'){$str .= '<span style="margin-left: 12px;"><a href="/login/unlink_acc/' . $user->user_id . '/" title="unlink account" alt="unlink account"><i class="icon-close"></i></a></span></div>';}
