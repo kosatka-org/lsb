@@ -992,6 +992,13 @@ jQuery(document).ready(function() {
 						</div>
 					</div>
 				{/if}
+                {if $product->local_video}
+                    <div class="item" style="width: 80%; margin: 0 auto; background: url('/jscript/AjaxLoader.gif') no-repeat; background-position: center;">
+                        <div class="product-image main-image ShAA_vimeoVideo">
+                            <iframe src="/files/products/{$product->local_video}" frameborder="0" allowfullscreen style="float: left;"></iframe>
+                        </div>
+                    </div>
+                {/if}
                 {if $empty_foto}
                     <div class="item">
                         <img class="lazyOwl" src="" data-src="/images/noimg.png" alt="фото товара" />
@@ -1036,16 +1043,26 @@ jQuery(document).ready(function() {
                 </div>
             {/if}
             {if $product->category_id != 8233}
-              <div class=" pr_parallax" id="big_carousel">
-				{if $product->vimeo}
-					<div style="float: left; background: url('/jscript/AjaxLoader.gif') no-repeat; background-position: center;">
-						<div id="_vimeoVideo" class="product-image main-image ShAA_vimeoVideo">
-							<iframe src="{$product->vimeo}?autoplay=1&autopause=0&background=1&muted=1&loop=1" width="320" height="480"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="float: left;"></iframe>
-							<img style="background: #333; position: absolute; top: 0; left: 0; height:auto; opacity: 0; z-index: 999; background: #ccc;" class="cloudzoom zoomImg vimeoblock" src="{$product->vimeo}?autoplay=1&autopause=0&background=1&muted=1&loop=1" data-cloudzoom="disableZoom: true" itemprop="image" />
-						</div>
-					</div>
-				{/if}
-			  </div>
+                <div class=" pr_parallax" id="big_carousel">
+                    {if $product->vimeo}
+                        <div style="float: left; background: url('/jscript/AjaxLoader.gif') no-repeat; background-position: center;">
+                            <div id="_vimeoVideo" class="product-image main-image ShAA_vimeoVideo">
+                                <iframe src="{$product->vimeo}?autoplay=1&autopause=0&background=1&muted=1&loop=1" width="320" height="480"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="float: left;"></iframe>
+                                <img style="background: #333; position: absolute; top: 0; left: 0; height:auto; opacity: 0; z-index: 999; background: #ccc;" class="cloudzoom zoomImg vimeoblock" src="{$product->vimeo}?autoplay=1&autopause=0&background=1&muted=1&loop=1" data-cloudzoom="disableZoom: true" itemprop="image" />
+                            </div>
+                        </div>
+                    {/if}
+
+                    {if $product->local_video}
+                        <div style="float: left; background: url('/jscript/AjaxLoader.gif') no-repeat; background-position: center;">
+                            <div id="_vimeoVideo" class="product-image main-image ShAA_vimeoVideo">
+                                <iframe src="/files/products/{$product->local_video}"  frameborder="0"  allowfullscreen style="float: left;"></iframe>
+                            </div>
+                        </div>
+                    {/if}
+
+                </div>
+
                 <div class="parallax_c pr_parallax" id="PlaxDiv">
 
                     <div class="parallax_l ShAA_maxWidthBlock">
@@ -1092,7 +1109,6 @@ jQuery(document).ready(function() {
                             </div>
                         {/if}
                     </div>
-
                 </div>
             {/if}
         </div>
