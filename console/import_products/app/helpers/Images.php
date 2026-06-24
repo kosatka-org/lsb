@@ -3,7 +3,6 @@
 namespace console\import_products\app\helpers;
 
 use stdClass, Exception;
-use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
 /**
@@ -124,12 +123,12 @@ class Images extends _Base
      */
     protected static function addImage($url, $productId, $type)
     {
+        if (!$url)
+            return false;
+
         $query = "SELECT $type"."_img FROM products_downloaded_img WHERE product_id = $productId";
 
         $downloadedUrl = self::$db->get_var($query);
-
-        if (!$url)
-            return false;
 
         if ($downloadedUrl and $downloadedUrl == $url)
             return false;
@@ -239,7 +238,7 @@ class Images extends _Base
      *
      * @return string
      */
-    protected static function getImageDir()
+    public static function getImageDir()
     {
         return SITE_DIR.'/files/products';
     }

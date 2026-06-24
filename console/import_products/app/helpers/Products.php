@@ -67,6 +67,8 @@ class Products extends _Base
         (new ProductSizes)->addAllProductSizes($productId, $productSizes);
 
         (new Images)->downloadImages($productId, $product);
+
+        (new Video)->downloadVideo($productId, $product);
     }
 
     /**
@@ -86,6 +88,8 @@ class Products extends _Base
         (new ProductSizes)->updateAllProductSizes($productId, $productSizes);
 
         (new Images)->downloadImages($productId, $product);
+
+        (new Video)->downloadVideo($productId, $product);
     }
 
 
