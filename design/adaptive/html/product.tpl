@@ -1056,7 +1056,7 @@ jQuery(document).ready(function() {
                     {if $product->local_video}
                         <div style="float: left; background: url('/jscript/AjaxLoader.gif') no-repeat; background-position: center;">
                             <div id="_vimeoVideo" class="product-image main-image ShAA_vimeoVideo">
-                                <iframe src="/files/products/{$product->local_video}"  frameborder="0"  allowfullscreen style="float: left;"></iframe>
+                                <iframe src="/files/products/{$product->local_video}"  frameborder="0"  allowfullscreen style="float: left;" id="local-video-frame"></iframe>
                             </div>
                         </div>
                     {/if}
@@ -1475,6 +1475,11 @@ jQuery(document).ready(function() {
         $('div#info-'+r).show()
       }
     });
+
+    document.getElementById('local-video-frame').contentWindow.document.head.insertAdjacentHTML(
+        'beforeend',
+        '<style>video { min-width: unset !important; }</style>'
+    );
 
 </script>
 {/literal}
