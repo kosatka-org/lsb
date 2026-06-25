@@ -992,10 +992,11 @@ jQuery(document).ready(function() {
 						</div>
 					</div>
 				{/if}
+
                 {if $product->local_video}
                     <div class="item" style="width: 80%; margin: 0 auto; background: url('/jscript/AjaxLoader.gif') no-repeat; background-position: center;">
                         <div class="product-image main-image ShAA_vimeoVideo">
-                            <iframe src="/files/products/{$product->local_video}" frameborder="0" allowfullscreen style="float: left;"></iframe>
+                            <video src="/files/products/{$product->local_video}" autoplay style="float: left;"></video>
                         </div>
                     </div>
                 {/if}
@@ -1053,10 +1054,13 @@ jQuery(document).ready(function() {
                         </div>
                     {/if}
 
+
+
                     {if $product->local_video}
                         <div style="float: left; background: url('/jscript/AjaxLoader.gif') no-repeat; background-position: center;">
                             <div id="_vimeoVideo" class="product-image main-image ShAA_vimeoVideo">
-                                <iframe src="/files/products/{$product->local_video}"  frameborder="0"  allowfullscreen style="float: left;" id="local-video-frame"></iframe>
+
+                                <video src="/files/products/{$product->local_video}" autoplay muted controls style="float: left;"></video>
                             </div>
                         </div>
                     {/if}
@@ -1475,11 +1479,6 @@ jQuery(document).ready(function() {
         $('div#info-'+r).show()
       }
     });
-
-    document.getElementById('local-video-frame').contentWindow.document.head.insertAdjacentHTML(
-        'beforeend',
-        '<style>video { min-width: unset !important; }</style>'
-    );
 
 </script>
 {/literal}

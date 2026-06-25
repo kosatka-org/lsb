@@ -5192,10 +5192,6 @@ h2.slider{
     position: relative;
 }
 
-:host(.media-document.video.mac) {
-	min-width: unset !important;
-}
-
 .ShAA_vimeoVideo {
 	position: relative;
 	padding-bottom: 132%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */ /*Гы, забавный костыль*/
@@ -5204,7 +5200,7 @@ h2.slider{
 	overflow: hidden;
 }
 
-.ShAA_vimeoVideo iframe {
+.ShAA_vimeoVideo iframe, .ShAA_vimeoVideo video {
   position: absolute;
   top: 0;
   left: 0;
