@@ -49,6 +49,7 @@ $routes = array(
     array('%brands/([^/]+)/profiler/%','catalog/?brand_url=$1&profiler'),
     array('%brands/([^/]+)/%','catalog/?brand_url=$1'),
     array('%goods/([^/]+)/%','catalog/?goods=$1'),
+    array('%/new/%','catalog/?new=1'),
     array('%\/specials/([^/]+)/%','catalog/?special_url=$1'),
     array('%\/look_specials/([^/]+)/%','index.php?module=Looks&special_url=$1'),
     array('%swd/%','index.php?module=Promo&name=swd'),

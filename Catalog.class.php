@@ -380,8 +380,8 @@ class Catalog extends Widget
         $filter_url = array();
         $limit   = $where_brands = $where_materials = $where_sizes = $where_cats = "";
         $where   = " products.enabled = 1 ";
-        if(isset($_GET['sort']) && $_GET['sort'] == 'hits') $sort_by = "pvc.count DESC";
-        else $sort_by = " products.photo_added DESC ";
+
+        $sort_by = (isset($_GET['sort']) && $_GET['sort'] == 'hits') ? "pvc.count DESC" : " products.product_id DESC ";
 
         if ( !empty($special) ) {
             $special = (int)$special;

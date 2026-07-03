@@ -900,7 +900,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <ul class="menuList desktop">
                 <li>
-                    <a href="#">Новая коллекция</a>
+                    <a href="/new/">Новинки</a>
                 </li>
                 <li>
                     <a href="/categories/yuvelirnye-cepochki/">Цепи</a>
@@ -920,7 +920,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>
                     <a href="#/looks/">{if $language == 'eng'}Looks{else}Образы{/if}</a>
                 </li>
-                <li><a rel="nofollow" href="/sale" style="color: #C30000;">Ликвидация</a></li>
+                <li><a rel="nofollow" href="/sale" style="color: #C30000;">Sale</a></li>
 
 				<!--Поиск desktop-->
 				<li class="search">
