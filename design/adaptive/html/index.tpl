@@ -918,7 +918,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="/categories/yuvelirnye-podveski/">Подвески</a>
                 </li>
                 <li>
-                    <a href="#/looks/">{if $language == 'eng'}Looks{else}Образы{/if}</a>
+                    <a href="/looks/">{if $language == 'eng'}Looks{else}Образы{/if}</a>
                 </li>
                 <li><a rel="nofollow" href="/sale" style="color: #C30000;">Sale</a></li>
 

@@ -346,7 +346,7 @@
         </div>
     </div>
 <div class="centerRightContentCatalog_new ShAA_looksPage">
-	<h1>{$header|default:'Образы от стилиста Лакшери Store'}</h1>
+	<h1>{$header|default:'Образы от стилиста Svetlov Jewelry'}</h1>
     {if $description || $brand}
 		<div class="brandDescription mobileBrandDescr">
 			<p>
