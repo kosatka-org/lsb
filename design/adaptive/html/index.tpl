@@ -939,14 +939,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div style = 'display: none' id="change_view_mobile">{if $language == 'eng'}FASHION{else}ОБРАЗ{/if}</div>
                 <div style = 'display: none' class="ShAA_onlyMobileVer ShAA_mobileFilters">
                     <!-- <span href="#top" class="ShAA_toUp"><span id="active_menu_mob" class="ShAA_activeOnlyMobileVer"><i class="icon-filter icon-2x"></i></span></a> -->
-                    <a href="#top" class="ShAA_toUp"><span id="active_menu_mob" class="ShAA_activeOnlyMobileVer"><div class=" ">{if $language == 'eng'}Filters{else}Фильтры{/if}</div></span></a>
+                    <a href="#top" class="ShAA_toUp"><span id="active_menu_mob" class="ShAA_activeOnlyMobileVer"><div class=" ">{if $language == 'eng'}Filters{else}1Фильтры{/if}</div></span></a>
                 </div>
             {/if}
         {/foreach}
         {if ($new_season || (preg_match('/specials/', $smarty.server.REQUEST_URI)) || $furs || $looks || $whatsnew || ($brand && !preg_match('/brandwall/', $smarty.server.REQUEST_URI) && !preg_match('/personal_data/', $smarty.server.REQUEST_URI)) || $big_size || $sale) & (!preg_match('/product/', $smarty.server.REQUEST_URI))}
             <div style = 'display: none' id="change_view_mobile">{if $language == 'eng'}FASHION{else}ОБРАЗ{/if}</div>
             <div style = 'display: none' class="ShAA_onlyMobileVer ShAA_mobileFilters">
-                <a href="#top" class="ShAA_toUp"><span id="active_menu_mob" class="ShAA_activeOnlyMobileVer"><div class=" ">{if $language == 'eng'}Filters{else}Фильтры{/if}</div></span></a>
+                <a href="#top" class="ShAA_toUp"><span id="active_menu_mob" class="ShAA_activeOnlyMobileVer"><div class=" ">{if $language == 'eng'}Filters{else}2Фильтры{/if}</div></span></a>
             </div>
         {elseif (!preg_match('/catalog/', $smarty.server.REQUEST_URI))  & (!preg_match('/product/', $smarty.server.REQUEST_URI)) }
             <div class="ShAA_upBlock ShAA_sexMobileBlock" style="text-transform: uppercase;">
@@ -958,16 +958,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         {if ($new_season || (preg_match('/specials/', $smarty.server.REQUEST_URI)) || $furs || $looks || $whatsnew || ($brand && !preg_match('/brandwall/', $smarty.server.REQUEST_URI) && !preg_match('/personal_data/', $smarty.server.REQUEST_URI)) || $big_size || $sale) & (!preg_match('/product/', $smarty.server.REQUEST_URI))}
             <div class="ShAA_filterBig">
-                <a id="active_menu" class="ShAA_toUp" href="#top">{if $language == 'eng'}Filters{else}Фильтры{/if}</a>
+                <a id="active_menu" class="ShAA_toUp" href="#top">{if $language == 'eng'}Filters{else}3Фильтры{/if}</a>
             </div>
         {/if}
-        {foreach from=$categories item=cat}
-            {if ($cat->category_id == $category || $cat->category_id == $view_category) & (!preg_match('/products/', $smarty.server.REQUEST_URI)) & (!preg_match('/product/', $smarty.server.REQUEST_URI)) & (!preg_match('/goods/', $smarty.server.REQUEST_URI))}
-                <div class="ShAA_filterBig">
-                    <a id="active_menu" class="ShAA_toUp" href="#top">{if $language == 'eng'}Filters{else}Фильтры{/if}</a>
-                </div>
-            {/if}
-        {/foreach}
+        <div class="ShAA_filterBig">
+            <a id="active_menu" class="ShAA_toUp" href="#top">Фильтры</a>
+        </div>
         <div class="clear"></div>
     </div>
     </div>
