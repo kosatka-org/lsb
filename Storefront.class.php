@@ -306,7 +306,7 @@ class Storefront extends Widget
         }
 
 
-        $this->smarty->assign('title', "{$stock->category_name} из Италии сезона " . date('Y') . " | интернет магазин одежды Лакшери стор");
+        $this->smarty->assign('title', "{$stock->category_name} | Svetlov Jewelry");
         $this->smarty->assign('location', $location);
         $this->smarty->assign('product', $stock);
 
@@ -631,7 +631,7 @@ class Storefront extends Widget
 
         $addNameStore = (strpos($_SERVER['SERVER_NAME'], 'lstore.moscow') !== false ) ? 'lstore.moscow' : 'Лакшери стор';
 
-        $title = "{$product->model} из Италии {$season}" . " | интернет магазин {$sex} одежды {$addNameStore}";
+        $title = "{$product->model} | Svetlov Jewelry";
         if($_COOKIE['language'] === 'eng'){$title = "{$group_name} {$product->brand} made in Italy {$season}" . " | Luxury Store";}
         $this->smarty->assign('title',       $title);
         $this->smarty->assign('keywords',    "{$product->model}, одежда из Италии, {$season}" . ", интернет магазин {$sex} одежды, {$addNameStore}");

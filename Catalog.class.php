@@ -515,8 +515,8 @@ class Catalog extends Widget
                   $type = 'designer ' . $category_item->eng_name;
                   $title = "{$type} | Luxury Store";
                 }else{
-                  $type = ($category_item->category_id == 2 || $category_item->category_id == 1 ? 'дизайнерская ' : 'дизайнерские ') . $category_item->name;
-                  $title = "{$type} | бутик Лакшери Стор";
+                  $type =  $category_item->name;
+                  $title = "{$type} | Svetlov Jewelry";
                 }
                 if ($mw == '2') {
                     $categ_desc = strip_custom_tags($category_item->womens_description);

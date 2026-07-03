@@ -71,7 +71,7 @@ class Site extends Widget
 		$this->smarty->assign('cart_total_price',  $this->cart_total_price);
 		$this->smarty->assign('cart_products_num', isset($_SESSION['shopping_cart']) && is_array($_SESSION['shopping_cart']) ? count($_SESSION['shopping_cart']) : 0);
 		$this->smarty->assign('wl_products_num',   isset($_SESSION['wish_list']) && is_array($_SESSION['wish_list']) ? count($_SESSION['wish_list']) : 0);
-        if ( isset($_SESSION['user']->original_user_id) ) { 
+        if ( isset($_SESSION['user']->original_user_id) ) {
             $this->smarty->assign('n_deposit',    $this->db->get_var(" SELECT deposit   FROM users WHERE user_id = '{$_SESSION['user']->original_user_id}' "));
             $this->smarty->assign('big_avatar',   $this->db->get_var(" SELECT photo     FROM users WHERE user_id = '{$_SESSION['user']->original_user_id}' "));
             $this->smarty->assign('small_avatar', $this->db->get_var(" SELECT photo_rec FROM users WHERE user_id = '{$_SESSION['user']->original_user_id}' "));
@@ -123,9 +123,10 @@ class Site extends Widget
 			$this->db->query($query);
 			$this->section = $this->db->result();
 			$this->smarty->assign('section', $this->section);
+
 			//  Устанавливаем мета-теги, указанные в главном блоке
-      if($_COOKIE['language'] === 'eng'){$title = 'Luxury Store';}
-      else{$title = 'бутик фирменной одежды из Италии и Франции - Лакшери стор';}
+            $title = 'Ювелирные изделия - Svetlov Jewelry';
+
 			$this->title =       isset($this->section->meta_title)      ? $this->section->meta_title       : $this->main->title;
 			$this->keywords =    isset($this->section->meta_keywords)   ? $this->section->meta_keywords    : $this->main->keywords;
 			$this->description = isset($this->section->meta_description)? $this->section->meta_description : $this->main->description;
@@ -193,7 +194,7 @@ class Site extends Widget
 			setcookie('sex', '0', time()+60*60*24*365, '/');
 			$_COOKIE['sex'] = 0;
 		}
-		
+
 		// Создаем основной блок страницы
 		if (!$this->main->fetch()) {
 			return false;
