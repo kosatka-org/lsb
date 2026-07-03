@@ -756,6 +756,11 @@ class Catalog extends Widget
                     LEFT JOIN product_view_counters pvc ON pvc.product_id = products.product_id
                   WHERE {$where}
                   ORDER BY {$sort_by} {$limit}";
+            
+            echo "<pre>";
+            print_r ($query);
+            echo "</pre>";
+            exit;
 
             $products = $this->db->results($query);
 
