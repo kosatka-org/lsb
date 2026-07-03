@@ -74,24 +74,14 @@
 <ul class="catalog_menu">
 <li><a href='/'>{$settings->site_name}</a></li>
 <ul class="catalog_menu">
-	<li><img class="ShAA_iconsSiteMap" src="/images/icon_catalog.png" width="16" height="11" /><a href='/catalog/'>Каталог</a></li>
+	<li><a href='/catalog/?allsex=1'>Каталог</a></li>
 	{defun name=cats_tree categories=$catalog}
 		{if $categories}
 			<ul class="catalog_menu">
 				{foreach item=c from=$categories}
 					{if $c->name}
 						<li>
-							{if $c->category_id == 38}
-								<img class="ShAA_subIconsSiteMap" src="/images/icon_bag.png" width="16" height="16" />
-							{elseif $c->category_id == 2}
-								<img class="ShAA_subIconsSiteMap" src="/images/icon_shoes.png" width="16" height="13" />
-							{elseif $c->category_id == 1}
-								<img class="ShAA_subIconsSiteMap" src="/images/icon_clothes.png" width="16" height="15" />
-							{elseif $c->category_id == 4}
-								<img class="ShAA_subIconsSiteMap" src="/images/icon_accessories.png" width="16" height="12" />
-							{/if}
-							<a href='/catalog/?category={$c->category_id}&sex=1' tooltip='category' category_id='{$c->category_id}'>{$c->name|escape} муж</a>
-							<a href='/catalog/?category={$c->category_id}&sex=2' tooltip='category' category_id='{$c->category_id}'>{$c->name|escape} жен</a>
+							<a href='/catalog/?category={$c->category_id}&allsex=1' tooltip='category' category_id='{$c->category_id}'>{$c->name|escape} </a>
 						</li>
 						<li style="margin: 0 0 0 20px;">
 							{fun name=cats_tree categories=$c->subcategories}
@@ -138,10 +128,10 @@
 	<li><img class="ShAA_iconsSiteMap" src="/images/icon_designers.png" width="16" height="17" /><a href='/brandwall/'>Бренды</a></li>
 	<ul class="catalog_menu">
 		<li>
-			<a href='/brands/adamas/'>ADAMAS</a>
+			<a href='/brands/adamas/?allsex=1'>ADAMAS</a>
 		</li>
 		<li>
-			<a href='/brands/svetlov/'>SVETLOV</a>
+			<a href='/brands/svetlov/?allsex=1'>SVETLOV</a>
 		</li>
 				{foreach item=good from=$goods}
 					{if $good->title}
