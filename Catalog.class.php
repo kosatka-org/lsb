@@ -484,7 +484,7 @@ class Catalog extends Widget
             elseif ($category == 'sale') {
                 $this->smarty->assign('sale', true);
                 $ecommerce_list = 'sale'.$mf;
-                $where .= " AND products.old_price > products.price AND products.item_location != 'Podium VIP' AND products.season_type NOT IN ('next_season','new_season') AND brands.show_delta = 1 ";
+                $where .= " AND products.old_price > products.price AND brands.show_delta = 1 ";
 
                 if (array_key_exists('swd', $this->promos) && !empty($this->promos['swd']->brands)) {
                     $sort_by = "FIElD(products.brand_id, '{$this->promos['swd']->brands}') DESC, products.created DESC";
@@ -591,17 +591,6 @@ class Catalog extends Widget
                 elseif (!empty($_SESSION['user']->original_user_id)) {$s_user_id = $_SESSION['user']->original_user_id;}
                 $brands_str = implode(",", luser::visible_brands($s_user_id));
                 $where .= " AND brands.brand_id IN ({$brands_str}) ";
-
-                // Отображать товары в разделе SALE только
-                // если клиент видит скидку на товар
-                if ($category == 'sale') {
-                  $sale_brands = luser::sale_visible_brands($s_user_id);
-                  $s_brand_filter = array();
-                  foreach ($sale_brands as $v) {
-                    $s_brand_filter[] = "(brands.brand_id IN ({$v->brand_ids}) AND products.season_type = '{$v->season}')";
-                  }
-                  $where .= (' AND (' . implode(" OR ", $s_brand_filter) . ')');
-                }
             }
         }
 
