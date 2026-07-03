@@ -7,7 +7,7 @@
 {/if}
 
 <head>
-  <title>{$Title}</title>
+  <title>{$Title} Админка Svetlov</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Language" content="ru" />
   <meta name="description" content="{$Site_name}" />

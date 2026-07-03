@@ -142,6 +142,8 @@ class Widget
             $this->smarty->config_dir = 'configs/';
             $this->smarty->cache_dir = 'cache/';
 
+            $this->smarty->assign('serverName',       $_SERVER['SERVER_NAME']);
+
             global $database_object;
             $this->db = new Database($this->config->dbname, $this->config->dbhost, $this->config->dbuser, $this->config->dbpass);
             $database_object = $this->db;
@@ -309,7 +311,7 @@ class Widget
         $Ftext = strip_tags($text, '<p><a><br><div><span>');
         return $Ftext;
     }
-    
+
     function rus_date() {
       $translate = array(
         "am" => "дп",
@@ -362,7 +364,7 @@ class Widget
       if (func_num_args() > 1) {
         $timestamp = func_get_arg(1);
         return strtr(date(func_get_arg(0), $timestamp), $translate);
-      } 
+      }
       else {
         return strtr(date(func_get_arg(0)), $translate);
       }

@@ -38,7 +38,7 @@ body {
 		<img src="./images/icon_users.jpg" alt="" class="line"/>
 		<!-- /Иконка раздела /-->
 
-		<h1 id="headline">Email-рассылка клиентам Лакшери Стор</h1>
+		<h1 id="headline">Email-рассылка клиентам</h1>
 
 
 	  </div>
@@ -70,13 +70,13 @@ body {
 				<div class="form-group row">
 			    <label for="sender_name" class="col-sm-2 control-label">Имя отправителя:</label>
 			    <div class="col-sm-10">
-						<input class="form-control" name="sender_name" value="Luxury Store" type="text" id="sender_name">
+						<input class="form-control" name="sender_name" value="Svetlov Jewelry" type="text" id="sender_name">
 			    </div>
 			  </div>
 				<div class="form-group row">
 			    <label for="sender_email" class="col-sm-2 control-label">Адрес отправителя:</label>
 			    <div class="col-sm-10">
-						<input class="form-control" name="sender_email" value="mail@lstore.moscow" type="text" id="sender_email">
+						<input class="form-control" name="sender_email" value="mail@{$serverName}" type="text" id="sender_email">
 			    </div>
 			  </div>
 			{else}
