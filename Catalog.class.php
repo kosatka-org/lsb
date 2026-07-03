@@ -484,7 +484,7 @@ class Catalog extends Widget
             elseif ($category == 'sale') {
                 $this->smarty->assign('sale', true);
                 $ecommerce_list = 'sale'.$mf;
-                $where .= " AND products.old_price > products.price AND brands.show_delta = 1 ";
+                $where .= " AND products.old_price > products.price ";
 
                 if (array_key_exists('swd', $this->promos) && !empty($this->promos['swd']->brands)) {
                     $sort_by = "FIElD(products.brand_id, '{$this->promos['swd']->brands}') DESC, products.created DESC";
@@ -756,11 +756,6 @@ class Catalog extends Widget
                     LEFT JOIN product_view_counters pvc ON pvc.product_id = products.product_id
                   WHERE {$where}
                   ORDER BY {$sort_by} {$limit}";
-            
-            echo "<pre>";
-            print_r ($query);
-            echo "</pre>";
-            exit;
 
             $products = $this->db->results($query);
 
