@@ -1198,7 +1198,7 @@ jQuery(document).ready(function() {
                         <img src="/design/adaptive/images/mir.jpg" alt="Мир" />
                     </a>
                 </div>
-                <div class="ShAA_footerPhone">
+                <div class="ShAA_footerPhone hide">
                     <a href="tel:89276910611">8 (927) 691-06-11</a>
                 </div>
                 <div class="ShAA_footerPhone">
