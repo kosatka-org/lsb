@@ -9,10 +9,10 @@
         </div>
         <div class="ShAA_cityPageStrongBlock">
             <div class="ShAA_cpLeftBlock">
-                <h1>"Лакшери Стор" {$city->name}: пункты самовывоза</h1>
+                <h1>{$city->name}: пункты самовывоза</h1>
             </div>
         </div>
-        <div class="ShAA_cityPageShippInfo">            
+        <div class="ShAA_cityPageShippInfo">
             <div class="ShAA_cpLeftBlock">
                 {if !empty($city->map_url)}
                     <p style="margin: 12px 0;">{$city->map_url}</p>
@@ -20,7 +20,7 @@
                 <div class="ShAA_cpTextUnderMap">
                     {$city->text2}
                 </div>
-                {if $payment_methods}    
+                {if $payment_methods}
                 <div class="ShAA_cpTextUnderMap">
                     <h1 style="margin-left: 0; display: none;"><b>Оплата</b></h1>
                     {foreach item=pm from=$payment_methods}
@@ -31,10 +31,10 @@
                     {/foreach}
                 </div>
                 {/if}
-        
+
             </div>
         </div>
-        
+
     </div>
     <div style="clear: both;"></div>
 {else}
@@ -77,9 +77,9 @@
       <div class="delclear"></div>
       </div>
   {/literal}
- 
+
 {/if}
-    <div class="ShAA_cpLeftBlock">  
+    <div class="ShAA_cpLeftBlock">
         <div class="ShAA_staticPageDetails">
             <h1>Реквизиты магазина</h1>
             <div style="margin-left:0px;margin-bottom: 12px;">
@@ -117,7 +117,7 @@
                     <li> Покупатель в праве отказаться от исполнения договора и потребовать возврата уплаченной за товар суммы. - В случае оплаты наличными возвращается полная стоимость товара по наличному расчёту соответственно. - В случае оплаты посредством пластиковой карты полная стоимость товара перечисляется на банковский счёт.</li>
                 </ol>
                 <br> - Замена товара и возврат средств производится на основании чека. Чек доставляется вместе с товаром.<br> Проверьте наличие чека в момент получения товара.
-                <br><br>По вопросам возврата звоните <a href="tel:88003332138">8 800 333 21 38</a><br>Или заполните <a href="/return.doc" style="border-bottom: 1px solid #000;">заявление на возврат</a> и отправьте на почту <a href="mailto:vozvrat@lsboutique.ru">vozvrat@lsboutique.ru</a>
+                <br><br>По вопросам возврата звоните <a href="tel:89276910611">8 (927) 691-06-11</a><br>Или заполните <a href="/return.doc" style="border-bottom: 1px solid #000;">заявление на возврат</a> и отправьте на почту <a href="mailto:vozvrat@{$serverName}">vozvrat@{$serverName}</a>
         </div>
         <div style="clear: both; height: 30px;"></div>
     </div>

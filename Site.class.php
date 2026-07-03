@@ -34,6 +34,8 @@ class Site extends Widget
 		// Пока не знаем какого класса центральный блок, он будет базового класса
 		$this->main = new Widget($this);
 
+        $this->smarty->assign('serverName',       $_SERVER['SERVER_NAME']);
+
         // Категории товаров
 		$this->categories = Storefront::get_categories();
 		$this->smarty->assign('categories', $this->categories);
