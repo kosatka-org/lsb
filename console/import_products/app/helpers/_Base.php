@@ -41,7 +41,7 @@ abstract class _Base
             }
         }
 
-        if (!$genders or in_array('Детский', $genders) or (in_array('Женский', $genders) and in_array('Мужской', $genders)))
+        if (!$genders or (in_array('Женский', $genders) and in_array('Мужской', $genders)))
             return 0;
 
         if (in_array('Мужской', $genders))
@@ -49,6 +49,9 @@ abstract class _Base
 
         if (in_array('Женский', $genders) or in_array('Девочки', $genders))
             return 2;
+
+        if (in_array('Детский', $genders))
+            return 3;
 
         throw new Exception("Can't find gender in product {$product->id}");
     }

@@ -42,6 +42,14 @@ class Products extends _Base
             if (!$product)
                 continue;
 
+            $gender = self::getGender($product);
+
+            #детские товары отключаем
+            if ($gender == 3) {
+                self::disableProduct($product);
+                continue;
+            }
+
             if (ImportedProducts::isNewProduct($sku))
                 self::addProduct($product, $productSizes);
             else
@@ -90,6 +98,20 @@ class Products extends _Base
         (new Images)->downloadImages($productId, $product);
 
         (new Video)->downloadVideo($productId, $product);
+    }
+
+    /**
+     * Отключить товар
+     *
+     * @param stdClass $product
+     * @return void
+     * @throws Exception
+     */
+    protected static function disableProduct(stdClass $product)
+    {
+        $query = "UPDATE products SET enabled = 0 WHERE sku = '{$product->sku}'";
+
+        self::$db->query($query);
     }
 
 
