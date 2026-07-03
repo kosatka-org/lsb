@@ -961,9 +961,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a id="active_menu" class="ShAA_toUp" href="#top">{if $language == 'eng'}Filters{else}3Фильтры{/if}</a>
             </div>
         {/if}
-        <div class="ShAA_filterBig">
-            <a id="active_menu" class="ShAA_toUp" href="#top">Фильтры</a>
-        </div>
+        {if $isCatalog}
+            <div class="ShAA_filterBig">
+                <a id="active_menu" class="ShAA_toUp" href="#top">Фильтры</a>
+            </div>
+        {/if}
+
         <div class="clear"></div>
     </div>
     </div>

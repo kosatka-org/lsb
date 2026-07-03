@@ -199,6 +199,8 @@ class Catalog extends Widget
             $log_search = true;
         }
 
+        $this->smarty->assign('isCatalog', true);
+
         // Для скидки выходного дня
         if (!empty($from)) {
             if ($from == 'swd' && isset($_SESSION['user']) && !empty($_SESSION['user']->user_id) ) {
