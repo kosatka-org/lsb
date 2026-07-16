@@ -55,6 +55,8 @@
     <link rel="manifest" href="/images/icons/manifest.json">
     <meta name="theme-color" content="#ffffff">
 
+    <script type="text/javascript" src="/js/ym/ym.js"></script>
+
     {if !$offlineSales && $smarty.session.user->group_id < 2 && $config->enviroment == 'live' }
        <script>
         window.dataLayer = window.dataLayer || [];
@@ -122,7 +124,9 @@
     {/if}
 {assign var="query" value=$smarty.server.QUERY_STRING|replace:'lang=eng':''|replace:'lang=ru':''}
 
-<script type="text/javascript">
+
+
+    <script type="text/javascript">
 var eng_link = "{if $query}{$smarty.server.PATH_INFO}?{$query}&lang=eng{else}{$smarty.server.PATH_INFO}?lang=eng{/if}";
 var geolocation ='{$geolocation}';
 {literal}
