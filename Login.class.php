@@ -400,14 +400,10 @@ class Login extends Widget
             if ( $user ) {
                 $card_number = $user->card_number;
                 if ($user->group_id == 1) $card_number = substr($user->card_number, -5);
-                if($_COOKIE['language']=='eng')$m = "{$card_number} - your card number for www.lsboutique.ru 88003332138";
-                else $m = "{$card_number} - номер Вашей карты в www.lsboutique.ru 88003332138";
+
+                $m = "{$card_number} - номер Вашей карты";
+
                 send_sms_to_phone( $user->phone_number, $m, $user->original_user_id );
-                $this->email('mail@lsboutique.ru', 'Клиент восстановил номер карты', "Наш клиент {$user->name}, с телефоном {$user->phone_number}, восстановил номер карты в Лакшери Store №{$card_number}.");
-                // Отправляем в слак
-                $message = "Пользователь <https://lsboutique.ru/admin/index.php?section=User&user_id={$user->user_id}|{$user->name}>, телефон {$user->phone}, восстановил карту.";
-                $args = array( 'user' => 'ls_admin', 'message' => $message, 'channel' => "restored_cards" );
-                Job::push('SlackJob', $args);
 
                 die('ok');
             }
