@@ -220,6 +220,19 @@ class Widget
                 $this->smarty->assign('show_furs', 1);
             }
 
+            $_COOKIE['design'] = $_COOKIE['design'] ?: 'adaptive';
+
+            if (isset($_GET['design'])) {
+                $design = $_GET['design'];
+
+                $dir = __DIR__."/design/$design";
+
+                if (is_dir($dir)) {
+                    setcookie("design", $design, time() + 3600 * 24 * 365 * 10, '/');
+                    $_COOKIE['design'] = $design;
+                }
+            }
+
             //Настройка языка
             $_GET['lang'] = 'ru';
             if (isset($_GET['lang']) || $_COOKIE['language']) {
@@ -275,8 +288,9 @@ class Widget
             include_once "models/order.php";
             $this->smarty->assign('mixmarket_enabled', orders::mixmarket_enabled($this->config));
 
-            $this->settings->theme     = 'adaptive';
-            $this->smarty->compile_dir = 'compiled/adaptive';
+            $this->settings->theme     = $_COOKIE['design'];
+            $this->smarty->compile_dir = "compiled/$_COOKIE[design]";
+            
             if ( isset($_COOKIE['old_design']) && $_COOKIE['old_design'] == 1 ) {
                 $this->settings->theme     = 'default';
                 $this->smarty->disable     = true;
