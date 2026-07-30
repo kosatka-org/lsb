@@ -1,0 +1,251 @@
+body {
+  background: none;
+  height: initial;
+  margin-top: 60px;
+}
+label {
+  vertical-align: middle;
+}
+#page {
+  width: 100%;
+}
+.mt-6 {
+  margin-top: -6px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.ml6 {
+  margin-left: 6px;
+}
+#headBlock, #headBlock-hidden, .footer {
+  display: none;
+}
+a:hover {
+  border-bottom: none;
+}
+
+.ShAA_searchBlockOffline {
+    float: right;
+}
+
+.ShAA_leftBlockOfflineDesctop {
+    float: left;
+    padding-left: 0;
+}
+
+.ShAA_buttonPrint {
+    float: right;
+    margin: -16px 0 24px 0;
+}
+
+.ShAA_infoItemOffline {
+    float: left;
+}
+
+.ShAA_itemDebt div{
+    float: left;
+}
+
+.ShAA_moneyBlock div {
+    float: left;
+}
+
+#user-form .ShAA_nameUser {
+     width: 58%;
+     float: left;
+}
+
+.ShAA_offlineUser {
+    float: left;
+    width: 18%;
+    margin-right: 2%;
+}
+
+.ShAA_callsCashboxesTitle {
+    float: left;
+    width: 20%;
+    margin: 0 0 6px 0 !important;
+}
+
+.ShAA_callsCashboxesTitle {
+    float: left;
+    width: 20%;
+    margin: 0 0 6px 0 !important;
+}
+
+.ShAA_callsBrandsTitle {
+    float: left;
+    width: 16%;
+    margin: 0 0 6px 0 !important;
+}
+
+.ShAA_leftCallsBlock {
+    float: left;
+    width: 100%;
+}
+
+.ShAA_callsButtonsBlock {
+    float: right;
+    margin-top: -80px;
+}
+
+.img-thumbnail {
+  min-width: 60px;
+  min-height: 60px;
+}
+.form-inline .form-group {
+  margin-right: 6px;
+}
+.debt-by-date {
+  max-width: 120px;
+}
+
+.cr_bold_title{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  font-weight: 800;
+}
+
+.cr_list{
+  width: 100%;
+  margin: 3px 0;
+}
+
+@media (max-width: 990px) {
+    .btn {
+        font-size: 13px !important;
+    }
+    .ShAA_searchBlockOffline {
+        float: left;
+        margin-top: 0px !important;
+        margin-bottom: 12px;
+    }
+
+    .ShAA_leftBlockOfflineDesctop {
+        padding-left: 15px;
+        width: 100%;
+    }
+    .ShAA_itemDebt div{
+        width: 25%;
+    }
+    .ShAA_dateOffline {
+        display: none;
+    }
+
+    .ShAA_titleOfTable {
+        display: none;
+    }
+
+    .ShAA_mobImgItem {
+        float: left;
+    }
+
+    #product-list .mt20 {
+        margin-top: 6px;
+    }
+
+    .ShAA_callsCashboxesTitle {
+        width: 32%;
+    }
+
+    .ShAA_callsBrandsTitle {
+        width: 32%;
+    }
+
+    .ShAA_salesItemOff .mt10 {
+        margin-top: 0 !important;
+    }
+
+    .ShAA_orderItemsOff .col-md-2 {
+        float: left;
+    }
+}
+
+@media (max-width: 767px) {
+    .ShAA_buttonPrint {
+        display: none !important;
+        float: none;
+        clear: both;
+
+    }
+
+    .ShAA_searchResTitle {
+        font-size: 22px;
+    }
+
+    .ShAA_infoItemOffline {
+        clear: both;
+    }
+
+    .ShAA_itemDebt div{
+        width: 50%;
+    }
+
+    .ShAA_itemDebt {
+        margin-bottom: 12px;
+        float: left;
+    }
+
+    .ShAA_rightItem {
+        float: right;
+        text-align: right;
+    }
+
+    .ShAA_nameTitle {
+        font-size: 18px;
+    }
+
+    #debts_filter {
+        margin-bottom: 24px;
+    }
+
+    #debts_filter select, #debts_filter input {
+        width: 32%;
+    }
+
+    .ShAA_mobNone {
+        display: none;
+    }
+
+    .form-group select, .form-group input {
+        max-width: 100% !important;
+        margin-bottom: 6px;
+    }
+
+    #user-form .form-group {
+        width: 100%;
+    }
+
+    .ShAA_callsCashboxesTitle {
+        width: 49%;
+    }
+
+    .ShAA_nameTitle .select-user {
+        float: left;
+        margin-bottom: 6px;
+        width: 100%;
+    }
+
+    .ShAA_nameTitle span {
+        float: none !important;
+        width: 100%;
+    }
+
+
+    .ShAA_callsBrandsTitle {
+        width: 49%;
+    }
+
+    .ShAA_callsButtonsBlock {
+        margin-top: 12px;
+    }
+    .ShAA_mobInfoLine {
+        width: 100%;
+        float: left;
+        margin-bottom: 6px;
+    }
+}
