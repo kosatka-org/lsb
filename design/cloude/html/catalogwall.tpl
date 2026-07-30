@@ -395,7 +395,6 @@ jQuery(document).ready(function() {
     }
 </style>
 {/literal}
-sdfds
 <div style="clear: both; width: 100%; margin: 24px 0 0; float: left; display: none;" id="catalog_left">
     <div class="checks" style="margin: 6px 0px 0 0;">
     {if $is_admin}<div style="margin-bottom:20px;">Создать подборку из выбранных товаров<form action="/admin/index.php?section=Special" method="POST" name="article" />
