@@ -288,8 +288,11 @@ class Widget
             include_once "models/order.php";
             $this->smarty->assign('mixmarket_enabled', orders::mixmarket_enabled($this->config));
 
-            $this->settings->theme     = $_COOKIE['design'];
+            $this->settings->theme = $_COOKIE['design'];
             $this->smarty->compile_dir = "compiled/$_COOKIE[design]";
+
+            if ($this->settings->theme == 'cloude')
+                $this->smarty->force_compile = true;
 
             if ( isset($_COOKIE['old_design']) && $_COOKIE['old_design'] == 1 ) {
                 $this->settings->theme     = 'default';
