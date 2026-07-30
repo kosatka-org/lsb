@@ -290,7 +290,7 @@ class Widget
 
             $this->settings->theme     = $_COOKIE['design'];
             $this->smarty->compile_dir = "compiled/$_COOKIE[design]";
-            
+
             if ( isset($_COOKIE['old_design']) && $_COOKIE['old_design'] == 1 ) {
                 $this->settings->theme     = 'default';
                 $this->smarty->disable     = true;
