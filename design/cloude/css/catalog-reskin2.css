@@ -1,0 +1,76 @@
+/* =====================================================================
+   catalog-reskin2.css — стили для ПОЛНОСТЬЮ переверстанного catalogwall.tpl
+   (используется вместе с catalogwall_NEW.tpl + _catalog_card.tpl).
+
+   Это НЕ патч поверх старых классов (как catalog-reskin.css для старой
+   разметки) — здесь разметка уже нативно на классах catalog.html,
+   поэтому это просто её родная таблица стилей, плюс:
+     - #product_container вместо .product-grid (id сохранён ради JS
+       из catalogwall_NEW.tpl — сам класс .product-grid можно навесить
+       туда же дополнительно, если хотите использовать общий style.css
+       без правок)
+     - .filter-chip.selected — состояние выбранного фильтра
+     - .crumbs [itemprop] — микроразметка schema.org не мешает стилям
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+  --black:#000; --white:#fff; --blue:#073DFF; --red:#EB5757;
+  --grey:#D9D9D9; --grey-bg:#F5F5F5;
+  --maxw:1328px; --side:56px;
+}
+
+*{box-sizing:border-box;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--side);font-family:'Roboto',Arial,sans-serif;}
+
+.crumbs{font-size:12px;letter-spacing:.3px;opacity:.5;padding:24px 0 0;}
+.crumbs a{color:var(--black);text-decoration:none;}
+.crumbs a:hover{opacity:.7;text-decoration:underline;}
+
+.page-title{font-weight:300;font-size:40px;text-transform:uppercase;letter-spacing:1px;margin:16px 0 24px;}
+
+.catalog-layout{display:grid;grid-template-columns:208px 1fr;gap:72px;padding-top:16px;}
+.filters-title{font-size:17px;text-transform:uppercase;letter-spacing:.5px;font-weight:400;margin-bottom:16px;}
+.filter-group{border-top:1px solid var(--grey);padding:16px 0;}
+.filter-group summary{display:flex;align-items:center;justify-content:space-between;font-size:14px;cursor:pointer;list-style:none;}
+.filter-group summary::-webkit-details-marker{display:none;}
+.filter-group summary:after{content:'▾';opacity:.5;font-size:11px;}
+.filter-group[open] summary:after{content:'▴';}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.filter-chip{display:inline-flex;align-items:center;border:1px solid var(--grey);border-radius:2px;padding:6px 9px;font-size:12px;opacity:.75;background:var(--white);cursor:pointer;user-select:none;}
+.filter-chip:hover{border-color:var(--black);opacity:1;}
+.filter-chip.selected{background:var(--black);border-color:var(--black);color:var(--white);opacity:1;}
+.filter-chip.filter-clear{border-style:dashed;opacity:.5;}
+.filter-chip.filter-clear:hover{opacity:1;}
+
+.catalog-toolbar{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--grey);padding-bottom:16px;margin-bottom:24px;}
+.toolbar-tabs{display:flex;gap:24px;}
+.toolbar-tabs a{font-size:16px;text-transform:uppercase;letter-spacing:.3px;opacity:.5;text-decoration:none;color:var(--black);}
+.toolbar-tabs a.active{opacity:1;border-bottom:2px solid var(--black);padding-bottom:16px;margin-bottom:-17px;}
+.sort{font-size:14px;opacity:.8;}
+
+#product_container{display:grid !important;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media (max-width:900px){#product_container{grid-template-columns:repeat(2,1fr);}}
+
+.card{position:relative;}
+.card .img-wrap{position:relative;display:block;border-radius:6px;overflow:hidden;background:var(--grey-bg);aspect-ratio:208/331;}
+.card .img-wrap img{width:100%;height:100%;object-fit:contain;object-position:center;}
+.card .heart{position:absolute;top:12px;right:12px;width:24px;height:24px;color:var(--white);opacity:.9;font-size:18px;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.3));text-decoration:none;}
+.card .heart:hover{opacity:1;transform:scale(1.1);}
+.card .brand{font-size:14px;text-transform:uppercase;margin:16px 0 3px;}
+.card .name{display:block;font-size:14px;font-weight:300;color:var(--blue);margin:0 0 6px;text-decoration:none;}
+.card .sizes{display:flex;gap:6px;font-size:10px;opacity:.5;margin-bottom:8px;}
+.card .price{display:flex;align-items:baseline;gap:8px;font-size:14px;text-transform:uppercase;margin-bottom:9px;}
+.card .price .old{opacity:.3;text-decoration:line-through;}
+.card .tags{display:flex;flex-wrap:wrap;gap:6px;}
+.card .tags span{border:1px solid var(--grey);border-radius:2px;padding:5px 7px;font-size:12px;opacity:.7;}
+
+.rich-text{max-width:900px;font-size:15px;line-height:1.7;color:rgba(0,0,0,.7);font-weight:300;margin:64px 0;}
+
+#preloader{margin:20px auto;text-align:center;}
+
+@media (max-width:1100px){
+  .catalog-layout{grid-template-columns:1fr;}
+}
