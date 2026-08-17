@@ -1231,8 +1231,8 @@ jQuery(document).ready(function() {
             </div>
 
             <div class="clear"></div>
-            <div style="margin: 48px 0 0 0;" title="При использовании изображений прямая ссылка на сайт обязательна">
-                &copy; kosatka.org {if $x_region}{$x_region}{/if} 2011-{$smarty.now|date_format:"%Y"}
+            <div style="margin: 48px 0 0 0;">
+                &copy; АО «1 Ювелирная Сеть». ОГРН: 5187746013670. ИНН: 9715334311
             </div>
         </div>
         <div class="ok">
