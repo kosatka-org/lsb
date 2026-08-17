@@ -1164,8 +1164,6 @@ jQuery(document).ready(function() {
                 <div class="footerMenuTitle">{if $language=='eng'}Online store{else}Интернет магазин{/if}:</div>
                 <div>
                     <ul>
-                        {if $language != 'eng'}<li><a rel="nofollow" href="/citiesselect/" id="city_link">{if !$x_city && !$smarty.session.user->city && !$x_region}{if $language=='eng'}Choose your city{else}Выберите город{/if}{/if}</a></li>{/if}
-                        <li><a rel="nofollow" href="{if $city->url}/city/{$city->url}{else}/sections/shipping{if $language=='eng'}_eng{/if}{/if}" target="_blank">{if $language=='eng'}Shipping and payment{else}Доставка {if $x_city}{$x_city}{elseif $smarty.session.user->city}{$smarty.session.user->city}{elseif $x_region}{$x_region}{else} и оплата{/if}{/if}</a></li>
                         <li><a rel="nofollow" href="/sections/sitemap/" target="_blank">{if $language=='eng'}Sitemap{else}Карта сайта{/if}</a></li>
                         {if $language != 'eng'}<li><a rel="nofollow" href="/faq/">{if $language=='eng'}Help{else}Вопрос-ответ{/if}</a></li>{/if}
                         {if $language != 'eng'}<li><a rel="nofollow" href="http://market.yandex.ru/shop/105646/reviews?clid=703" target="_blank" >{if $language=='eng'}Client feedback{else}Отзывы клиентов{/if}</a></li>{/if}
